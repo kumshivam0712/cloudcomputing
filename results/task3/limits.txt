@@ -1,0 +1,2 @@
+$ docker run -d --name parser-limits --cpus=1 --memory=1g --memory-swap=1g -p 8001:8000 ... ccmini/parser:1.0
+NanoCpus=1000000000 Memory=1073741824 MemorySwap=1073741824

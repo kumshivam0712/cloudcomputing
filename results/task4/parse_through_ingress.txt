@@ -1,0 +1,10 @@
+$ curl -i -X POST http://localhost:8080/parse -d '{"text": "set an alarm for seven thirty am tomorrow"}'
+HTTP/1.1 200 OK
+Content-Length: 78
+Content-Type: application/json
+Date: Sun, 08 Nov 2026 20:49:05 GMT
+Server: uvicorn
+X-Model-Version: v1
+X-Served-By: parser-68fc4b5b57-kztcm
+
+{"intent":"alarm_set","date":"tomorrow","time":"seven thirty am","place":null}

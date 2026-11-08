@@ -1,0 +1,41 @@
+== 20:49:45
+error: metrics not available yet
+== 20:49:55
+parser-68fc4b5b57-9r6h8   243m   363Mi   
+parser-68fc4b5b57-t6w2k   141m   373Mi   
+== 20:50:06
+parser-68fc4b5b57-9r6h8   243m   363Mi   
+parser-68fc4b5b57-t6w2k   141m   373Mi   
+== 20:50:16
+parser-68fc4b5b57-9r6h8   997m    366Mi   
+parser-68fc4b5b57-t6w2k   1000m   381Mi   
+== 20:50:26
+parser-68fc4b5b57-9r6h8   997m    370Mi   
+parser-68fc4b5b57-t6w2k   1000m   390Mi   
+== 20:50:36
+parser-68fc4b5b57-9r6h8   987m   370Mi   
+parser-68fc4b5b57-t6w2k   999m   396Mi   
+== 20:50:46
+parser-68fc4b5b57-9r6h8   987m   370Mi   
+parser-68fc4b5b57-t6w2k   999m   396Mi   
+== 20:50:57
+parser-68fc4b5b57-9r6h8   992m    371Mi   
+parser-68fc4b5b57-t6w2k   1000m   397Mi   
+== 20:51:07
+parser-68fc4b5b57-9r6h8   987m    371Mi   
+parser-68fc4b5b57-t6w2k   1000m   397Mi   
+== 20:51:17
+parser-68fc4b5b57-9r6h8   987m    371Mi   
+parser-68fc4b5b57-t6w2k   1000m   397Mi   
+== 20:51:27
+parser-68fc4b5b57-9r6h8   984m   370Mi   
+parser-68fc4b5b57-t6w2k   996m   398Mi   
+== 20:51:37
+parser-68fc4b5b57-9r6h8   989m    371Mi   
+parser-68fc4b5b57-t6w2k   1000m   398Mi   
+== 20:51:47
+parser-68fc4b5b57-9r6h8   989m    371Mi   
+parser-68fc4b5b57-t6w2k   1000m   398Mi   
+== 20:51:58
+parser-68fc4b5b57-9r6h8   677m    371Mi   
+parser-68fc4b5b57-t6w2k   1000m   400Mi   

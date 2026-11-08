@@ -1,0 +1,3 @@
+NAME                      CPU(cores)   MEMORY(bytes)   
+parser-68fc4b5b57-9r6h8   677m         371Mi           
+parser-68fc4b5b57-t6w2k   16m          399Mi           

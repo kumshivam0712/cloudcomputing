@@ -1,0 +1,63 @@
+{
+  "runs": [
+    {
+      "run": "run1",
+      "pods": [
+        {
+          "pod": "parser-68fc4b5b57-2ddnb",
+          "created": "2026-11-08T20:49:08Z",
+          "ready": "2026-11-08T20:49:14Z",
+          "seconds": 6.0
+        },
+        {
+          "pod": "parser-68fc4b5b57-m26s6",
+          "created": "2026-11-08T20:49:08Z",
+          "ready": "2026-11-08T20:49:14Z",
+          "seconds": 6.0
+        }
+      ],
+      "max_seconds": 6.0,
+      "mean_seconds": 6.0
+    },
+    {
+      "run": "run2",
+      "pods": [
+        {
+          "pod": "parser-68fc4b5b57-5z9b9",
+          "created": "2026-11-08T20:49:18Z",
+          "ready": "2026-11-08T20:49:25Z",
+          "seconds": 7.0
+        },
+        {
+          "pod": "parser-68fc4b5b57-wcdmn",
+          "created": "2026-11-08T20:49:18Z",
+          "ready": "2026-11-08T20:49:25Z",
+          "seconds": 7.0
+        }
+      ],
+      "max_seconds": 7.0,
+      "mean_seconds": 7.0
+    },
+    {
+      "run": "run3",
+      "pods": [
+        {
+          "pod": "parser-68fc4b5b57-9r6h8",
+          "created": "2026-11-08T20:49:29Z",
+          "ready": "2026-11-08T20:49:35Z",
+          "seconds": 6.0
+        },
+        {
+          "pod": "parser-68fc4b5b57-t6w2k",
+          "created": "2026-11-08T20:49:29Z",
+          "ready": "2026-11-08T20:49:37Z",
+          "seconds": 8.0
+        }
+      ],
+      "max_seconds": 8.0,
+      "mean_seconds": 7.0
+    }
+  ],
+  "median_of_runs_seconds (slowest pod per run)": 7.0,
+  "median_over_all_pods_seconds": 6.5
+}

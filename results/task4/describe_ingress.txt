@@ -1,0 +1,15 @@
+Name:             parser
+Labels:           <none>
+Namespace:        app
+Address:          172.18.0.2
+Ingress Class:    traefik
+Default backend:  <default>
+Rules:
+  Host        Path  Backends
+  ----        ----  --------
+  *           
+              /parse     parser:http (10.42.0.12:8000,10.42.0.11:8000)
+              /readyz    parser:http (10.42.0.12:8000,10.42.0.11:8000)
+              /healthz   parser:http (10.42.0.12:8000,10.42.0.11:8000)
+Annotations:  traefik.ingress.kubernetes.io/router.entrypoints: web
+Events:       <none>

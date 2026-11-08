@@ -1,0 +1,178 @@
+[20:48:29] Task 3: image size, no weights, pinned versions
+[20:48:30] Task 3: run with --cpus=1 --memory=1g
+[20:48:36] Task 3: 50 sequential requests
+[20:48:59] Task 3: FAULT_INJECT=1
+{
+  "cgroup_memory_peak_bytes": 680001536,
+  "cgroup_memory_peak_mib": 648.5,
+  "docker_stats_samples": 14,
+  "docker_stats_peak_mib": 372.2,
+  "sequential_50": {
+    "requests": 50,
+    "http_200": 49,
+    "http_500": 1,
+    "other": 0,
+    "latency_ms_mean": 450.4,
+    "latency_ms_p50": 449.8,
+    "latency_ms_p95": 491.8,
+    "latency_ms_max": 647.9
+  },
+  "oom_check": "OOMKilled=false Running=true RestartCount=0"
+}
+[20:49:05] Task 4: deployed resources
+[20:49:08] Task 4: cold start run 1
+[20:49:18] Task 4: cold start run 2
+[20:49:29] Task 4: cold start run 3
+{
+  "runs": [
+    {
+      "run": "run1",
+      "pods": [
+        {
+          "pod": "parser-68fc4b5b57-2ddnb",
+          "created": "2026-11-08T20:49:08Z",
+          "ready": "2026-11-08T20:49:14Z",
+          "seconds": 6.0
+        },
+        {
+          "pod": "parser-68fc4b5b57-m26s6",
+          "created": "2026-11-08T20:49:08Z",
+          "ready": "2026-11-08T20:49:14Z",
+          "seconds": 6.0
+        }
+      ],
+      "max_seconds": 6.0,
+      "mean_seconds": 6.0
+    },
+    {
+      "run": "run2",
+      "pods": [
+        {
+          "pod": "parser-68fc4b5b57-5z9b9",
+          "created": "2026-11-08T20:49:18Z",
+          "ready": "2026-11-08T20:49:25Z",
+          "seconds": 7.0
+        },
+        {
+          "pod": "parser-68fc4b5b57-wcdmn",
+          "created": "2026-11-08T20:49:18Z",
+          "ready": "2026-11-08T20:49:25Z",
+          "seconds": 7.0
+        }
+      ],
+      "max_seconds": 7.0,
+      "mean_seconds": 7.0
+    },
+    {
+      "run": "run3",
+      "pods": [
+        {
+          "pod": "parser-68fc4b5b57-9r6h8",
+          "created": "2026-11-08T20:49:29Z",
+          "ready": "2026-11-08T20:49:35Z",
+          "seconds": 6.0
+        },
+        {
+          "pod": "parser-68fc4b5b57-t6w2k",
+          "created": "2026-11-08T20:49:29Z",
+          "ready": "2026-11-08T20:49:37Z",
+          "seconds": 8.0
+        }
+      ],
+      "max_seconds": 8.0,
+      "mean_seconds": 7.0
+    }
+  ],
+  "median_of_runs_seconds (slowest pod per run)": 7.0,
+  "median_over_all_pods_seconds": 6.5
+}
+[20:49:45] Task 7: standard load test with exactly two Ready replicas
+{
+  "requests": 506,
+  "failures": 5,
+  "failure_pct": 0.988,
+  "p50_ms": 890.0,
+  "p95_ms": 1500.0,
+  "p99_ms": 1500.0,
+  "avg_ms": 936.8,
+  "max_ms": 1558.7780459999863,
+  "requests_per_s": 4.254,
+  "per_replica": {
+    "parser-68fc4b5b57-9r6h8": 250,
+    "parser-68fc4b5b57-t6w2k": 254
+  },
+  "per_model_version": {
+    "v1": 504
+  },
+  "per_replica_share_pct": {
+    "parser-68fc4b5b57-9r6h8": 49.6,
+    "parser-68fc4b5b57-t6w2k": 50.4
+  }
+}
+per replica per hour = 1 vCPU x 3.50 + 1 GiB x 0.45 = 3.9500 INR/h
+all replicas per hour = 2 x 3.9500 = 7.9000 INR/h
+requests per hour = 4.254 req/s x 3600 = 15313.2
+cost per 1,000 requests = 7.9000 / 15313.2 x 1000 = 0.5159 INR
+[20:52:08] Task 4: rolling update v1 -> v2 under load, then rollback
+{
+  "requests": 1403,
+  "failures": 12,
+  "failure_pct": 0.855,
+  "p50_ms": 1000.0,
+  "p95_ms": 1600.0,
+  "p99_ms": 1700.0,
+  "avg_ms": 1023.5,
+  "max_ms": 2236.4938240000356,
+  "requests_per_s": 3.903,
+  "per_replica": {
+    "parser-68fc4b5b57-t6w2k": 115,
+    "parser-68fc4b5b57-9r6h8": 101,
+    "parser-7d4885b655-hkrjj": 141,
+    "parser-7d4885b655-rtnbs": 113,
+    "parser-68fc4b5b57-f2src": 462,
+    "parser-68fc4b5b57-xfdcp": 460
+  },
+  "per_model_version": {
+    "v1": 1138,
+    "v2": 254
+  },
+  "per_replica_share_pct": {
+    "parser-68fc4b5b57-t6w2k": 8.3,
+    "parser-68fc4b5b57-9r6h8": 7.3,
+    "parser-7d4885b655-hkrjj": 10.1,
+    "parser-7d4885b655-rtnbs": 8.1,
+    "parser-68fc4b5b57-f2src": 33.2,
+    "parser-68fc4b5b57-xfdcp": 33.0
+  }
+}
+[20:58:09] Task 4: delete one Pod under load
+{
+  "requests": 719,
+  "failures": 7,
+  "failure_pct": 0.974,
+  "p50_ms": 1100.0,
+  "p95_ms": 1600.0,
+  "p99_ms": 1900.0,
+  "avg_ms": 992.2,
+  "max_ms": 2139.651817000072,
+  "requests_per_s": 4.02,
+  "per_replica": {
+    "parser-68fc4b5b57-f2src": 84,
+    "parser-68fc4b5b57-xfdcp": 363,
+    "parser-68fc4b5b57-lxn5z": 268
+  },
+  "per_model_version": {
+    "v1": 715
+  },
+  "per_replica_share_pct": {
+    "parser-68fc4b5b57-f2src": 11.7,
+    "parser-68fc4b5b57-xfdcp": 50.8,
+    "parser-68fc4b5b57-lxn5z": 37.5
+  }
+}
+[21:01:09] Task 4: HPA (min 1, max 2, 70 % CPU) - idle -> 1, load -> 2, idle -> 1
+2026-11-08T21:02:52Z scaled down to 1 replica while idle
+2026-11-08T21:03:00Z load started (4 users)
+2026-11-08T21:03:36Z HPA set replicas=2 under load
+2026-11-08T21:08:01Z load finished
+2026-11-08T21:09:38Z replicas=1 after load

@@ -1,0 +1,34 @@
+[pod/parser-68fc4b5b57-ccjdm/parser] INFO:     Started server process [1]
+[pod/parser-68fc4b5b57-ccjdm/parser] INFO:     Waiting for application startup.
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:20,088 INFO starting: MODEL_URI=s3://models/v1/ MODEL_VERSION=v1 S3_ENDPOINT=http://seaweedfs-s3.data.svc.cluster.local:8333 MAX_NEW_TOKENS=48 FAULT_INJECT=False pod=parser-68fc4b5b57-ccjdm
+[pod/parser-68fc4b5b57-ccjdm/parser] INFO:     Application startup complete.
+[pod/parser-68fc4b5b57-ccjdm/parser] INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:21,931 INFO Found credentials in environment variables.
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:22,051 INFO downloading s3://models/v1/config.json (0.0 MB)
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:22,059 INFO downloading s3://models/v1/generation_config.json (0.0 MB)
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:22,066 INFO downloading s3://models/v1/model.safetensors (281.7 MB)
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:23,291 INFO downloading s3://models/v1/model.sha256 (0.0 MB)
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:23,297 INFO downloading s3://models/v1/special_tokens_map.json (0.0 MB)
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:23,302 INFO downloading s3://models/v1/tokenizer.json (3.6 MB)
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:23,333 INFO downloading s3://models/v1/tokenizer_config.json (0.0 MB)
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:23,339 INFO downloading s3://models/v1/version.json (0.0 MB)
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:23,344 INFO downloaded 8 files (285.3 MB) from s3://models/v1/ in 1.3s
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:23,600 INFO sha256 verified for every file in model.sha256
+[pod/parser-68fc4b5b57-ccjdm/parser] 2026-11-08 20:48:24,173 INFO model v1 loaded from s3://models/v1/ in 2.3s; ready
+[pod/parser-68fc4b5b57-kztcm/parser] INFO:     Started server process [1]
+[pod/parser-68fc4b5b57-kztcm/parser] INFO:     Waiting for application startup.
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:20,093 INFO starting: MODEL_URI=s3://models/v1/ MODEL_VERSION=v1 S3_ENDPOINT=http://seaweedfs-s3.data.svc.cluster.local:8333 MAX_NEW_TOKENS=48 FAULT_INJECT=False pod=parser-68fc4b5b57-kztcm
+[pod/parser-68fc4b5b57-kztcm/parser] INFO:     Application startup complete.
+[pod/parser-68fc4b5b57-kztcm/parser] INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:21,922 INFO Found credentials in environment variables.
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:22,040 INFO downloading s3://models/v1/config.json (0.0 MB)
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:22,049 INFO downloading s3://models/v1/generation_config.json (0.0 MB)
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:22,057 INFO downloading s3://models/v1/model.safetensors (281.7 MB)
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:23,287 INFO downloading s3://models/v1/model.sha256 (0.0 MB)
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:23,294 INFO downloading s3://models/v1/special_tokens_map.json (0.0 MB)
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:23,299 INFO downloading s3://models/v1/tokenizer.json (3.6 MB)
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:23,330 INFO downloading s3://models/v1/tokenizer_config.json (0.0 MB)
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:23,336 INFO downloading s3://models/v1/version.json (0.0 MB)
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:23,341 INFO downloaded 8 files (285.3 MB) from s3://models/v1/ in 1.3s
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:23,596 INFO sha256 verified for every file in model.sha256
+[pod/parser-68fc4b5b57-kztcm/parser] 2026-11-08 20:48:24,172 INFO model v1 loaded from s3://models/v1/ in 2.3s; ready

@@ -1,0 +1,31 @@
+{
+  "requests": 1403,
+  "failures": 12,
+  "failure_pct": 0.855,
+  "p50_ms": 1000.0,
+  "p95_ms": 1600.0,
+  "p99_ms": 1700.0,
+  "avg_ms": 1023.5,
+  "max_ms": 2236.4938240000356,
+  "requests_per_s": 3.903,
+  "per_replica": {
+    "parser-68fc4b5b57-t6w2k": 115,
+    "parser-68fc4b5b57-9r6h8": 101,
+    "parser-7d4885b655-hkrjj": 141,
+    "parser-7d4885b655-rtnbs": 113,
+    "parser-68fc4b5b57-f2src": 462,
+    "parser-68fc4b5b57-xfdcp": 460
+  },
+  "per_model_version": {
+    "v1": 1138,
+    "v2": 254
+  },
+  "per_replica_share_pct": {
+    "parser-68fc4b5b57-t6w2k": 8.3,
+    "parser-68fc4b5b57-9r6h8": 7.3,
+    "parser-7d4885b655-hkrjj": 10.1,
+    "parser-7d4885b655-rtnbs": 8.1,
+    "parser-68fc4b5b57-f2src": 33.2,
+    "parser-68fc4b5b57-xfdcp": 33.0
+  }
+}

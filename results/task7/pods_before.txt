@@ -1,0 +1,3 @@
+NAME                      READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+parser-68fc4b5b57-9r6h8   1/1     Running   0          16s   10.42.0.18   k3d-ccmini-server-0   <none>           <none>
+parser-68fc4b5b57-t6w2k   1/1     Running   0          16s   10.42.0.17   k3d-ccmini-server-0   <none>           <none>

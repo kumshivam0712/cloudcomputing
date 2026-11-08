@@ -1,0 +1,17 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2026-11-08 20:49:20,524 INFO starting: MODEL_URI=s3://models/v1/ MODEL_VERSION=v1 S3_ENDPOINT=http://seaweedfs-s3.data.svc.cluster.local:8333 MAX_NEW_TOKENS=48 FAULT_INJECT=False pod=parser-68fc4b5b57-wcdmn
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-11-08 20:49:22,886 INFO Found credentials in environment variables.
+2026-11-08 20:49:23,104 INFO downloading s3://models/v1/config.json (0.0 MB)
+2026-11-08 20:49:23,122 INFO downloading s3://models/v1/generation_config.json (0.0 MB)
+2026-11-08 20:49:23,213 INFO downloading s3://models/v1/model.safetensors (281.7 MB)
+2026-11-08 20:49:24,011 INFO downloading s3://models/v1/model.sha256 (0.0 MB)
+2026-11-08 20:49:24,017 INFO downloading s3://models/v1/special_tokens_map.json (0.0 MB)
+2026-11-08 20:49:24,023 INFO downloading s3://models/v1/tokenizer.json (3.6 MB)
+2026-11-08 20:49:24,055 INFO downloading s3://models/v1/tokenizer_config.json (0.0 MB)
+2026-11-08 20:49:24,061 INFO downloading s3://models/v1/version.json (0.0 MB)
+2026-11-08 20:49:24,066 INFO downloaded 8 files (285.3 MB) from s3://models/v1/ in 1.0s
+2026-11-08 20:49:24,323 INFO sha256 verified for every file in model.sha256
+2026-11-08 20:49:24,946 INFO model v1 loaded from s3://models/v1/ in 2.2s; ready

@@ -1,0 +1,52 @@
+Name:                   parser
+Namespace:              app
+CreationTimestamp:      Sun, 08 Nov 2026 20:48:18 +0000
+Labels:                 app=parser
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=parser
+Replicas:               2 desired | 2 updated | 2 total | 2 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  0 max unavailable, 1 max surge
+Pod Template:
+  Labels:  app=parser
+  Containers:
+   parser:
+    Image:      ccmini/parser:1.0
+    Port:       8000/TCP (http)
+    Host Port:  0/TCP (http)
+    Limits:
+      cpu:     1
+      memory:  1Gi
+    Requests:
+      cpu:      500m
+      memory:   512Mi
+    Liveness:   http-get http://:http/healthz delay=10s timeout=5s period=10s successThreshold=1 failureThreshold=6
+    Readiness:  http-get http://:http/readyz delay=0s timeout=2s period=2s successThreshold=1 failureThreshold=2
+    Environment Variables from:
+      parser-config   ConfigMap  Optional: false
+      s3-credentials  Secret     Optional: false
+    Environment:
+      MODEL_URI:      s3://models/v1/
+      MODEL_VERSION:  v1
+      POD_NAME:        (v1:metadata.name)
+    Mounts:
+      /models from model-cache (rw)
+  Volumes:
+   model-cache:
+    Type:          EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:        
+    SizeLimit:     1Gi
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   parser-68fc4b5b57 (2/2 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  47s   deployment-controller  Scaled up replica set parser-68fc4b5b57 to 2

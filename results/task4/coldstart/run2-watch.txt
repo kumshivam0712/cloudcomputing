@@ -1,0 +1,40 @@
+== 20:49:18
+parser-68fc4b5b57-2ddnb   Running   true   <none>
+parser-68fc4b5b57-m26s6   Running   true   <none>
+ready endpoints: [] not-ready: []
+== 20:49:20
+parser-68fc4b5b57-2ddnb   Running   true    2026-11-08T20:49:58Z
+parser-68fc4b5b57-5z9b9   Running   false   <none>
+parser-68fc4b5b57-m26s6   Running   true    2026-11-08T20:49:58Z
+parser-68fc4b5b57-wcdmn   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-5z9b9 parser-68fc4b5b57-wcdmn]
+== 20:49:21
+parser-68fc4b5b57-2ddnb   Running   true    2026-11-08T20:49:58Z
+parser-68fc4b5b57-5z9b9   Running   false   <none>
+parser-68fc4b5b57-m26s6   Running   true    2026-11-08T20:49:58Z
+parser-68fc4b5b57-wcdmn   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-5z9b9 parser-68fc4b5b57-wcdmn]
+== 20:49:23
+parser-68fc4b5b57-2ddnb   Running   true    2026-11-08T20:49:58Z
+parser-68fc4b5b57-5z9b9   Running   false   <none>
+parser-68fc4b5b57-m26s6   Running   true    2026-11-08T20:49:58Z
+parser-68fc4b5b57-wcdmn   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-5z9b9 parser-68fc4b5b57-wcdmn]
+== 20:49:24
+parser-68fc4b5b57-2ddnb   Running   true    2026-11-08T20:49:58Z
+parser-68fc4b5b57-5z9b9   Running   false   <none>
+parser-68fc4b5b57-m26s6   Running   true    2026-11-08T20:49:58Z
+parser-68fc4b5b57-wcdmn   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-5z9b9 parser-68fc4b5b57-wcdmn]
+== 20:49:26
+parser-68fc4b5b57-2ddnb   Running   true   2026-11-08T20:49:58Z
+parser-68fc4b5b57-5z9b9   Running   true   <none>
+parser-68fc4b5b57-m26s6   Running   true   2026-11-08T20:49:58Z
+parser-68fc4b5b57-wcdmn   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-5z9b9 parser-68fc4b5b57-wcdmn] not-ready: []
+== 20:49:27
+parser-68fc4b5b57-2ddnb   Running   true   2026-11-08T20:49:58Z
+parser-68fc4b5b57-5z9b9   Running   true   <none>
+parser-68fc4b5b57-m26s6   Running   true   2026-11-08T20:49:58Z
+parser-68fc4b5b57-wcdmn   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-5z9b9 parser-68fc4b5b57-wcdmn] not-ready: []

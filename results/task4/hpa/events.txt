@@ -1,0 +1,131 @@
+LAST SEEN   TYPE      REASON                         OBJECT                           MESSAGE
+10m         Normal    Scheduled                      pod/parser-68fc4b5b57-lxn5z      Successfully assigned app/parser-68fc4b5b57-lxn5z to k3d-ccmini-server-0
+20m         Normal    Scheduled                      pod/parser-68fc4b5b57-m26s6      Successfully assigned app/parser-68fc4b5b57-m26s6 to k3d-ccmini-server-0
+21m         Normal    Scheduled                      pod/parser-68fc4b5b57-ccjdm      Successfully assigned app/parser-68fc4b5b57-ccjdm to k3d-ccmini-server-0
+16m         Normal    Scheduled                      pod/parser-7d4885b655-hkrjj      Successfully assigned app/parser-7d4885b655-hkrjj to k3d-ccmini-server-0
+15m         Normal    Scheduled                      pod/parser-68fc4b5b57-xfdcp      Successfully assigned app/parser-68fc4b5b57-xfdcp to k3d-ccmini-server-0
+20m         Normal    Scheduled                      pod/parser-68fc4b5b57-wcdmn      Successfully assigned app/parser-68fc4b5b57-wcdmn to k3d-ccmini-server-0
+20m         Normal    Scheduled                      pod/parser-68fc4b5b57-t6w2k      Successfully assigned app/parser-68fc4b5b57-t6w2k to k3d-ccmini-server-0
+15m         Normal    Scheduled                      pod/parser-68fc4b5b57-f2src      Successfully assigned app/parser-68fc4b5b57-f2src to k3d-ccmini-server-0
+20m         Normal    Scheduled                      pod/parser-68fc4b5b57-2ddnb      Successfully assigned app/parser-68fc4b5b57-2ddnb to k3d-ccmini-server-0
+16m         Normal    Scheduled                      pod/parser-7d4885b655-rtnbs      Successfully assigned app/parser-7d4885b655-rtnbs to k3d-ccmini-server-0
+6m13s       Normal    Scheduled                      pod/parser-68fc4b5b57-g4dfj      Successfully assigned app/parser-68fc4b5b57-g4dfj to k3d-ccmini-server-0
+21m         Normal    Scheduled                      pod/parser-68fc4b5b57-kztcm      Successfully assigned app/parser-68fc4b5b57-kztcm to k3d-ccmini-server-0
+20m         Normal    Scheduled                      pod/parser-68fc4b5b57-5z9b9      Successfully assigned app/parser-68fc4b5b57-5z9b9 to k3d-ccmini-server-0
+20m         Normal    Scheduled                      pod/parser-68fc4b5b57-9r6h8      Successfully assigned app/parser-68fc4b5b57-9r6h8 to k3d-ccmini-server-0
+21m         Normal    ScalingReplicaSet              deployment/parser                Scaled up replica set parser-68fc4b5b57 to 2
+21m         Normal    SuccessfulCreate               replicaset/parser-68fc4b5b57     Created pod: parser-68fc4b5b57-kztcm
+21m         Normal    SuccessfulCreate               replicaset/parser-68fc4b5b57     Created pod: parser-68fc4b5b57-ccjdm
+21m         Normal    Pulled                         pod/parser-68fc4b5b57-kztcm      Container image "ccmini/parser:1.0" already present on machine
+21m         Normal    Created                        pod/parser-68fc4b5b57-ccjdm      Created container parser
+21m         Normal    Started                        pod/parser-68fc4b5b57-kztcm      Started container parser
+21m         Normal    Created                        pod/parser-68fc4b5b57-kztcm      Created container parser
+21m         Normal    Started                        pod/parser-68fc4b5b57-ccjdm      Started container parser
+21m         Normal    Pulled                         pod/parser-68fc4b5b57-ccjdm      Container image "ccmini/parser:1.0" already present on machine
+21m         Warning   Unhealthy                      pod/parser-68fc4b5b57-kztcm      Readiness probe failed: HTTP probe failed with statuscode: 503
+21m         Warning   Unhealthy                      pod/parser-68fc4b5b57-ccjdm      Readiness probe failed: HTTP probe failed with statuscode: 503
+20m         Normal    Killing                        pod/parser-68fc4b5b57-kztcm      Stopping container parser
+20m         Normal    Created                        pod/parser-68fc4b5b57-m26s6      Created container parser
+20m         Normal    Killing                        pod/parser-68fc4b5b57-ccjdm      Stopping container parser
+20m         Normal    Pulled                         pod/parser-68fc4b5b57-m26s6      Container image "ccmini/parser:1.0" already present on machine
+20m         Normal    Started                        pod/parser-68fc4b5b57-m26s6      Started container parser
+20m         Normal    SuccessfulCreate               replicaset/parser-68fc4b5b57     Created pod: parser-68fc4b5b57-2ddnb
+20m         Normal    SuccessfulCreate               replicaset/parser-68fc4b5b57     Created pod: parser-68fc4b5b57-m26s6
+20m         Normal    Pulled                         pod/parser-68fc4b5b57-2ddnb      Container image "ccmini/parser:1.0" already present on machine
+20m         Normal    Started                        pod/parser-68fc4b5b57-2ddnb      Started container parser
+20m         Normal    Created                        pod/parser-68fc4b5b57-2ddnb      Created container parser
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-m26s6      Readiness probe failed: Get "http://10.42.0.13:8000/readyz": dial tcp 10.42.0.13:8000: connect: connection refused
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-2ddnb      Readiness probe failed: Get "http://10.42.0.14:8000/readyz": dial tcp 10.42.0.14:8000: connect: connection refused
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-m26s6      Readiness probe failed: HTTP probe failed with statuscode: 503
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-2ddnb      Readiness probe failed: HTTP probe failed with statuscode: 503
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-ccjdm      Readiness probe failed: Get "http://10.42.0.11:8000/readyz": dial tcp 10.42.0.11:8000: connect: connection refused
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-kztcm      Readiness probe failed: Get "http://10.42.0.12:8000/readyz": dial tcp 10.42.0.12:8000: connect: connection refused
+20m         Normal    Killing                        pod/parser-68fc4b5b57-2ddnb      Stopping container parser
+20m         Normal    Killing                        pod/parser-68fc4b5b57-m26s6      Stopping container parser
+20m         Normal    SuccessfulCreate               replicaset/parser-68fc4b5b57     Created pod: parser-68fc4b5b57-5z9b9
+20m         Normal    SuccessfulCreate               replicaset/parser-68fc4b5b57     Created pod: parser-68fc4b5b57-wcdmn
+20m         Normal    Created                        pod/parser-68fc4b5b57-wcdmn      Created container parser
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-5z9b9      Readiness probe failed: Get "http://10.42.0.15:8000/readyz": dial tcp 10.42.0.15:8000: connect: connection refused
+20m         Normal    Pulled                         pod/parser-68fc4b5b57-wcdmn      Container image "ccmini/parser:1.0" already present on machine
+20m         Normal    Created                        pod/parser-68fc4b5b57-5z9b9      Created container parser
+20m         Normal    Started                        pod/parser-68fc4b5b57-5z9b9      Started container parser
+20m         Normal    Started                        pod/parser-68fc4b5b57-wcdmn      Started container parser
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-wcdmn      Readiness probe failed: Get "http://10.42.0.16:8000/readyz": dial tcp 10.42.0.16:8000: connect: connection refused
+20m         Normal    Pulled                         pod/parser-68fc4b5b57-5z9b9      Container image "ccmini/parser:1.0" already present on machine
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-wcdmn      Readiness probe failed: HTTP probe failed with statuscode: 503
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-5z9b9      Readiness probe failed: HTTP probe failed with statuscode: 503
+20m         Normal    Killing                        pod/parser-68fc4b5b57-wcdmn      Stopping container parser
+20m         Normal    SuccessfulCreate               replicaset/parser-68fc4b5b57     Created pod: parser-68fc4b5b57-t6w2k
+20m         Normal    SuccessfulCreate               replicaset/parser-68fc4b5b57     Created pod: parser-68fc4b5b57-9r6h8
+20m         Normal    Started                        pod/parser-68fc4b5b57-t6w2k      Started container parser
+20m         Normal    Created                        pod/parser-68fc4b5b57-t6w2k      Created container parser
+20m         Normal    Pulled                         pod/parser-68fc4b5b57-t6w2k      Container image "ccmini/parser:1.0" already present on machine
+20m         Normal    Killing                        pod/parser-68fc4b5b57-5z9b9      Stopping container parser
+20m         Normal    Pulled                         pod/parser-68fc4b5b57-9r6h8      Container image "ccmini/parser:1.0" already present on machine
+20m         Normal    Started                        pod/parser-68fc4b5b57-9r6h8      Started container parser
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-t6w2k      Readiness probe failed: Get "http://10.42.0.17:8000/readyz": dial tcp 10.42.0.17:8000: connect: connection refused
+20m         Normal    Created                        pod/parser-68fc4b5b57-9r6h8      Created container parser
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-9r6h8      Readiness probe failed: HTTP probe failed with statuscode: 503
+20m         Warning   Unhealthy                      pod/parser-68fc4b5b57-t6w2k      Readiness probe failed: HTTP probe failed with statuscode: 503
+20m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/parser   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+20m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/parser   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+17m         Normal    SuccessfulCreate               replicaset/parser-7d4885b655     Created pod: parser-7d4885b655-hkrjj
+17m         Normal    ScalingReplicaSet              deployment/parser                Scaled up replica set parser-7d4885b655 to 1
+16m         Normal    Pulled                         pod/parser-7d4885b655-hkrjj      Container image "ccmini/parser:1.0" already present on machine
+16m         Normal    Started                        pod/parser-7d4885b655-hkrjj      Started container parser
+16m         Normal    Created                        pod/parser-7d4885b655-hkrjj      Created container parser
+16m         Warning   Unhealthy                      pod/parser-7d4885b655-hkrjj      Readiness probe failed: HTTP probe failed with statuscode: 503
+16m         Normal    ScalingReplicaSet              deployment/parser                Scaled up replica set parser-7d4885b655 to 2 from 1
+16m         Normal    Killing                        pod/parser-68fc4b5b57-9r6h8      Stopping container parser
+16m         Normal    SuccessfulCreate               replicaset/parser-7d4885b655     Created pod: parser-7d4885b655-rtnbs
+16m         Normal    SuccessfulDelete               replicaset/parser-68fc4b5b57     Deleted pod: parser-68fc4b5b57-9r6h8
+16m         Normal    Started                        pod/parser-7d4885b655-rtnbs      Started container parser
+16m         Normal    Pulled                         pod/parser-7d4885b655-rtnbs      Container image "ccmini/parser:1.0" already present on machine
+16m         Normal    Created                        pod/parser-7d4885b655-rtnbs      Created container parser
+16m         Warning   Unhealthy                      pod/parser-7d4885b655-rtnbs      Readiness probe failed: HTTP probe failed with statuscode: 503
+16m         Normal    Killing                        pod/parser-68fc4b5b57-t6w2k      Stopping container parser
+16m         Warning   Unhealthy                      pod/parser-68fc4b5b57-9r6h8      Readiness probe failed: Get "http://10.42.0.18:8000/readyz": dial tcp 10.42.0.18:8000: connect: connection refused
+16m         Normal    ScalingReplicaSet              deployment/parser                Scaled down replica set parser-68fc4b5b57 to 0 from 1
+16m         Normal    SuccessfulDelete               replicaset/parser-68fc4b5b57     Deleted pod: parser-68fc4b5b57-t6w2k
+15m         Normal    ScalingReplicaSet              deployment/parser                Scaled up replica set parser-68fc4b5b57 to 1 from 0
+15m         Normal    SuccessfulCreate               replicaset/parser-68fc4b5b57     Created pod: parser-68fc4b5b57-f2src
+15m         Normal    Started                        pod/parser-68fc4b5b57-f2src      Started container parser
+15m         Normal    Created                        pod/parser-68fc4b5b57-f2src      Created container parser
+15m         Normal    Pulled                         pod/parser-68fc4b5b57-f2src      Container image "ccmini/parser:1.0" already present on machine
+15m         Warning   Unhealthy                      pod/parser-68fc4b5b57-f2src      Readiness probe failed: HTTP probe failed with statuscode: 503
+15m         Normal    Killing                        pod/parser-7d4885b655-rtnbs      Stopping container parser
+15m         Normal    Pulled                         pod/parser-68fc4b5b57-xfdcp      Container image "ccmini/parser:1.0" already present on machine
+15m         Normal    ScalingReplicaSet              deployment/parser                Scaled down replica set parser-7d4885b655 to 1 from 2
+15m         Normal    SuccessfulDelete               replicaset/parser-7d4885b655     Deleted pod: parser-7d4885b655-rtnbs
+15m         Normal    Created                        pod/parser-68fc4b5b57-xfdcp      Created container parser
+15m         Normal    Started                        pod/parser-68fc4b5b57-xfdcp      Started container parser
+15m         Warning   Unhealthy                      pod/parser-68fc4b5b57-xfdcp      Readiness probe failed: Get "http://10.42.0.22:8000/readyz": dial tcp 10.42.0.22:8000: connect: connection refused
+15m         Warning   Unhealthy                      pod/parser-68fc4b5b57-xfdcp      Readiness probe failed: HTTP probe failed with statuscode: 503
+15m         Normal    ScalingReplicaSet              deployment/parser                Scaled down replica set parser-7d4885b655 to 0 from 1
+15m         Normal    Killing                        pod/parser-7d4885b655-hkrjj      Stopping container parser
+15m         Normal    SuccessfulDelete               replicaset/parser-7d4885b655     Deleted pod: parser-7d4885b655-hkrjj
+15m         Warning   Unhealthy                      pod/parser-7d4885b655-rtnbs      Readiness probe failed: Get "http://10.42.0.20:8000/readyz": dial tcp 10.42.0.20:8000: connect: connection refused
+15m         Warning   Unhealthy                      pod/parser-7d4885b655-hkrjj      Readiness probe failed: Get "http://10.42.0.19:8000/readyz": dial tcp 10.42.0.19:8000: connect: connection refused
+15m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/parser   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+15m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/parser   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+10m         Normal    Killing                        pod/parser-68fc4b5b57-f2src      Stopping container parser
+10m         Normal    Started                        pod/parser-68fc4b5b57-lxn5z      Started container parser
+10m         Normal    Pulled                         pod/parser-68fc4b5b57-lxn5z      Container image "ccmini/parser:1.0" already present on machine
+10m         Normal    Created                        pod/parser-68fc4b5b57-lxn5z      Created container parser
+10m         Warning   Unhealthy                      pod/parser-68fc4b5b57-lxn5z      Readiness probe failed: HTTP probe failed with statuscode: 503
+10m         Warning   Unhealthy                      pod/parser-68fc4b5b57-f2src      Readiness probe failed: Get "http://10.42.0.21:8000/readyz": dial tcp 10.42.0.21:8000: connect: connection refused
+6m59s       Normal    Killing                        pod/parser-68fc4b5b57-lxn5z      Stopping container parser
+6m59s       Normal    SuccessfulDelete               replicaset/parser-68fc4b5b57     Deleted pod: parser-68fc4b5b57-lxn5z
+6m50s       Warning   Unhealthy                      pod/parser-68fc4b5b57-lxn5z      Readiness probe failed: Get "http://10.42.0.23:8000/readyz": dial tcp 10.42.0.23:8000: connect: connection refused
+6m14s       Normal    ScalingReplicaSet              deployment/parser                Scaled up replica set parser-68fc4b5b57 to 2 from 1
+6m14s       Normal    SuccessfulCreate               replicaset/parser-68fc4b5b57     (combined from similar events): Created pod: parser-68fc4b5b57-g4dfj
+6m14s       Normal    SuccessfulRescale              horizontalpodautoscaler/parser   New size: 2; reason: cpu resource utilization (percentage of request) above target
+6m13s       Normal    Started                        pod/parser-68fc4b5b57-g4dfj      Started container parser
+6m13s       Normal    Created                        pod/parser-68fc4b5b57-g4dfj      Created container parser
+6m13s       Warning   Unhealthy                      pod/parser-68fc4b5b57-g4dfj      Readiness probe failed: Get "http://10.42.0.24:8000/readyz": dial tcp 10.42.0.24:8000: connect: connection refused
+6m13s       Normal    Pulled                         pod/parser-68fc4b5b57-g4dfj      Container image "ccmini/parser:1.0" already present on machine
+6m9s        Warning   Unhealthy                      pod/parser-68fc4b5b57-g4dfj      Readiness probe failed: HTTP probe failed with statuscode: 503
+13s         Normal    Killing                        pod/parser-68fc4b5b57-g4dfj      Stopping container parser
+13s         Normal    ScalingReplicaSet              deployment/parser                Scaled down replica set parser-68fc4b5b57 to 1 from 2
+13s         Normal    SuccessfulRescale              horizontalpodautoscaler/parser   New size: 1; reason: All metrics below target
+13s         Normal    SuccessfulDelete               replicaset/parser-68fc4b5b57     Deleted pod: parser-68fc4b5b57-g4dfj

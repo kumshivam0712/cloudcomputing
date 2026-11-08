@@ -1,0 +1,10 @@
+2026-11-08T20:58:49Z deleting pod parser-68fc4b5b57-f2src
+pod "parser-68fc4b5b57-f2src" deleted from app namespace
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+parser   1/2     2            1           10m
+2026-11-08T20:59:00Z replica count restored
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+parser   2/2     2            2           10m
+NAME                      READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+parser-68fc4b5b57-lxn5z   1/1     Running   0          11s     10.42.0.23   k3d-ccmini-server-0   <none>           <none>
+parser-68fc4b5b57-xfdcp   1/1     Running   0          4m50s   10.42.0.22   k3d-ccmini-server-0   <none>           <none>

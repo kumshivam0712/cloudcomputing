@@ -1,0 +1,18 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2026-11-08 20:49:00,082 INFO starting: MODEL_URI=s3://models/v1/ MODEL_VERSION=v1 S3_ENDPOINT=http://host.docker.internal:8333 MAX_NEW_TOKENS=48 FAULT_INJECT=True pod=parser-fault
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-11-08 20:49:01,829 INFO Found credentials in environment variables.
+2026-11-08 20:49:01,944 INFO downloading s3://models/v1/config.json (0.0 MB)
+2026-11-08 20:49:01,953 INFO downloading s3://models/v1/generation_config.json (0.0 MB)
+2026-11-08 20:49:01,958 INFO downloading s3://models/v1/model.safetensors (281.7 MB)
+2026-11-08 20:49:02,491 INFO downloading s3://models/v1/model.sha256 (0.0 MB)
+2026-11-08 20:49:02,497 INFO downloading s3://models/v1/special_tokens_map.json (0.0 MB)
+2026-11-08 20:49:02,501 INFO downloading s3://models/v1/tokenizer.json (3.6 MB)
+2026-11-08 20:49:02,524 INFO downloading s3://models/v1/tokenizer_config.json (0.0 MB)
+2026-11-08 20:49:02,530 INFO downloading s3://models/v1/version.json (0.0 MB)
+2026-11-08 20:49:02,535 INFO downloaded 8 files (285.3 MB) from s3://models/v1/ in 0.6s
+2026-11-08 20:49:02,790 INFO sha256 verified for every file in model.sha256
+2026-11-08 20:49:03,355 INFO model v1 loaded from s3://models/v1/ in 1.6s; ready
+2026-11-08 20:49:04,392 WARNING invalid model output for 'set an alarm for seven thirty am tomorrow': 'not json'

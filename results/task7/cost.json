@@ -1,0 +1,18 @@
+{
+  "currency": "INR",
+  "replicas": 2,
+  "cpu_limit_vcpu": 1.0,
+  "memory_limit_gib": 1.0,
+  "requests_per_s": 4.253661441168077,
+  "successful_requests_per_s": 4.212,
+  "hourly_cost_per_replica": 3.95,
+  "hourly_cost_all_replicas": 7.9,
+  "requests_per_hour": 15313.2,
+  "cost_per_1000_requests": 0.5159,
+  "steps": [
+    "per replica per hour = 1 vCPU x 3.50 + 1 GiB x 0.45 = 3.9500 INR/h",
+    "all replicas per hour = 2 x 3.9500 = 7.9000 INR/h",
+    "requests per hour = 4.254 req/s x 3600 = 15313.2",
+    "cost per 1,000 requests = 7.9000 / 15313.2 x 1000 = 0.5159 INR"
+  ]
+}

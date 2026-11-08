@@ -1,0 +1,9 @@
+20:48:30 GET /readyz -> 000
+20:48:31 GET /readyz -> 000
+20:48:32 GET /readyz -> 503
+20:48:32 GET /readyz -> 503
+20:48:33 GET /readyz -> 503
+20:48:33 GET /readyz -> 503
+20:48:34 GET /readyz -> 503
+20:48:34 GET /readyz -> 503
+20:48:35 GET /readyz -> 200

@@ -1,0 +1,22 @@
+{
+  "requests": 1167,
+  "failures": 12,
+  "failure_pct": 1.028,
+  "p50_ms": 1300.0,
+  "p95_ms": 1800.0,
+  "p99_ms": 2000.0,
+  "avg_ms": 1024.6,
+  "max_ms": 2230.9084630001053,
+  "requests_per_s": 3.898,
+  "per_replica": {
+    "parser-68fc4b5b57-xfdcp": 616,
+    "parser-68fc4b5b57-g4dfj": 541
+  },
+  "per_model_version": {
+    "v1": 1157
+  },
+  "per_replica_share_pct": {
+    "parser-68fc4b5b57-xfdcp": 53.2,
+    "parser-68fc4b5b57-g4dfj": 46.8
+  }
+}

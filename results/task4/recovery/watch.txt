@@ -1,0 +1,478 @@
+== 20:58:09
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:11
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:12
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:14
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:15
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:17
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:18
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:20
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:22
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:23
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:24
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:26
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:27
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:29
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:31
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:32
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:34
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:35
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:37
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:38
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:40
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:41
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:42
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:44
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:46
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:47
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:49
+parser-68fc4b5b57-f2src   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-f2src parser-68fc4b5b57-xfdcp] not-ready: []
+== 20:58:50
+parser-68fc4b5b57-f2src   Running   true    2026-11-08T20:59:29Z
+parser-68fc4b5b57-lxn5z   Pending   false   <none>
+parser-68fc4b5b57-xfdcp   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp] not-ready: [parser-68fc4b5b57-lxn5z]
+== 20:58:52
+parser-68fc4b5b57-f2src   Running   true    2026-11-08T20:59:29Z
+parser-68fc4b5b57-lxn5z   Running   false   <none>
+parser-68fc4b5b57-xfdcp   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp] not-ready: [parser-68fc4b5b57-lxn5z]
+== 20:58:53
+parser-68fc4b5b57-f2src   Running   true    2026-11-08T20:59:29Z
+parser-68fc4b5b57-lxn5z   Running   false   <none>
+parser-68fc4b5b57-xfdcp   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp] not-ready: [parser-68fc4b5b57-lxn5z]
+== 20:58:55
+parser-68fc4b5b57-f2src   Running   true    2026-11-08T20:59:29Z
+parser-68fc4b5b57-lxn5z   Running   false   <none>
+parser-68fc4b5b57-xfdcp   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp] not-ready: [parser-68fc4b5b57-lxn5z]
+== 20:58:56
+parser-68fc4b5b57-f2src   Running   true    2026-11-08T20:59:29Z
+parser-68fc4b5b57-lxn5z   Running   false   <none>
+parser-68fc4b5b57-xfdcp   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp] not-ready: [parser-68fc4b5b57-lxn5z]
+== 20:58:57
+parser-68fc4b5b57-f2src   Running   true    2026-11-08T20:59:29Z
+parser-68fc4b5b57-lxn5z   Running   false   <none>
+parser-68fc4b5b57-xfdcp   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp] not-ready: [parser-68fc4b5b57-lxn5z]
+== 20:58:59
+parser-68fc4b5b57-f2src   Succeeded   false   2026-11-08T20:59:29Z
+parser-68fc4b5b57-lxn5z   Running     true    <none>
+parser-68fc4b5b57-xfdcp   Running     true    <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:00
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:02
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:03
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:05
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:07
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:08
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:10
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:11
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:13
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:14
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:16
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:18
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:19
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:21
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:22
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:24
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:26
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:27
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:29
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:30
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:32
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:33
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:35
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:36
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:38
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:40
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:41
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:43
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:44
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:46
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:47
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:49
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:50
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:52
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:53
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:55
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:57
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 20:59:58
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:00
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:01
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:03
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:04
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:06
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:07
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:09
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:10
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:12
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:14
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:15
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:17
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:18
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:20
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:21
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:23
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:24
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:26
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:27
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:29
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:30
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:32
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:33
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:35
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:37
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:38
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:40
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:41
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:43
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:44
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:46
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:48
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:49
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:51
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:52
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:54
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:55
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:57
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:00:59
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:01:00
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:01:02
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:01:03
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:01:05
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:01:06
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:01:08
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xfdcp parser-68fc4b5b57-lxn5z] not-ready: []
+== 21:01:09
+parser-68fc4b5b57-lxn5z   Running   true   <none>
+parser-68fc4b5b57-xfdcp   Running   true   <none>

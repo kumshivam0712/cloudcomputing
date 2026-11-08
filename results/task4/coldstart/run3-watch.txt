@@ -1,0 +1,44 @@
+== 20:49:29
+parser-68fc4b5b57-5z9b9   Running   true   2026-11-08T20:50:09Z
+parser-68fc4b5b57-wcdmn   Running   true   <none>
+ready endpoints: [] not-ready: []
+== 20:49:30
+parser-68fc4b5b57-5z9b9   Running   true    2026-11-08T20:50:09Z
+parser-68fc4b5b57-9r6h8   Pending   false   <none>
+parser-68fc4b5b57-t6w2k   Pending   false   <none>
+parser-68fc4b5b57-wcdmn   Running   true    2026-11-08T20:50:09Z
+ready endpoints: [] not-ready: [parser-68fc4b5b57-t6w2k parser-68fc4b5b57-9r6h8]
+== 20:49:32
+parser-68fc4b5b57-5z9b9   Running   true    2026-11-08T20:50:09Z
+parser-68fc4b5b57-9r6h8   Running   false   <none>
+parser-68fc4b5b57-t6w2k   Running   false   <none>
+parser-68fc4b5b57-wcdmn   Running   true    2026-11-08T20:50:09Z
+ready endpoints: [] not-ready: [parser-68fc4b5b57-t6w2k parser-68fc4b5b57-9r6h8]
+== 20:49:33
+parser-68fc4b5b57-5z9b9   Running   true    2026-11-08T20:50:09Z
+parser-68fc4b5b57-9r6h8   Running   false   <none>
+parser-68fc4b5b57-t6w2k   Running   false   <none>
+parser-68fc4b5b57-wcdmn   Running   true    2026-11-08T20:50:09Z
+ready endpoints: [] not-ready: [parser-68fc4b5b57-t6w2k parser-68fc4b5b57-9r6h8]
+== 20:49:35
+parser-68fc4b5b57-5z9b9   Running   true    2026-11-08T20:50:09Z
+parser-68fc4b5b57-9r6h8   Running   false   <none>
+parser-68fc4b5b57-t6w2k   Running   false   <none>
+parser-68fc4b5b57-wcdmn   Running   true    2026-11-08T20:50:09Z
+ready endpoints: [] not-ready: [parser-68fc4b5b57-t6w2k parser-68fc4b5b57-9r6h8]
+== 20:49:36
+parser-68fc4b5b57-5z9b9   Running   true    2026-11-08T20:50:09Z
+parser-68fc4b5b57-9r6h8   Running   true    <none>
+parser-68fc4b5b57-t6w2k   Running   false   <none>
+parser-68fc4b5b57-wcdmn   Running   true    2026-11-08T20:50:09Z
+ready endpoints: [parser-68fc4b5b57-9r6h8] not-ready: [parser-68fc4b5b57-t6w2k]
+== 20:49:37
+parser-68fc4b5b57-5z9b9   Running   true   2026-11-08T20:50:09Z
+parser-68fc4b5b57-9r6h8   Running   true   <none>
+parser-68fc4b5b57-t6w2k   Running   true   <none>
+parser-68fc4b5b57-wcdmn   Running   true   2026-11-08T20:50:09Z
+ready endpoints: [parser-68fc4b5b57-t6w2k parser-68fc4b5b57-9r6h8] not-ready: []
+== 20:49:39
+parser-68fc4b5b57-9r6h8   Running   true   <none>
+parser-68fc4b5b57-t6w2k   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-t6w2k parser-68fc4b5b57-9r6h8] not-ready: []

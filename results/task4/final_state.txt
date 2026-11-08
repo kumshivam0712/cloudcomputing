@@ -1,0 +1,35 @@
+NAME                  STATUS   ROLES                  AGE   VERSION        INTERNAL-IP   EXTERNAL-IP   OS-IMAGE           KERNEL-VERSION     CONTAINER-RUNTIME
+k3d-ccmini-server-0   Ready    control-plane,master   24m   v1.30.6+k3s1   172.18.0.2    <none>        K3s v1.30.6+k3s1   7.0.0-1017-azure   containerd://1.7.22-k3s1
+NAME                          READY   STATUS    RESTARTS   AGE
+pod/parser-68fc4b5b57-xfdcp   1/1     Running   0          15m
+
+NAME             TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+service/parser   ClusterIP   10.43.27.148   <none>        80/TCP    21m
+
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/parser   1/1     1            1           21m
+
+NAME                                DESIRED   CURRENT   READY   AGE
+replicaset.apps/parser-68fc4b5b57   1         1         1       21m
+replicaset.apps/parser-7d4885b655   0         0         0       17m
+
+NAME                                         REFERENCE           TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/parser   Deployment/parser   cpu: 0%/70%   1         2         2          21m
+
+NAME                               CLASS     HOSTS   ADDRESS      PORTS   AGE
+ingress.networking.k8s.io/parser   traefik   *       172.18.0.2   80      21m
+NAME                             READY   STATUS    RESTARTS   AGE
+pod/seaweedfs-7457b79669-5c8r7   1/1     Running   0          23m
+
+NAME                   TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+service/seaweedfs-s3   NodePort   10.43.181.10   <none>        8333:30333/TCP   23m
+
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/seaweedfs   1/1     1            1           23m
+
+NAME                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/seaweedfs-7457b79669   1         1         1       23m
+
+NAME                                   STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/seaweedfs-data   Bound    pvc-dae6ae52-90e2-43e1-84a2-ebebf0b84059   5Gi        RWO            local-path     <unset>                 23m
+{"behavior":{"scaleDown":{"policies":[{"periodSeconds":15,"type":"Percent","value":100}],"selectPolicy":"Max","stabilizationWindowSeconds":60},"scaleUp":{"policies":[{"periodSeconds":15,"type":"Pods","value":4},{"periodSeconds":15,"type":"Percent","value":100}],"selectPolicy":"Max","stabilizationWindowSeconds":0}},"maxReplicas":2,"metrics":[{"resource":{"name":"cpu","target":{"averageUtilization":70,"type":"Utilization"}},"type":"Resource"}],"minReplicas":1,"scaleTargetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"parser"}}
