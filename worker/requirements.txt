@@ -1,0 +1,8 @@
+# Teacher-labelling worker image. Fully pinned (uv pip compile, Python 3.12, linux x86_64).
+boto3==1.35.81
+botocore==1.35.86
+jmespath==1.0.1
+python-dateutil==2.9.0.post0
+s3transfer==0.10.4
+six==1.17.0
+urllib3==2.2.3

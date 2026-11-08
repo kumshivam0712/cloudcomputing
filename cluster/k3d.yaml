@@ -1,0 +1,26 @@
+# Local Kubernetes cluster (k3s in Docker) used by every task.
+#   create:  k3d cluster create --config cluster/k3d.yaml   (make cluster / make up)
+#   delete:  k3d cluster delete --config cluster/k3d.yaml   (make down)
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: ccmini
+servers: 1          # single node: one laptop / one CI runner (no multi-machine fault tolerance)
+agents: 0
+image: rancher/k3s:v1.30.6-k3s1
+ports:
+  # Traefik ingress (bundled with k3s) -> http://localhost:8080  (Locust --host)
+  - port: 8080:80
+    nodeFilters:
+      - loadbalancer
+  # SeaweedFS S3 API (NodePort 30333) -> http://localhost:8333   (uploads from the host)
+  - port: 8333:30333
+    nodeFilters:
+      - loadbalancer
+options:
+  k3d:
+    wait: true
+    timeout: "180s"
+  kubeconfig:
+    updateDefaultKubeconfig: true
+    switchCurrentContext: true

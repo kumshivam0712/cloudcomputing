@@ -1,0 +1,92 @@
+# Task 1: k3d cluster + SeaweedFS + in-cluster Ollama teacher + parallel labelling workers + clean.py.
+# Also runs the teacher on validation.jsonl (Task 2, step 6). Results are committed back to the branch.
+name: task1-teacher-labelling
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Label only the first N pool lines (0 = all 3,000)"
+        default: "0"
+      shard_count:
+        description: "Number of parallel worker Pods (SHARD_COUNT)"
+        default: "4"
+      teacher_eval:
+        description: "Also run the teacher on validation.jsonl"
+        type: boolean
+        default: true
+      commit:
+        description: "Commit datasets/ and results/ back to the branch"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: task1-labelling
+  cancel-in-progress: false
+
+env:
+  K3D_VERSION: v5.7.4
+  COMMIT_NAME: Shivam Kumar
+  COMMIT_EMAIL: 227203916+kumshivam0712@users.noreply.github.com
+
+jobs:
+  label:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install k3d
+        run: |
+          sudo curl -fsSL -o /usr/local/bin/k3d \
+            "https://github.com/k3d-io/k3d/releases/download/${K3D_VERSION}/k3d-linux-amd64"
+          sudo chmod +x /usr/local/bin/k3d
+          k3d version && kubectl version --client && nproc && free -g
+
+      - name: Cluster from cluster/k3d.yaml, SeaweedFS, buckets, upload commands_pool.jsonl
+        run: make storage
+
+      - name: Teacher (Ollama phi3.5) in namespace pipeline
+        run: make teacher-up SHARD_COUNT=${{ inputs.shard_count }}
+
+      - name: Teacher on validation.jsonl
+        if: ${{ inputs.teacher_eval }}
+        run: |
+          mkdir -p results/task1
+          make teacher-eval 2>&1 | tee results/task1/teacher_eval.log
+
+      - name: Parallel labelling (Indexed Job, SHARD_COUNT workers)
+        run: make label SHARD_COUNT=${{ inputs.shard_count }} LIMIT=${{ inputs.limit }} LABEL_TIMEOUT=19000
+
+      - name: Clean (worker/clean.py in the cluster)
+        run: make clean-data SHARD_COUNT=${{ inputs.shard_count }} LIMIT=${{ inputs.limit }}
+
+      - name: Re-run clean.py on the downloaded shards and compare the checksum
+        run: make verify-data LIMIT=${{ inputs.limit }} | tee results/task1/verify_checksum.txt
+
+      - name: Collect evidence
+        if: always()
+        run: scripts/collect_task1.sh
+
+      - name: Upload evidence artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: task1-${{ github.run_id }}
+          path: |
+            results/
+            datasets/
+          if-no-files-found: warn
+
+      - name: Commit results
+        if: ${{ success() && inputs.commit }}
+        run: scripts/ci_commit.sh "Task 1: teacher labelling and cleaned dataset (workflow run ${{ github.run_id }}, limit ${{ inputs.limit }})" datasets results

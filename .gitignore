@@ -1,0 +1,25 @@
+# credentials generated at deploy time (never committed)
+.secrets/
+*.env
+
+# python
+.venv/
+.venv-train/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# build outputs and model weights (weights live in object storage + GitHub Releases)
+build/
+dist/
+models/**
+!models/
+!models/*/
+!models/*/model.sha256
+!models/*/version.json
+*.safetensors
+*.bin
+*.pt
+*.tar.gz
+build-port-forward.log

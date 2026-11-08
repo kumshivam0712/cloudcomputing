@@ -1,0 +1,42 @@
+# Runs worker/clean.py inside the cluster: shard outputs -> s3://datasets/v1/train.jsonl + train.sha256
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: clean-dataset
+  namespace: pipeline
+  labels:
+    app: clean-dataset
+spec:
+  backoffLimit: 2
+  template:
+    metadata:
+      labels:
+        app: clean-dataset
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: clean
+          image: ccmini/worker:1.0
+          imagePullPolicy: Never
+          command: ["python", "/app/worker/clean.py"]
+          args:
+            - --shards=s3://datasets/teacher/
+            - --out=s3://datasets/v1/
+            - --schema=/app/data/schema.json
+            - --pool=s3://datasets/commands_pool.jsonl
+            - --pool-limit=__LIMIT__
+            - --report=s3://datasets/v1/clean_report.json
+            - --rejected=s3://datasets/v1/rejected.jsonl
+          env:
+            - name: S3_ENDPOINT
+              value: http://seaweedfs-s3.data.svc.cluster.local:8333
+          envFrom:
+            - secretRef:
+                name: s3-credentials
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
