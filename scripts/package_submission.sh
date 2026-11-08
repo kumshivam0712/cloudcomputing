@@ -16,6 +16,8 @@ git rev-parse --verify -q "$ref^{commit}" >/dev/null || { echo "git ref $ref not
 stage=$(mktemp -d)
 trap 'rm -rf "$stage"' EXIT
 git archive --format=tar "$ref" | tar -x -C "$stage"
+rm -f "$stage/${scan#./}"                     # the scan goes in once, as <roll>.pdf at the root
+rmdir "$stage/$(dirname "${scan#./}")" 2>/dev/null || true
 cp "$scan" "$stage/$roll.pdf"
 for f in README.md report/report.pdf "$roll.pdf"; do
   [[ -f "$stage/$f" ]] || { echo "missing $f in the package" >&2; exit 1; }

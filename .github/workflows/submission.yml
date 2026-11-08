@@ -1,0 +1,88 @@
+# Final submission: fill in name + roll number, rebuild report/report.pdf, commit, tag "final",
+# and package <roll_number>.zip (source tree of the "final" tag + the scanned handwritten
+# reflection, renamed <roll_number>.pdf). Run it from the Actions tab (Run workflow).
+# Upload the scan to the repository first (default path: reflection/scan.pdf).
+name: submission
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Your full name (as on the report)"
+        required: true
+      roll_number:
+        description: "Your roll number (used for <roll_number>.zip and <roll_number>.pdf)"
+        required: true
+      reflection_scan:
+        description: "Path of the scanned handwritten reflection PDF in the repository"
+        default: "reflection/scan.pdf"
+
+permissions:
+  contents: write
+
+env:
+  COMMIT_NAME: Shivam Kumar
+  COMMIT_EMAIL: 227203916+kumshivam0712@users.noreply.github.com
+  NAME: ${{ inputs.name }}
+  ROLL: ${{ inputs.roll_number }}
+  SCAN: ${{ inputs.reflection_scan }}
+
+jobs:
+  submit:
+    runs-on: ubuntu-24.04
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check the inputs
+        run: |
+          [[ "$ROLL" =~ ^[A-Za-z0-9._-]+$ ]] || { echo "roll number must not contain spaces or special characters"; exit 1; }
+          [[ -n "$NAME" ]] || { echo "name is empty"; exit 1; }
+      - name: Fill in name and roll number
+        run: |
+          python3 - <<'PY'
+          import html, os
+          name, roll = html.escape(os.environ["NAME"].strip()), html.escape(os.environ["ROLL"].strip())
+          for path in ("report/report.md", "README.md"):
+              s = open(path, encoding="utf-8").read()
+              s = s.replace("⟨NAME⟩", name).replace("⟨ROLL⟩", roll)
+              open(path, "w", encoding="utf-8").write(s)
+          PY
+          grep -n "Roll number" report/report.md README.md || true
+      - name: Install pandoc and headless Chromium
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q pandoc
+          cd report && npm init -y >/dev/null && npm install --no-save playwright@1.49.1 >/dev/null
+          npx playwright install --with-deps chromium >/dev/null
+      - name: Build report/report.pdf
+        run: report/build_pdf.sh report.md report.pdf && pdfinfo report/report.pdf 2>/dev/null | grep Pages || true
+      - name: Commit and tag "final"
+        run: |
+          git config user.name "$COMMIT_NAME"
+          git config user.email "$COMMIT_EMAIL"
+          git add report/report.md report/report.pdf README.md
+          git diff --cached --quiet || git commit -q -m "Final submission: report with name and roll number"
+          git push -q origin "HEAD:${GITHUB_REF_NAME}"
+          git tag -f -a final -m "Final submission (${ROLL})"
+          git push -f -q origin final
+          echo "final -> $(git rev-parse --short final)"
+      - name: Package <roll_number>.zip
+        run: |
+          if [[ ! -f "$SCAN" ]]; then
+            echo "::warning::Scanned reflection '$SCAN' not found - upload it to the repository and run this workflow again."
+            exit 0
+          fi
+          scripts/package_submission.sh "$ROLL" "$SCAN" final
+          gh release delete submission --yes 2>/dev/null || true
+          gh release create submission "dist/${ROLL}.zip" --target "$(git rev-parse final)" \
+            --title "Submission ${ROLL}" --notes "Single-file submission built from tag final."
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: submission
+          path: |
+            report/report.pdf
+            dist/*.zip
+          if-no-files-found: warn
