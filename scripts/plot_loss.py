@@ -50,7 +50,8 @@ def main():
         d = " ".join(f"{'M' if j == 0 else 'L'}{x(e):.1f},{y(v):.1f}" for j, (e, v) in enumerate(pts))
         out.append(f'<path d="{d}" fill="none" stroke="{c}" stroke-width="2" stroke-linejoin="round"/>')
         for e, v in pts:
-            out.append(f'<circle cx="{x(e):.1f}" cy="{y(v):.1f}" r="3" fill="{c}" stroke="#fcfcfb" stroke-width="1.5"/>')
+            out.append(f'<circle cx="{x(e):.1f}" cy="{y(v):.1f}" r="3" fill="{c}" '
+                       f'stroke="#fcfcfb" stroke-width="1.5"/>')
         e, v = pts[-1]
         out.append(f'<text x="{x(e) + 8:.1f}" y="{y(v) + 3 + i * 11:.1f}" fill="{INK}">{name} {v:.3f}</text>')
         lx = W - R - 150 + i * 75
