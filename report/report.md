@@ -6,9 +6,13 @@
 
 ## Architecture
 
-⟨ARCH⟩
+<figure><img src="architecture.svg" alt="architecture" style="width:100%"><figcaption>One k3d cluster, three namespaces. Data flows: kit → <code>s3://datasets</code> → teacher workers → shards → <code>clean.py</code> → <code>train.jsonl</code> → CPU training → GitHub Releases → <code>s3://models</code> → service Pods (model pulled at start-up) → Traefik Ingress → clients.</figcaption></figure>
+
+Object storage is the hand-off point between every stage, and every hand-off is checksummed (`train.sha256`, `model.sha256`). The GitHub Release is the durable copy of the model; SeaweedFS is the copy the cluster reads at runtime, so a fresh clone can rebuild the whole system without retraining.
 
 ## 1 · Object storage and parallel teacher labelling
+
+**Architecture / implementation.** `k3d cluster create --config cluster/k3d.yaml` (k3s v1.30.6, one server node; host port 8080 → Traefik, 8333 → SeaweedFS NodePort). **SeaweedFS 3.80** runs in namespace `data` as one all-in-one Pod (master, volume, filer, S3 gateway) on a 5 Gi local-path PVC; its S3 identities file is mounted from a Secret generated at deploy time with random keys (`scripts/secrets.sh`; nothing secret in Git). `make storage` creates the buckets **`datasets`** and **`models`** (boto3) and uploads `commands_pool.jsonl` to `s3://datasets/commands_pool.jsonl`. The **teacher** (`ollama/ollama:0.5.7`, model `phi3.5:latest`, ⟨DIGEST⟩) runs *inside* the cluster in namespace `pipeline` with 4 decoding slots; every request uses temperature 0, seed 42 (and `num_predict` 128 as a length cap). The prompt (`prompts/teacher_prompt.txt`) states the task, lists the eight intents with the handout's examples, defines the three slots and the three copy rules, gives nine worked examples (none taken from `validation.jsonl`), and asks for one line of JSON only. **Workers** (`worker/worker.py`, image built by `worker/Dockerfile`) write `{"id","text","teacher_raw"}` lines - `teacher_raw` is Ollama's `response` field, stored unchanged. **`worker/clean.py`** runs as a Job in the cluster, reads all shard objects, applies the rules in the order (a) invalid JSON → (b) keys ≠ {intent, date, time, place} → (c) intent not one of eight → (d) a slot that is neither null nor a non-empty string occurring in the command (case/space-insensitive) → (e) duplicate command (lower-cased, spaces collapsed; resolved *after* (a)-(d) so the smallest-id **valid** copy is kept), and writes the survivors in id order to `s3://datasets/v1/train.jsonl` with `train.sha256` (each line keeps the teacher's four values and its exact raw reply).
 
 ⟨T1⟩
 
@@ -22,15 +26,32 @@
 
 ## 3 · Inference service in a container
 
+**Architecture / implementation.** `service/app.py` (FastAPI 0.115.6 + Uvicorn, port 8000). On start-up a background thread lists `MODEL_URI` (e.g. `s3://models/v1/`) on `S3_ENDPOINT` with boto3, downloads every object to an `emptyDir`, verifies each file against the downloaded `model.sha256`, then loads model + tokenizer; failures are retried with back-off, never crash-looping. `GET /healthz` is always 200 while the process lives; `GET /readyz` is 503 until the model is loaded, then 200. `POST /parse` runs the same greedy generation code as evaluation (`service/model.py`, prompt `Command: …\nJSON:`, stop at newline/EOS, `MAX_NEW_TOKENS`), checks the text against `schema.json` (object, exactly the four keys, intent from the enum, slots string/null), and returns either the object alone (HTTP 200) or `{"error": "invalid_model_output"}` (HTTP 500) - never broken JSON with 200. Both headers `X-Model-Version` (= `MODEL_VERSION`) and `X-Served-By` (= Pod name, downward API) are set on every answer. `FAULT_INJECT=1` replaces the model output with `not json` *before* validation. Configuration: `MODEL_URI`, `MODEL_VERSION`, `S3_ENDPOINT`, `MAX_NEW_TOKENS` (+ `FAULT_INJECT`); S3 keys come only from the Secret `s3-credentials`. One generation runs at a time per Pod (lock; `TORCH_NUM_THREADS=1` to match the 1-CPU limit) while health checks stay responsive.
+
+**Image.** `python:3.12.8-slim-bookworm`, CPU-only `torch==2.5.1+cpu` from the PyTorch CPU index (the default wheel pulls ~3 GB of CUDA libraries), every dependency pinned with `==` (fully resolved lock, `service/requirements.txt`), non-root user, no weights (checked: 0 weight files in the image). Build from a fresh clone with one command: `make image` (= `docker build -f service/Dockerfile -t ccmini/parser:1.0 .`).
+
 ⟨T3⟩
 
 ## 4 · Kubernetes deployment, scaling and reliability
+
+**Architecture / implementation** (`k8s/app/parser.yaml`). Namespace `app`: a **Deployment** `parser` with 2 replicas, requests 500m CPU / 512 Mi and limits 1 CPU / 1 Gi, readiness probe `GET /readyz` every 2 s, liveness probe `GET /healthz` (10 s, 6 failures), rolling update `maxSurge 1 / maxUnavailable 0`, `preStop: sleep 8` and a 40 s grace period so that a Pod keeps serving while Traefik removes it from the endpoints; a **Service** (ClusterIP :80 → 8000) that only lists Ready Pods; a Traefik **Ingress** routing `/parse` (and `/readyz`, `/healthz`) from `localhost:8080`; an **HPA** `autoscaling/v2`, min 1, max 2, target 70 % average CPU utilisation (of the 500m request), scale-down stabilisation shortened to 60 s (default 300 s) so the demonstration fits in one CI run. All experiments are scripted in `scripts/experiments.sh` and ran in one `deploy` workflow run on a fresh runner; for the tests that need exactly two replicas (rolling update, recovery, load balancing, cold start) the HPA's `minReplicas` was temporarily patched to 2 and restored to 1 for the HPA test (<span class="a">design choice</span>, recorded in the logs).
 
 ⟨T4⟩
 
 ## 5 · Subnetting and network access control
 
-⟨T5⟩
+**Subnets** (largest first from 10.20.0.0, each right after the previous, smallest prefix with 2<sup>32−p</sup> − 2 ≥ hosts; full working in `network/subnets.md`, re-checked by `scripts/subnets.py` and a unit test):
+
+| Subnet | Hosts needed | Network / prefix | Usable host range | Broadcast | Usable hosts |
+|---|---:|---|---|---|---:|
+| app | 1,000 | 10.20.0.0/22 | 10.20.0.1 - 10.20.3.254 | 10.20.3.255 | 1,022 |
+| public | 250 | 10.20.4.0/24 | 10.20.4.1 - 10.20.4.254 | 10.20.4.255 | 254 |
+| data | 100 | 10.20.5.0/25 | 10.20.5.1 - 10.20.5.126 | 10.20.5.127 | 126 |
+| management | 20 | 10.20.5.128/27 | 10.20.5.129 - 10.20.5.158 | 10.20.5.159 | 30 |
+
+Working, e.g. app: 2<sup>9</sup>−2 = 510 < 1,000 ≤ 2<sup>10</sup>−2 = 1,022 → 10 host bits → /22 (1,024 addresses, 10.20.0.0-10.20.3.255); public starts at 10.20.3.255 + 1 = 10.20.4.0, and so on.
+
+**NACL for the public subnet** (`network/nacl.json`). Inbound: 90 deny *all* from 198.51.100.0/24; 100 allow TCP 80 from 0.0.0.0/0; 110 allow TCP 443 from 0.0.0.0/0; 120 allow TCP 22 from 10.20.5.128/27 (management); 130 allow TCP 1024-65535 from 10.20.0.0/22 (replies from app:8000). Outbound: 100 allow TCP 8000 to 10.20.0.0/22; 110 allow TCP 1024-65535 to 0.0.0.0/0 (replies to clients' ephemeral ports). Everything else hits the implicit deny. <span class="m">`nacl_sim.py --check` on `packets_sample.jsonl`: 6 / 6 correct</span> (`results/task5/nacl_check.txt`); 16 extra hand-made packets also behaved as the rules say. *Limitation (inherent to stateless filtering):* because outbound rule 110 must open the whole ephemeral range, it also lets out a TCP packet to port 8000 of a non-app host; a stateful security group or a narrower client port range would close that.
 
 **Why separate reply rules, and why order matters.** A NACL is **stateless**: it does not remember that a packet belongs to a connection it already allowed, so every packet - including a reply - is checked on its own against the rules for its direction. A client's request to the load balancer arrives on port 80/443, but the response leaves towards the client's *ephemeral* port (1024-65535); likewise the app's answer to the load balancer's request to port 8000 comes back to the load balancer's ephemeral port. Without outbound rule 110 and inbound rule 130 these replies would hit the implicit deny and every connection would hang. Rules are evaluated from the lowest number up and the first match decides, so the deny for 198.51.100.0/24 must have a **lower number (90)** than the allow-anywhere rules for 80/443 (100, 110). If it were numbered, say, 200, a packet from 198.51.100.9 to port 443 would match rule 110 first and be allowed, and the deny would never be reached (sample packet S04 checks exactly this).
 
