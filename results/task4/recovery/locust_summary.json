@@ -1,0 +1,24 @@
+{
+  "requests": 736,
+  "failures": 0,
+  "failure_pct": 0.0,
+  "p50_ms": 990.0,
+  "p95_ms": 1700.0,
+  "p99_ms": 2300.0,
+  "avg_ms": 971.5,
+  "max_ms": 2379.8970420000387,
+  "requests_per_s": 4.106,
+  "per_replica": {
+    "parser-68fc4b5b57-xr8w6": 381,
+    "parser-68fc4b5b57-bfzml": 87,
+    "parser-68fc4b5b57-q75vq": 271
+  },
+  "per_model_version": {
+    "v1": 739
+  },
+  "per_replica_share_pct": {
+    "parser-68fc4b5b57-xr8w6": 51.6,
+    "parser-68fc4b5b57-bfzml": 11.8,
+    "parser-68fc4b5b57-q75vq": 36.7
+  }
+}

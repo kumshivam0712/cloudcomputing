@@ -1,0 +1,5 @@
+2026-11-08T21:33:18Z scaled down to 1 replica while idle
+2026-11-08T21:33:26Z load started (4 users)
+2026-11-08T21:33:46Z HPA set replicas=2 under load
+2026-11-08T21:38:26Z load finished
+2026-11-08T21:39:48Z replicas=1 after load

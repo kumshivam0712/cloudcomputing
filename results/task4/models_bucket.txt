@@ -1,0 +1,16 @@
+         820  s3://models/v1/config.json
+         132  s3://models/v1/generation_config.json
+   281715176  s3://models/v1/model.safetensors
+         589  s3://models/v1/model.sha256
+         473  s3://models/v1/special_tokens_map.json
+     3564303  s3://models/v1/tokenizer.json
+        4846  s3://models/v1/tokenizer_config.json
+        1264  s3://models/v1/version.json
+         820  s3://models/v2/config.json
+         132  s3://models/v2/generation_config.json
+   281715176  s3://models/v2/model.safetensors
+         589  s3://models/v2/model.sha256
+         473  s3://models/v2/special_tokens_map.json
+     3564303  s3://models/v2/tokenizer.json
+        4846  s3://models/v2/tokenizer_config.json
+        1269  s3://models/v2/version.json

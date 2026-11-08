@@ -1,0 +1,4 @@
+per replica per hour = 1 vCPU x 3.50 + 1 GiB x 0.45 = 3.9500 INR/h
+all replicas per hour = 2 x 3.9500 = 7.9000 INR/h
+requests per hour = 4.459 req/s x 3600 = 16053.1
+cost per 1,000 requests = 7.9000 / 16053.1 x 1000 = 0.4921 INR

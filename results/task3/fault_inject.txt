@@ -1,0 +1,10 @@
+$ curl -i -X POST localhost:8002/parse -d '{"text": "set an alarm for seven thirty am tomorrow"}'   # container started with FAULT_INJECT=1
+HTTP/1.1 500 Internal Server Error
+date: Sun, 08 Nov 2026 21:19:46 GMT
+server: uvicorn
+x-model-version: v1
+x-served-by: parser-fault
+content-length: 32
+content-type: application/json
+
+{"error":"invalid_model_output"}

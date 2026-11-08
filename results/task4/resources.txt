@@ -1,0 +1,21 @@
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES              SELECTOR
+deployment.apps/parser   2/2     2            2           49s   parser       ccmini/parser:1.0   app=parser
+
+NAME                                DESIRED   CURRENT   READY   AGE   CONTAINERS   IMAGES              SELECTOR
+replicaset.apps/parser-68fc4b5b57   2         2         2       49s   parser       ccmini/parser:1.0   app=parser,pod-template-hash=68fc4b5b57
+
+NAME                          READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
+pod/parser-68fc4b5b57-75tjb   1/1     Running   0          49s   10.42.0.11   k3d-ccmini-server-0   <none>           <none>
+pod/parser-68fc4b5b57-lzqv8   1/1     Running   0          49s   10.42.0.12   k3d-ccmini-server-0   <none>           <none>
+
+NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE   SELECTOR
+service/parser   ClusterIP   10.43.236.112   <none>        80/TCP    49s   app=parser
+
+NAME               ENDPOINTS                         AGE
+endpoints/parser   10.42.0.11:8000,10.42.0.12:8000   49s
+
+NAME                               CLASS     HOSTS   ADDRESS      PORTS   AGE
+ingress.networking.k8s.io/parser   traefik   *       172.18.0.2   80      49s
+
+NAME                                         REFERENCE           TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/parser   Deployment/parser   cpu: 0%/70%   1         2         2          48s

@@ -1,0 +1,44 @@
+== 21:19:52
+parser-68fc4b5b57-75tjb   Running   true     2026-11-08T21:20:32Z
+parser-68fc4b5b57-lzqv8   Running   true     2026-11-08T21:20:32Z
+parser-68fc4b5b57-z6szm   Pending   <none>   <none>
+ready endpoints: [] not-ready: []
+== 21:19:53
+parser-68fc4b5b57-75tjb   Running   true    2026-11-08T21:20:32Z
+parser-68fc4b5b57-9djsv   Running   false   <none>
+parser-68fc4b5b57-lzqv8   Running   true    2026-11-08T21:20:32Z
+parser-68fc4b5b57-z6szm   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-z6szm parser-68fc4b5b57-9djsv]
+== 21:19:55
+parser-68fc4b5b57-75tjb   Running   true    2026-11-08T21:20:32Z
+parser-68fc4b5b57-9djsv   Running   false   <none>
+parser-68fc4b5b57-lzqv8   Running   true    2026-11-08T21:20:32Z
+parser-68fc4b5b57-z6szm   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-z6szm parser-68fc4b5b57-9djsv]
+== 21:19:57
+parser-68fc4b5b57-75tjb   Running   true    2026-11-08T21:20:32Z
+parser-68fc4b5b57-9djsv   Running   false   <none>
+parser-68fc4b5b57-lzqv8   Running   true    2026-11-08T21:20:32Z
+parser-68fc4b5b57-z6szm   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-z6szm parser-68fc4b5b57-9djsv]
+== 21:19:58
+parser-68fc4b5b57-75tjb   Running   true    2026-11-08T21:20:32Z
+parser-68fc4b5b57-9djsv   Running   false   <none>
+parser-68fc4b5b57-lzqv8   Running   true    2026-11-08T21:20:32Z
+parser-68fc4b5b57-z6szm   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-z6szm parser-68fc4b5b57-9djsv]
+== 21:20:00
+parser-68fc4b5b57-75tjb   Running   true    2026-11-08T21:20:32Z
+parser-68fc4b5b57-9djsv   Running   false   <none>
+parser-68fc4b5b57-lzqv8   Running   true    2026-11-08T21:20:32Z
+parser-68fc4b5b57-z6szm   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-z6szm parser-68fc4b5b57-9djsv]
+== 21:20:01
+parser-68fc4b5b57-75tjb   Succeeded   false   2026-11-08T21:20:32Z
+parser-68fc4b5b57-9djsv   Running     true    <none>
+parser-68fc4b5b57-lzqv8   Succeeded   false   2026-11-08T21:20:32Z
+parser-68fc4b5b57-z6szm   Running     true    <none>
+ready endpoints: [parser-68fc4b5b57-z6szm parser-68fc4b5b57-9djsv] not-ready: []
+== 21:20:02
+parser-68fc4b5b57-9djsv   Running   true   <none>
+parser-68fc4b5b57-z6szm   Running   true   <none>

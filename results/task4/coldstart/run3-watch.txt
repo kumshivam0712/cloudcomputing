@@ -1,0 +1,44 @@
+== 21:20:15
+parser-68fc4b5b57-nhmnd   Running   true   <none>
+parser-68fc4b5b57-w556c   Running   true   <none>
+ready endpoints: [] not-ready: []
+== 21:20:16
+parser-68fc4b5b57-fvt6b   Running   false   <none>
+parser-68fc4b5b57-nhmnd   Running   true    2026-11-08T21:20:55Z
+parser-68fc4b5b57-w556c   Running   true    2026-11-08T21:20:55Z
+parser-68fc4b5b57-wwfd2   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2]
+== 21:20:18
+parser-68fc4b5b57-fvt6b   Running   false   <none>
+parser-68fc4b5b57-nhmnd   Running   true    2026-11-08T21:20:55Z
+parser-68fc4b5b57-w556c   Running   true    2026-11-08T21:20:55Z
+parser-68fc4b5b57-wwfd2   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2]
+== 21:20:20
+parser-68fc4b5b57-fvt6b   Running   false   <none>
+parser-68fc4b5b57-nhmnd   Running   true    2026-11-08T21:20:55Z
+parser-68fc4b5b57-w556c   Running   true    2026-11-08T21:20:55Z
+parser-68fc4b5b57-wwfd2   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2]
+== 21:20:21
+parser-68fc4b5b57-fvt6b   Running   false   <none>
+parser-68fc4b5b57-nhmnd   Running   true    2026-11-08T21:20:55Z
+parser-68fc4b5b57-w556c   Running   true    2026-11-08T21:20:55Z
+parser-68fc4b5b57-wwfd2   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2]
+== 21:20:23
+parser-68fc4b5b57-fvt6b   Running   false   <none>
+parser-68fc4b5b57-nhmnd   Running   true    2026-11-08T21:20:55Z
+parser-68fc4b5b57-w556c   Running   true    2026-11-08T21:20:55Z
+parser-68fc4b5b57-wwfd2   Running   false   <none>
+ready endpoints: [] not-ready: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2]
+== 21:20:24
+parser-68fc4b5b57-fvt6b   Running     true    <none>
+parser-68fc4b5b57-nhmnd   Running     true    2026-11-08T21:20:55Z
+parser-68fc4b5b57-w556c   Succeeded   false   2026-11-08T21:20:55Z
+parser-68fc4b5b57-wwfd2   Running     true    <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:20:25
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []

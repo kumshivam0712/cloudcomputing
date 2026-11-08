@@ -1,0 +1,46 @@
+== 21:20:03
+parser-68fc4b5b57-9djsv   Running   true     2026-11-08T21:20:43Z
+parser-68fc4b5b57-nhmnd   Pending   <none>   <none>
+parser-68fc4b5b57-w556c   Pending   <none>   <none>
+parser-68fc4b5b57-z6szm   Running   true     2026-11-08T21:20:43Z
+ready endpoints: [] not-ready: []
+== 21:20:05
+parser-68fc4b5b57-9djsv   Running   true    2026-11-08T21:20:43Z
+parser-68fc4b5b57-nhmnd   Running   false   <none>
+parser-68fc4b5b57-w556c   Running   false   <none>
+parser-68fc4b5b57-z6szm   Running   true    2026-11-08T21:20:43Z
+ready endpoints: [] not-ready: [parser-68fc4b5b57-nhmnd parser-68fc4b5b57-w556c]
+== 21:20:06
+parser-68fc4b5b57-9djsv   Running   true    2026-11-08T21:20:43Z
+parser-68fc4b5b57-nhmnd   Running   false   <none>
+parser-68fc4b5b57-w556c   Running   false   <none>
+parser-68fc4b5b57-z6szm   Running   true    2026-11-08T21:20:43Z
+ready endpoints: [] not-ready: [parser-68fc4b5b57-nhmnd parser-68fc4b5b57-w556c]
+== 21:20:08
+parser-68fc4b5b57-9djsv   Running   true    2026-11-08T21:20:43Z
+parser-68fc4b5b57-nhmnd   Running   false   <none>
+parser-68fc4b5b57-w556c   Running   false   <none>
+parser-68fc4b5b57-z6szm   Running   true    2026-11-08T21:20:43Z
+ready endpoints: [] not-ready: [parser-68fc4b5b57-nhmnd parser-68fc4b5b57-w556c]
+== 21:20:09
+parser-68fc4b5b57-9djsv   Running   true    2026-11-08T21:20:43Z
+parser-68fc4b5b57-nhmnd   Running   false   <none>
+parser-68fc4b5b57-w556c   Running   false   <none>
+parser-68fc4b5b57-z6szm   Running   true    2026-11-08T21:20:43Z
+ready endpoints: [] not-ready: [parser-68fc4b5b57-nhmnd parser-68fc4b5b57-w556c]
+== 21:20:11
+parser-68fc4b5b57-9djsv   Running   true    2026-11-08T21:20:43Z
+parser-68fc4b5b57-nhmnd   Running   false   <none>
+parser-68fc4b5b57-w556c   Running   false   <none>
+parser-68fc4b5b57-z6szm   Running   true    2026-11-08T21:20:43Z
+ready endpoints: [] not-ready: [parser-68fc4b5b57-nhmnd parser-68fc4b5b57-w556c]
+== 21:20:12
+parser-68fc4b5b57-9djsv   Running   true   2026-11-08T21:20:43Z
+parser-68fc4b5b57-nhmnd   Running   true   <none>
+parser-68fc4b5b57-w556c   Running   true   <none>
+parser-68fc4b5b57-z6szm   Running   true   2026-11-08T21:20:43Z
+ready endpoints: [parser-68fc4b5b57-nhmnd parser-68fc4b5b57-w556c] not-ready: []
+== 21:20:14
+parser-68fc4b5b57-nhmnd   Running   true   <none>
+parser-68fc4b5b57-w556c   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-nhmnd parser-68fc4b5b57-w556c] not-ready: []

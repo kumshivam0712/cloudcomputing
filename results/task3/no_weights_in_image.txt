@@ -1,0 +1,6 @@
+weight files (*.safetensors, pytorch_model*.bin, *.gguf, *.pt) in the image:
+0
+contents of /models:
+total 8
+drwxr-xr-x 2 app  app  4096 Nov  8 21:18 .
+drwxr-xr-x 1 root root 4096 Nov  8 21:19 ..

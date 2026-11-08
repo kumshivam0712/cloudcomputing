@@ -1,0 +1,10 @@
+{
+  "requests": 50,
+  "http_200": 50,
+  "http_500": 0,
+  "other": 0,
+  "latency_ms_mean": 421.9,
+  "latency_ms_p50": 402.1,
+  "latency_ms_p95": 468.7,
+  "latency_ms_max": 1253.3
+}

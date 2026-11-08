@@ -1,0 +1,2 @@
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+k3d-ccmini-server-0   1797m        44%      2025Mi          12%         

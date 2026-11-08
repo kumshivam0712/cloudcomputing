@@ -1,0 +1,8 @@
+NAME              STATUS   AGE
+app               Active   3m5s
+data              Active   3m5s
+default           Active   3m16s
+kube-node-lease   Active   3m16s
+kube-public       Active   3m16s
+kube-system       Active   3m16s
+pipeline          Active   3m5s

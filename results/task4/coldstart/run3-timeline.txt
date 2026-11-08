@@ -1,0 +1,4 @@
+2026-11-08T21:20:15Z deleting all parser Pods: parser-68fc4b5b57-nhmnd,parser-68fc4b5b57-w556c
+pod "parser-68fc4b5b57-nhmnd" deleted from app namespace
+pod "parser-68fc4b5b57-w556c" deleted from app namespace
+2026-11-08T21:20:24Z two new Pods Ready

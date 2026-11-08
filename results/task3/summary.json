@@ -1,0 +1,17 @@
+{
+  "cgroup_memory_peak_bytes": 688001024,
+  "cgroup_memory_peak_mib": 656.1,
+  "docker_stats_samples": 13,
+  "docker_stats_peak_mib": 379.8,
+  "sequential_50": {
+    "requests": 50,
+    "http_200": 50,
+    "http_500": 0,
+    "other": 0,
+    "latency_ms_mean": 421.9,
+    "latency_ms_p50": 402.1,
+    "latency_ms_p95": 468.7,
+    "latency_ms_max": 1253.3
+  },
+  "oom_check": "OOMKilled=false Running=true RestartCount=0"
+}

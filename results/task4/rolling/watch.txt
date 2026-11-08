@@ -1,0 +1,1005 @@
+== 21:22:55
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:22:56
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:22:58
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:22:59
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:01
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:02
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:04
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:05
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:07
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:08
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:10
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:11
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:13
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:14
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:16
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:17
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:19
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:20
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:22
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:23
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:25
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:26
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:28
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:29
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:31
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:32
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:34
+parser-68fc4b5b57-fvt6b   Running   true   <none>
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:35
+parser-68fc4b5b57-fvt6b   Running   true    <none>
+parser-68fc4b5b57-wwfd2   Running   true    <none>
+parser-7d4885b655-hdb97   Pending   false   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: []
+== 21:23:37
+parser-68fc4b5b57-fvt6b   Running   true    <none>
+parser-68fc4b5b57-wwfd2   Running   true    <none>
+parser-7d4885b655-hdb97   Running   false   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: [parser-7d4885b655-hdb97]
+== 21:23:39
+parser-68fc4b5b57-fvt6b   Running   true    <none>
+parser-68fc4b5b57-wwfd2   Running   true    <none>
+parser-7d4885b655-hdb97   Running   false   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: [parser-7d4885b655-hdb97]
+== 21:23:40
+parser-68fc4b5b57-fvt6b   Running   true    <none>
+parser-68fc4b5b57-wwfd2   Running   true    <none>
+parser-7d4885b655-hdb97   Running   false   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: [parser-7d4885b655-hdb97]
+== 21:23:42
+parser-68fc4b5b57-fvt6b   Running   true    <none>
+parser-68fc4b5b57-wwfd2   Running   true    <none>
+parser-7d4885b655-hdb97   Running   false   <none>
+ready endpoints: [parser-68fc4b5b57-fvt6b parser-68fc4b5b57-wwfd2] not-ready: [parser-7d4885b655-hdb97]
+== 21:23:43
+parser-68fc4b5b57-fvt6b   Running   true   2026-11-08T21:24:23Z
+parser-68fc4b5b57-wwfd2   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-wwfd2 parser-7d4885b655-hdb97] not-ready: []
+== 21:23:45
+parser-68fc4b5b57-fvt6b   Running   true    2026-11-08T21:24:23Z
+parser-68fc4b5b57-wwfd2   Running   true    <none>
+parser-7d4885b655-br4gd   Running   false   <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-wwfd2 parser-7d4885b655-hdb97] not-ready: [parser-7d4885b655-br4gd]
+== 21:23:47
+parser-68fc4b5b57-fvt6b   Running   true    2026-11-08T21:24:23Z
+parser-68fc4b5b57-wwfd2   Running   true    <none>
+parser-7d4885b655-br4gd   Running   false   <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-wwfd2 parser-7d4885b655-hdb97] not-ready: [parser-7d4885b655-br4gd]
+== 21:23:48
+parser-68fc4b5b57-fvt6b   Running   true    2026-11-08T21:24:23Z
+parser-68fc4b5b57-wwfd2   Running   true    <none>
+parser-7d4885b655-br4gd   Running   false   <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-wwfd2 parser-7d4885b655-hdb97] not-ready: [parser-7d4885b655-br4gd]
+== 21:23:50
+parser-68fc4b5b57-fvt6b   Running   true    2026-11-08T21:24:23Z
+parser-68fc4b5b57-wwfd2   Running   true    <none>
+parser-7d4885b655-br4gd   Running   false   <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-wwfd2 parser-7d4885b655-hdb97] not-ready: [parser-7d4885b655-br4gd]
+== 21:23:51
+parser-68fc4b5b57-fvt6b   Running   true    2026-11-08T21:24:23Z
+parser-68fc4b5b57-wwfd2   Running   true    <none>
+parser-7d4885b655-br4gd   Running   false   <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-wwfd2 parser-7d4885b655-hdb97] not-ready: [parser-7d4885b655-br4gd]
+== 21:23:53
+parser-68fc4b5b57-fvt6b   Running   true    2026-11-08T21:24:23Z
+parser-68fc4b5b57-wwfd2   Running   true    <none>
+parser-7d4885b655-br4gd   Running   false   <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-68fc4b5b57-wwfd2 parser-7d4885b655-hdb97] not-ready: [parser-7d4885b655-br4gd]
+== 21:23:55
+parser-68fc4b5b57-wwfd2   Running   true   2026-11-08T21:24:34Z
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:23:56
+parser-68fc4b5b57-wwfd2   Running   true   2026-11-08T21:24:34Z
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:23:58
+parser-68fc4b5b57-wwfd2   Running   true   2026-11-08T21:24:34Z
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:23:59
+parser-68fc4b5b57-wwfd2   Running   true   2026-11-08T21:24:34Z
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:01
+parser-68fc4b5b57-wwfd2   Running   true   2026-11-08T21:24:34Z
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:02
+parser-68fc4b5b57-wwfd2   Running   true   2026-11-08T21:24:34Z
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:04
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:05
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:07
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:08
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:10
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:11
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:13
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:14
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:16
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:17
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:19
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:20
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:22
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:23
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:25
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:26
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:28
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:29
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:31
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:32
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:34
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:35
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:37
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:38
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:40
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:41
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:43
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:44
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:46
+parser-7d4885b655-br4gd   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:47
+parser-68fc4b5b57-xr8w6   Pending   false   <none>
+parser-7d4885b655-br4gd   Running   true    <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: []
+== 21:24:49
+parser-68fc4b5b57-xr8w6   Running   false   <none>
+parser-7d4885b655-br4gd   Running   true    <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: [parser-68fc4b5b57-xr8w6]
+== 21:24:50
+parser-68fc4b5b57-xr8w6   Running   false   <none>
+parser-7d4885b655-br4gd   Running   true    <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: [parser-68fc4b5b57-xr8w6]
+== 21:24:52
+parser-68fc4b5b57-xr8w6   Running   false   <none>
+parser-7d4885b655-br4gd   Running   true    <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: [parser-68fc4b5b57-xr8w6]
+== 21:24:54
+parser-68fc4b5b57-xr8w6   Running   false   <none>
+parser-7d4885b655-br4gd   Running   true    <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-7d4885b655-br4gd] not-ready: [parser-68fc4b5b57-xr8w6]
+== 21:24:55
+parser-68fc4b5b57-bfzml   Pending   false   <none>
+parser-68fc4b5b57-xr8w6   Running   true    <none>
+parser-7d4885b655-br4gd   Running   true    2026-11-08T21:25:35Z
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-68fc4b5b57-xr8w6] not-ready: []
+== 21:24:57
+parser-68fc4b5b57-bfzml   Running   false   <none>
+parser-68fc4b5b57-xr8w6   Running   true    <none>
+parser-7d4885b655-br4gd   Running   true    2026-11-08T21:25:35Z
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-68fc4b5b57-xr8w6] not-ready: [parser-68fc4b5b57-bfzml]
+== 21:24:59
+parser-68fc4b5b57-bfzml   Running   false   <none>
+parser-68fc4b5b57-xr8w6   Running   true    <none>
+parser-7d4885b655-br4gd   Running   true    2026-11-08T21:25:35Z
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-68fc4b5b57-xr8w6] not-ready: [parser-68fc4b5b57-bfzml]
+== 21:25:00
+parser-68fc4b5b57-bfzml   Running   false   <none>
+parser-68fc4b5b57-xr8w6   Running   true    <none>
+parser-7d4885b655-br4gd   Running   true    2026-11-08T21:25:35Z
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-68fc4b5b57-xr8w6] not-ready: [parser-68fc4b5b57-bfzml]
+== 21:25:02
+parser-68fc4b5b57-bfzml   Running   false   <none>
+parser-68fc4b5b57-xr8w6   Running   true    <none>
+parser-7d4885b655-br4gd   Running   true    2026-11-08T21:25:35Z
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-68fc4b5b57-xr8w6] not-ready: [parser-68fc4b5b57-bfzml]
+== 21:25:03
+parser-68fc4b5b57-bfzml   Running   false   <none>
+parser-68fc4b5b57-xr8w6   Running   true    <none>
+parser-7d4885b655-br4gd   Running   true    2026-11-08T21:25:35Z
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-68fc4b5b57-xr8w6] not-ready: [parser-68fc4b5b57-bfzml]
+== 21:25:05
+parser-68fc4b5b57-bfzml   Running   false   <none>
+parser-68fc4b5b57-xr8w6   Running   true    <none>
+parser-7d4885b655-hdb97   Running   true    <none>
+ready endpoints: [parser-7d4885b655-hdb97 parser-68fc4b5b57-xr8w6] not-ready: [parser-68fc4b5b57-bfzml]
+== 21:25:06
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   2026-11-08T21:25:45Z
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:08
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   2026-11-08T21:25:45Z
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:09
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   2026-11-08T21:25:45Z
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:11
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   2026-11-08T21:25:45Z
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:12
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   2026-11-08T21:25:45Z
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:14
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+parser-7d4885b655-hdb97   Running   true   2026-11-08T21:25:45Z
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:16
+parser-68fc4b5b57-bfzml   Running     true    <none>
+parser-68fc4b5b57-xr8w6   Running     true    <none>
+parser-7d4885b655-hdb97   Succeeded   false   2026-11-08T21:25:45Z
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:17
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:19
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:20
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:21
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:23
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:24
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:26
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:27
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:29
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:30
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:32
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:33
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:34
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:36
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:37
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:39
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:40
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:42
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:43
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:45
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:46
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:48
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:49
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:51
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:52
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:54
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:56
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:57
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:25:58
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:00
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:02
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:03
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:05
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:06
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:07
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:09
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:11
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:12
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:14
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:15
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:17
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:18
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:19
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:21
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:22
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:24
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:25
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:27
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:29
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:30
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:31
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:33
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:34
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:36
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:38
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:39
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:41
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:42
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:44
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:45
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:47
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:48
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:50
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:51
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:53
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:54
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:56
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:57
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:26:59
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:00
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:02
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:03
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:05
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:06
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:08
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:09
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:11
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:12
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:14
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:15
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:17
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:18
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:20
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:21
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:23
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:24
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:26
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:27
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:29
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:30
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:32
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:33
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:35
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:36
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:38
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:39
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:41
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:42
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:44
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:45
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:47
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:48
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:50
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:51
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:53
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:54
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:56
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:57
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:27:59
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:00
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:02
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:03
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:05
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:06
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:08
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:09
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:11
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:12
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:14
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:15
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:17
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:18
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:20
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:21
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:22
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:24
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:26
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:27
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:28
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:30
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:31
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:33
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:34
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:36
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:37
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:39
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:40
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:42
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:43
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:45
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:46
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:48
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:49
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:51
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:52
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
+== 21:28:54
+parser-68fc4b5b57-bfzml   Running   true   <none>
+parser-68fc4b5b57-xr8w6   Running   true   <none>
+ready endpoints: [parser-68fc4b5b57-xr8w6 parser-68fc4b5b57-bfzml] not-ready: []
