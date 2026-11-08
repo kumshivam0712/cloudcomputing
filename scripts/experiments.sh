@@ -204,7 +204,10 @@ hpa() {
   log "Task 4: HPA (min 1, max 2, 70 % CPU) - idle -> 1, load -> 2, idle -> 1"
   hpa_min 1
   ( while true; do
-      echo "$(date -u +%H:%M:%S) hpa: $(kubectl -n app get hpa parser --no-headers 2>/dev/null | awk '{print "targets="$3,"min="$4,"max="$5,"replicas="$6}') ready=$(ready_replicas)"
+      echo "$(date -u +%H:%M:%S) cpu=$(kubectl -n app get hpa parser -o jsonpath='{.status.currentMetrics[0].resource.current.averageUtilization}')%/70%" \
+           "min=$(kubectl -n app get hpa parser -o jsonpath='{.spec.minReplicas}') max=2" \
+           "current=$(kubectl -n app get hpa parser -o jsonpath='{.status.currentReplicas}')" \
+           "desired=$(kubectl -n app get hpa parser -o jsonpath='{.status.desiredReplicas}') ready=$(ready_replicas)"
       sleep 5
     done ) > "$out/hpa_watch.txt" 2>&1 & local w=$!
   local t0; t0=$(date +%s)

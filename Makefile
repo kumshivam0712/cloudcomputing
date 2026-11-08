@@ -128,10 +128,11 @@ deploy: ## Deployment, Service, Ingress, HPA in namespace app
 	kubectl apply -f k8s/app/
 	kubectl -n app rollout status deploy/parser --timeout=900s
 
-smoke: ## One request through the Ingress
-	for i in $$(seq 1 30); do \
-	  curl -sf -i -X POST http://localhost:8080/parse -H 'Content-Type: application/json' \
-	    -d '{"text": "set an alarm for seven thirty am tomorrow"}' && exit 0; sleep 3; done; exit 1
+smoke: ## Wait until /readyz answers 200 through the Ingress, then show one /parse answer
+	for i in $$(seq 1 60); do curl -sf http://localhost:8080/readyz && break; sleep 3; done
+	curl -sf http://localhost:8080/readyz >/dev/null
+	curl -s -i -X POST http://localhost:8080/parse -H 'Content-Type: application/json' \
+	  -d '{"text": "set an alarm for seven thirty am tomorrow"}'; echo
 
 loadtest: tools ## Standard Locust run (4 users, 2 min) through the Ingress
 	$(VENV)/bin/locust -f tools/locustfile.py --headless --users 4 --spawn-rate 4 --run-time 2m \
