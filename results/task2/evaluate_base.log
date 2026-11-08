@@ -1,0 +1,13 @@
+.venv-train/bin/python training/predict.py --model build/models/base --gold data/validation.jsonl --out results/pythia_base_predictions.jsonl
+100 predictions -> results/pythia_base_predictions.jsonl (raw: results/pythia_base_raw.jsonl) in 3.9s
+python3 tools/score.py results/pythia_base_predictions.jsonl data/validation.jsonl --out results/pythia_base_validation.json
+{
+  "json_validity": 0.0,
+  "intent_accuracy": 0.0,
+  "date_accuracy": 0.0,
+  "time_accuracy": 0.0,
+  "place_accuracy": 0.0,
+  "full_frame": 0.0,
+  "examples": 100,
+  "missing_predictions": 0
+}

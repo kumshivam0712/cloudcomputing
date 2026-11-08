@@ -1,0 +1,13 @@
+.venv-train/bin/python training/predict.py --model build/models/v2 --gold data/validation.jsonl --out results/student_v2_predictions.jsonl
+100 predictions -> results/student_v2_predictions.jsonl (raw: results/student_v2_raw.jsonl) in 46.0s
+python3 tools/score.py results/student_v2_predictions.jsonl data/validation.jsonl --out results/student_v2_validation.json
+{
+  "json_validity": 100.0,
+  "intent_accuracy": 83.0,
+  "date_accuracy": 82.0,
+  "time_accuracy": 85.0,
+  "place_accuracy": 86.0,
+  "full_frame": 49.0,
+  "examples": 100,
+  "missing_predictions": 0
+}

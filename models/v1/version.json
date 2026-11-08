@@ -1,0 +1,42 @@
+{
+  "version": "v1",
+  "base_model": "EleutherAI/pythia-70m",
+  "base_revision": "a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+  "method": "sequence-level knowledge distillation (fine-tune on teacher phi3.5 replies)",
+  "train_file": "datasets/v1/train.jsonl",
+  "train_file_sha256": "b79246c99ac598a3d0ea38a6db9801ec575aa04d1424d307ba247d9c589aea35",
+  "records": 1500,
+  "config": {
+    "version": "v1",
+    "seed": 42,
+    "learning_rate": 0.0005,
+    "batch_size": 16,
+    "epochs": 10,
+    "max_seq_length": 128,
+    "base_model": "EleutherAI/pythia-70m",
+    "base_revision": "a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+    "train_file": "datasets/v1/train.jsonl",
+    "max_train_records": 1500,
+    "output_dir": "build/models/v1",
+    "loss_csv": "training/loss.csv",
+    "optimizer": "adamw",
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.06,
+    "grad_clip_norm": 1.0,
+    "loss_on": "target_only",
+    "num_threads": 0,
+    "max_new_tokens": 48
+  },
+  "libraries": {
+    "python": "3.12.16",
+    "torch": "2.5.1",
+    "transformers": "4.46.3",
+    "tokenizers": "0.20.3",
+    "safetensors": "0.4.5",
+    "numpy": "2.2.1",
+    "pyyaml": "6.0.2"
+  },
+  "final_train_loss": 0.003892,
+  "training_seconds": 1543.7,
+  "created_utc": "2026-11-08T20:32:04Z"
+}

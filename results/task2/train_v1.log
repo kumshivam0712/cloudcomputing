@@ -1,0 +1,15 @@
+$ make train CONFIG=training/config.yaml
+.venv-train/bin/python training/train.py --config training/config.yaml --subset 0
+config training/config.yaml: 1500 records from /home/runner/work/cloudcomputing/cloudcomputing/datasets/v1/train.jsonl, seed 42, lr 0.0005, batch 16, epochs 10, max_seq_length 128, threads 2
+1500 examples, 58828 tokens, 0 truncated
+epoch 1/10  train_loss 0.7225  (154s)
+epoch 2/10  train_loss 0.4769  (152s)
+epoch 3/10  train_loss 0.2204  (150s)
+epoch 4/10  train_loss 0.1476  (152s)
+epoch 5/10  train_loss 0.0905  (150s)
+epoch 6/10  train_loss 0.0619  (153s)
+epoch 7/10  train_loss 0.0407  (160s)
+epoch 8/10  train_loss 0.0215  (160s)
+epoch 9/10  train_loss 0.0117  (156s)
+epoch 10/10  train_loss 0.0039  (156s)
+saved model + tokenizer to build/models/v1; loss per epoch in training/loss.csv

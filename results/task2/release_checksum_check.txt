@@ -1,0 +1,8 @@
+$ gh release download model-v1 && sha256sum -c models/v1/model.sha256
+model.safetensors: OK
+config.json: OK
+generation_config.json: OK
+special_tokens_map.json: OK
+tokenizer.json: OK
+tokenizer_config.json: OK
+version.json: OK

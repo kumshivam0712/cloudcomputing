@@ -1,0 +1,15 @@
+$ make train SUBSET=50
+.venv-train/bin/python training/train.py --config training/config.yaml --subset 50
+config training/config.yaml: 50 records from /home/runner/work/cloudcomputing/cloudcomputing/datasets/v1/train.jsonl, seed 42, lr 0.0005, batch 16, epochs 10, max_seq_length 128, threads 2
+50 examples, 1928 tokens, 0 truncated
+epoch 1/10  train_loss 4.2792  (5s)
+epoch 2/10  train_loss 6.3015  (5s)
+epoch 3/10  train_loss 2.5622  (5s)
+epoch 4/10  train_loss 1.2579  (5s)
+epoch 5/10  train_loss 0.7978  (5s)
+epoch 6/10  train_loss 0.6433  (5s)
+epoch 7/10  train_loss 0.6131  (5s)
+epoch 8/10  train_loss 0.3728  (5s)
+epoch 9/10  train_loss 0.3236  (5s)
+epoch 10/10  train_loss 0.2313  (5s)
+saved model + tokenizer to build/models/v1-subset50; loss per epoch in build/models/loss-subset50.csv
