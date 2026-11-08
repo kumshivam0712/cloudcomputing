@@ -1,3 +1,4 @@
+import sys
 from pathlib import Path
 
 import pytest
@@ -33,3 +34,12 @@ def test_teacher_prompt_file_asks_for_the_four_key_json():
     prompt = teacher.build_prompt(template, "what time is it in rome")
     assert prompt.endswith("Command: what time is it in rome\nJSON:")
     assert teacher.TEACHER_OPTIONS["temperature"] == 0 and teacher.TEACHER_OPTIONS["seed"] == 42
+
+
+
+def test_prediction_raw_file_never_overwrites_predictions():
+    sys.path.insert(0, str(ROOT / "training"))
+    import predict
+
+    assert predict.raw_path_for("results/student_v1_predictions.jsonl").name == "student_v1_raw.jsonl"
+    assert predict.raw_path_for("build/eval/predictions.jsonl").name == "predictions.raw.jsonl"

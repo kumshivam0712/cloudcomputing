@@ -22,7 +22,7 @@ from a file that a script or a workflow run produced**, and each such file is in
    the evidence. Failures during development (a YAML quoting error in a workflow, a missing
    `accelerate` dependency for `low_cpu_mem_usage`, a line too long for ruff) were found by running
    the code and then fixed.
-2. **Unit tests** (`tests/`, 19 tests) pin down the behaviour the assignment specifies: clean.py rules
+2. **Unit tests** (`tests/`, 20 tests) pin down the behaviour the assignment specifies: clean.py rules
    (a)-(e) and the count identity, shard partitioning without gaps or repeats, the exact
    `{"error": "invalid_model_output"}` body and HTTP 500 for invalid output and for `FAULT_INJECT=1`,
    both response headers, the subnet table and the NACL decisions.

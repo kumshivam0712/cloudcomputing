@@ -16,7 +16,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "service"))
-from model import ParserModel  # noqa: E402
+
+
+def raw_path_for(out):
+    """results/x_predictions.jsonl -> results/x_raw.jsonl; any other name -> <stem>.raw.jsonl (never the same file)."""
+    out = Path(out)
+    if "_predictions" in out.name:
+        return out.with_name(out.name.replace("_predictions", "_raw"))
+    return out.with_name(out.stem + ".raw" + out.suffix)
 
 
 def main():
@@ -29,11 +36,13 @@ def main():
     ap.add_argument("--threads", type=int, default=0)
     a = ap.parse_args()
 
+    from model import ParserModel  # imported here so the helpers above need no torch
+
     model = ParserModel(a.model, max_new_tokens=a.max_new_tokens, num_threads=a.threads or None, revision=a.revision)
     gold = [json.loads(line) for line in open(a.gold, encoding="utf-8") if line.strip()]
     out = Path(a.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    raw_path = out.with_name(out.name.replace("_predictions", "_raw"))
+    raw_path = raw_path_for(out)
     t_all = time.time()
     with open(out, "w", encoding="utf-8") as fp, open(raw_path, "w", encoding="utf-8") as fr:
         for g in gold:
