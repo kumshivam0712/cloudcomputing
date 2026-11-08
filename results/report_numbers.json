@@ -107,9 +107,9 @@
     "missing_predictions": 0
   },
   "student_v1_validation": {
-    "json_validity": 99.0,
-    "intent_accuracy": 86.0,
-    "date_accuracy": 85.0,
+    "json_validity": 100.0,
+    "intent_accuracy": 87.0,
+    "date_accuracy": 86.0,
     "time_accuracy": 83.0,
     "place_accuracy": 84.0,
     "full_frame": 47.0,
@@ -236,23 +236,23 @@
     }
   ],
   "task3": {
-    "cgroup_memory_peak_bytes": 680001536,
-    "cgroup_memory_peak_mib": 648.5,
-    "docker_stats_samples": 14,
-    "docker_stats_peak_mib": 372.2,
+    "cgroup_memory_peak_bytes": 688001024,
+    "cgroup_memory_peak_mib": 656.1,
+    "docker_stats_samples": 13,
+    "docker_stats_peak_mib": 379.8,
     "sequential_50": {
       "requests": 50,
-      "http_200": 49,
-      "http_500": 1,
+      "http_200": 50,
+      "http_500": 0,
       "other": 0,
-      "latency_ms_mean": 450.4,
-      "latency_ms_p50": 449.8,
-      "latency_ms_p95": 491.8,
-      "latency_ms_max": 647.9
+      "latency_ms_mean": 421.9,
+      "latency_ms_p50": 402.1,
+      "latency_ms_p95": 468.7,
+      "latency_ms_max": 1253.3
     },
     "oom_check": "OOMKilled=false Running=true RestartCount=0"
   },
-  "task3_image_bytes": 1137331816,
+  "task3_image_bytes": 1137333745,
   "task3_fault_inject": [
     "{\"error\":\"invalid_model_output\"}"
   ],
@@ -262,96 +262,96 @@
         "run": "run1",
         "pods": [
           {
-            "pod": "parser-68fc4b5b57-2ddnb",
-            "created": "2026-11-08T20:49:08Z",
-            "ready": "2026-11-08T20:49:14Z",
-            "seconds": 6.0
+            "pod": "parser-68fc4b5b57-9djsv",
+            "created": "2026-11-08T21:19:52Z",
+            "ready": "2026-11-08T21:20:00Z",
+            "seconds": 8.0
           },
           {
-            "pod": "parser-68fc4b5b57-m26s6",
-            "created": "2026-11-08T20:49:08Z",
-            "ready": "2026-11-08T20:49:14Z",
-            "seconds": 6.0
+            "pod": "parser-68fc4b5b57-z6szm",
+            "created": "2026-11-08T21:19:52Z",
+            "ready": "2026-11-08T21:20:00Z",
+            "seconds": 8.0
           }
         ],
-        "max_seconds": 6.0,
-        "mean_seconds": 6.0
+        "max_seconds": 8.0,
+        "mean_seconds": 8.0
       },
       {
         "run": "run2",
         "pods": [
           {
-            "pod": "parser-68fc4b5b57-5z9b9",
-            "created": "2026-11-08T20:49:18Z",
-            "ready": "2026-11-08T20:49:25Z",
-            "seconds": 7.0
+            "pod": "parser-68fc4b5b57-nhmnd",
+            "created": "2026-11-08T21:20:03Z",
+            "ready": "2026-11-08T21:20:12Z",
+            "seconds": 9.0
           },
           {
-            "pod": "parser-68fc4b5b57-wcdmn",
-            "created": "2026-11-08T20:49:18Z",
-            "ready": "2026-11-08T20:49:25Z",
-            "seconds": 7.0
+            "pod": "parser-68fc4b5b57-w556c",
+            "created": "2026-11-08T21:20:04Z",
+            "ready": "2026-11-08T21:20:12Z",
+            "seconds": 8.0
           }
         ],
-        "max_seconds": 7.0,
-        "mean_seconds": 7.0
+        "max_seconds": 9.0,
+        "mean_seconds": 8.5
       },
       {
         "run": "run3",
         "pods": [
           {
-            "pod": "parser-68fc4b5b57-9r6h8",
-            "created": "2026-11-08T20:49:29Z",
-            "ready": "2026-11-08T20:49:35Z",
-            "seconds": 6.0
+            "pod": "parser-68fc4b5b57-fvt6b",
+            "created": "2026-11-08T21:20:15Z",
+            "ready": "2026-11-08T21:20:24Z",
+            "seconds": 9.0
           },
           {
-            "pod": "parser-68fc4b5b57-t6w2k",
-            "created": "2026-11-08T20:49:29Z",
-            "ready": "2026-11-08T20:49:37Z",
-            "seconds": 8.0
+            "pod": "parser-68fc4b5b57-wwfd2",
+            "created": "2026-11-08T21:20:15Z",
+            "ready": "2026-11-08T21:20:24Z",
+            "seconds": 9.0
           }
         ],
-        "max_seconds": 8.0,
-        "mean_seconds": 7.0
+        "max_seconds": 9.0,
+        "mean_seconds": 9.0
       }
     ],
-    "median_of_runs_seconds (slowest pod per run)": 7.0,
-    "median_over_all_pods_seconds": 6.5
+    "median_of_runs_seconds (slowest pod per run)": 9.0,
+    "median_over_all_pods_seconds": 8.5
   },
   "task4_rolling_locust": {
-    "requests": 1403,
-    "failures": 12,
-    "failure_pct": 0.855,
-    "p50_ms": 1000.0,
-    "p95_ms": 1600.0,
-    "p99_ms": 1700.0,
-    "avg_ms": 1023.5,
-    "max_ms": 2236.4938240000356,
-    "requests_per_s": 3.903,
+    "requests": 1491,
+    "failures": 0,
+    "failure_pct": 0.0,
+    "p50_ms": 910.0,
+    "p95_ms": 1700.0,
+    "p99_ms": 2300.0,
+    "avg_ms": 962.2,
+    "max_ms": 2472.2871090000353,
+    "requests_per_s": 4.151,
     "per_replica": {
-      "parser-68fc4b5b57-t6w2k": 115,
-      "parser-68fc4b5b57-9r6h8": 101,
-      "parser-7d4885b655-hkrjj": 141,
-      "parser-7d4885b655-rtnbs": 113,
-      "parser-68fc4b5b57-f2src": 462,
-      "parser-68fc4b5b57-xfdcp": 460
+      "parser-68fc4b5b57-wwfd2": 121,
+      "parser-68fc4b5b57-fvt6b": 104,
+      "parser-7d4885b655-hdb97": 163,
+      "parser-7d4885b655-br4gd": 123,
+      "parser-68fc4b5b57-xr8w6": 499,
+      "parser-68fc4b5b57-bfzml": 483
     },
     "per_model_version": {
-      "v1": 1138,
-      "v2": 254
+      "v1": 1207,
+      "v2": 286
     },
     "per_replica_share_pct": {
-      "parser-68fc4b5b57-t6w2k": 8.3,
-      "parser-68fc4b5b57-9r6h8": 7.3,
-      "parser-7d4885b655-hkrjj": 10.1,
-      "parser-7d4885b655-rtnbs": 8.1,
-      "parser-68fc4b5b57-f2src": 33.2,
-      "parser-68fc4b5b57-xfdcp": 33.0
+      "parser-68fc4b5b57-wwfd2": 8.1,
+      "parser-68fc4b5b57-fvt6b": 7.0,
+      "parser-7d4885b655-hdb97": 10.9,
+      "parser-7d4885b655-br4gd": 8.2,
+      "parser-68fc4b5b57-xr8w6": 33.4,
+      "parser-68fc4b5b57-bfzml": 32.4
     }
   },
   "task4_rolling_timeline": [
-    "2026-11-08T20:52:48Z kubectl set env deployment/parser MODEL_VERSION=v2 MODEL_URI=s3://models/v2/",
+    "2026-11-08T21:23:35Z kubectl set env deployment/parser MODEL_VERSION=v2 MODEL_URI=s3://models/v2/",
     "deployment.apps/parser env updated",
     "Waiting for deployment \"parser\" rollout to finish: 1 out of 2 new replicas have been updated...",
     "Waiting for deployment \"parser\" rollout to finish: 1 out of 2 new replicas have been updated...",
@@ -359,8 +359,8 @@
     "Waiting for deployment \"parser\" rollout to finish: 1 old replicas are pending termination...",
     "Waiting for deployment \"parser\" rollout to finish: 1 old replicas are pending termination...",
     "deployment \"parser\" successfully rolled out",
-    "2026-11-08T20:53:07Z rollout to v2 complete",
-    "2026-11-08T20:54:01Z kubectl rollout undo deployment/parser",
+    "2026-11-08T21:23:54Z rollout to v2 complete",
+    "2026-11-08T21:24:46Z kubectl rollout undo deployment/parser",
     "Warning: resource deployments/parser was previously managed with 'kubectl apply'. Rolling back will not update the kubectl.kubernetes.io/last-applied-configuration annotation, which may cause unexpected behavior on future 'kubectl apply' operations. Consider using 'kubectl apply' with your previous configuration file instead.",
     "deployment.apps/parser rolled back",
     "Waiting for deployment \"parser\" rollout to finish: 1 out of 2 new replicas have been updated...",
@@ -369,133 +369,133 @@
     "Waiting for deployment \"parser\" rollout to finish: 1 old replicas are pending termination...",
     "Waiting for deployment \"parser\" rollout to finish: 1 old replicas are pending termination...",
     "deployment \"parser\" successfully rolled out",
-    "2026-11-08T20:54:18Z rollback complete"
+    "2026-11-08T21:25:06Z rollback complete"
   ],
   "task4_recovery_locust": {
-    "requests": 719,
-    "failures": 7,
-    "failure_pct": 0.974,
-    "p50_ms": 1100.0,
-    "p95_ms": 1600.0,
-    "p99_ms": 1900.0,
-    "avg_ms": 992.2,
-    "max_ms": 2139.651817000072,
-    "requests_per_s": 4.02,
+    "requests": 736,
+    "failures": 0,
+    "failure_pct": 0.0,
+    "p50_ms": 990.0,
+    "p95_ms": 1700.0,
+    "p99_ms": 2300.0,
+    "avg_ms": 971.5,
+    "max_ms": 2379.8970420000387,
+    "requests_per_s": 4.106,
     "per_replica": {
-      "parser-68fc4b5b57-f2src": 84,
-      "parser-68fc4b5b57-xfdcp": 363,
-      "parser-68fc4b5b57-lxn5z": 268
+      "parser-68fc4b5b57-xr8w6": 381,
+      "parser-68fc4b5b57-bfzml": 87,
+      "parser-68fc4b5b57-q75vq": 271
     },
     "per_model_version": {
-      "v1": 715
+      "v1": 739
     },
     "per_replica_share_pct": {
-      "parser-68fc4b5b57-f2src": 11.7,
-      "parser-68fc4b5b57-xfdcp": 50.8,
-      "parser-68fc4b5b57-lxn5z": 37.5
+      "parser-68fc4b5b57-xr8w6": 51.6,
+      "parser-68fc4b5b57-bfzml": 11.8,
+      "parser-68fc4b5b57-q75vq": 36.7
     }
   },
   "task4_recovery_timeline": [
-    "2026-11-08T20:58:49Z deleting pod parser-68fc4b5b57-f2src",
-    "pod \"parser-68fc4b5b57-f2src\" deleted from app namespace",
+    "2026-11-08T21:29:36Z deleting pod parser-68fc4b5b57-bfzml",
+    "pod \"parser-68fc4b5b57-bfzml\" deleted from app namespace",
     "NAME     READY   UP-TO-DATE   AVAILABLE   AGE",
     "parser   1/2     2            1           10m",
-    "2026-11-08T20:59:00Z replica count restored",
+    "2026-11-08T21:29:46Z replica count restored",
     "NAME     READY   UP-TO-DATE   AVAILABLE   AGE",
     "parser   2/2     2            2           10m",
-    "NAME                      READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES",
-    "parser-68fc4b5b57-lxn5z   1/1     Running   0          11s     10.42.0.23   k3d-ccmini-server-0   <none>           <none>",
-    "parser-68fc4b5b57-xfdcp   1/1     Running   0          4m50s   10.42.0.22   k3d-ccmini-server-0   <none>           <none>"
+    "NAME                      READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES",
+    "parser-68fc4b5b57-q75vq   1/1     Running   0          11s   10.42.0.23   k3d-ccmini-server-0   <none>           <none>",
+    "parser-68fc4b5b57-xr8w6   1/1     Running   0          5m    10.42.0.21   k3d-ccmini-server-0   <none>           <none>"
   ],
   "task4_hpa_locust": {
-    "requests": 1167,
-    "failures": 12,
-    "failure_pct": 1.028,
-    "p50_ms": 1300.0,
-    "p95_ms": 1800.0,
-    "p99_ms": 2000.0,
-    "avg_ms": 1024.6,
-    "max_ms": 2230.9084630001053,
-    "requests_per_s": 3.898,
+    "requests": 1257,
+    "failures": 0,
+    "failure_pct": 0.0,
+    "p50_ms": 1200.0,
+    "p95_ms": 1700.0,
+    "p99_ms": 2200.0,
+    "avg_ms": 950.4,
+    "max_ms": 2559.545142000161,
+    "requests_per_s": 4.202,
     "per_replica": {
-      "parser-68fc4b5b57-xfdcp": 616,
-      "parser-68fc4b5b57-g4dfj": 541
+      "parser-68fc4b5b57-xr8w6": 663,
+      "parser-68fc4b5b57-lfmkj": 596
     },
     "per_model_version": {
-      "v1": 1157
+      "v1": 1259
     },
     "per_replica_share_pct": {
-      "parser-68fc4b5b57-xfdcp": 53.2,
-      "parser-68fc4b5b57-g4dfj": 46.8
+      "parser-68fc4b5b57-xr8w6": 52.7,
+      "parser-68fc4b5b57-lfmkj": 47.3
     }
   },
   "task4_hpa_timeline": [
-    "2026-11-08T21:02:52Z scaled down to 1 replica while idle",
-    "2026-11-08T21:03:00Z load started (4 users)",
-    "2026-11-08T21:03:36Z HPA set replicas=2 under load",
-    "2026-11-08T21:08:01Z load finished",
-    "2026-11-08T21:09:38Z replicas=1 after load"
+    "2026-11-08T21:33:18Z scaled down to 1 replica while idle",
+    "2026-11-08T21:33:26Z load started (4 users)",
+    "2026-11-08T21:33:46Z HPA set replicas=2 under load",
+    "2026-11-08T21:38:26Z load finished",
+    "2026-11-08T21:39:48Z replicas=1 after load"
   ],
   "task4_versions_after_update": [
-    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
-    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-hkrjj ",
-    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
-    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
-    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
-    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
-    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
-    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-hkrjj ",
-    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
-    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-hkrjj"
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-br4gd ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-br4gd ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-br4gd ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-br4gd ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-br4gd ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-hdb97 ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-br4gd ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-hdb97 ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-br4gd ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-hdb97"
   ],
   "task4_versions_after_rollback": [
-    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
-    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
-    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
-    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
-    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
-    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-xfdcp ",
-    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
-    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-xfdcp ",
-    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
-    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-xfdcp"
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-xr8w6 ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-bfzml ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-xr8w6 ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-bfzml ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-xr8w6 ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-xr8w6 ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-bfzml ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-bfzml ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-bfzml ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-bfzml"
   ],
   "task7_loadtest": {
-    "requests": 506,
-    "failures": 5,
-    "failure_pct": 0.988,
-    "p50_ms": 890.0,
-    "p95_ms": 1500.0,
-    "p99_ms": 1500.0,
-    "avg_ms": 936.8,
-    "max_ms": 1558.7780459999863,
-    "requests_per_s": 4.254,
+    "requests": 530,
+    "failures": 0,
+    "failure_pct": 0.0,
+    "p50_ms": 860.0,
+    "p95_ms": 1400.0,
+    "p99_ms": 2200.0,
+    "avg_ms": 889.3,
+    "max_ms": 2248.713801000008,
+    "requests_per_s": 4.459,
     "per_replica": {
-      "parser-68fc4b5b57-9r6h8": 250,
-      "parser-68fc4b5b57-t6w2k": 254
+      "parser-68fc4b5b57-fvt6b": 268,
+      "parser-68fc4b5b57-wwfd2": 265
     },
     "per_model_version": {
-      "v1": 504
+      "v1": 533
     },
     "per_replica_share_pct": {
-      "parser-68fc4b5b57-9r6h8": 49.6,
-      "parser-68fc4b5b57-t6w2k": 50.4
+      "parser-68fc4b5b57-fvt6b": 50.3,
+      "parser-68fc4b5b57-wwfd2": 49.7
     }
   },
   "task7_top_pods": {
-    "parser-68fc4b5b57-9r6h8": {
+    "parser-68fc4b5b57-fvt6b": {
       "samples": 13,
-      "cpu_m_max": 997,
-      "cpu_m_avg": 851,
-      "mem_mi_max": 371,
-      "mem_mi_avg": 369
+      "cpu_m_max": 995,
+      "cpu_m_avg": 892,
+      "mem_mi_max": 400,
+      "mem_mi_avg": 394
     },
-    "parser-68fc4b5b57-t6w2k": {
+    "parser-68fc4b5b57-wwfd2": {
       "samples": 13,
       "cpu_m_max": 1000,
-      "cpu_m_avg": 867,
-      "mem_mi_max": 400,
-      "mem_mi_avg": 392
+      "cpu_m_avg": 841,
+      "mem_mi_max": 500,
+      "mem_mi_avg": 450
     }
   },
   "task7_cost": {
@@ -503,18 +503,18 @@
     "replicas": 2,
     "cpu_limit_vcpu": 1.0,
     "memory_limit_gib": 1.0,
-    "requests_per_s": 4.253661441168077,
-    "successful_requests_per_s": 4.212,
+    "requests_per_s": 4.459196296278451,
+    "successful_requests_per_s": 4.459,
     "hourly_cost_per_replica": 3.95,
     "hourly_cost_all_replicas": 7.9,
-    "requests_per_hour": 15313.2,
-    "cost_per_1000_requests": 0.5159,
+    "requests_per_hour": 16053.1,
+    "cost_per_1000_requests": 0.4921,
     "steps": [
       "per replica per hour = 1 vCPU x 3.50 + 1 GiB x 0.45 = 3.9500 INR/h",
       "all replicas per hour = 2 x 3.9500 = 7.9000 INR/h",
-      "requests per hour = 4.254 req/s x 3600 = 15313.2",
-      "cost per 1,000 requests = 7.9000 / 15313.2 x 1000 = 0.5159 INR"
+      "requests per hour = 4.459 req/s x 3600 = 16053.1",
+      "cost per 1,000 requests = 7.9000 / 16053.1 x 1000 = 0.4921 INR"
     ]
   },
-  "make_up_seconds": "185"
+  "make_up_seconds": "187"
 }

@@ -36,10 +36,12 @@ Object storage is the hand-off point between every stage, and every hand-off is 
 
 | Model | JSON validity | Intent | Date | Time | Place | **Full frame** |
 |---|---:|---:|---:|---:|---:|---:|
-| Teacher phi3.5 (3.8 B, Ollama, same prompt and settings as Task 1) | 95.0 | 83.0 | 81.0 | 81.0 | 87.0 | **53.0** |
+| Teacher phi3.5 ¹ | 95.0 | 83.0 | 81.0 | 81.0 | 87.0 | **53.0** |
 | Pythia-70M untrained | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | **0.0** |
-| **Student v1** (Pythia-70M distilled, 10 epochs) | **100.0** | 87.0 | 86.0 | 83.0 | 84.0 | **47.0** |
-| Student v2 (seed 1234, 11 epochs) | 100.0 | 83.0 | 82.0 | 85.0 | 86.0 | **49.0** |
+| **Student v1** (10 epochs) | **100.0** | 87.0 | 86.0 | 83.0 | 84.0 | **47.0** |
+| Student v2 (seed 1234, 11 ep.) | 100.0 | 83.0 | 82.0 | 85.0 | 86.0 | **49.0** |
+
+<p class="small">¹ 3.8 B parameters via Ollama, same prompt and settings as Task 1. Students: Pythia-70M distilled.</p>
 
 **What changed.** The untrained Pythia-70M has never seen the format: its first generated token is a newline, so every answer is empty (0 % on everything). After distillation the 70 M student reaches **89 % of the teacher's full-frame accuracy (47 vs 53)** with **~54× fewer parameters** and answers in 0.33 s (median, 4 threads) instead of several seconds. It is *more* often valid JSON than the teacher (greedy alone: 99 vs 95 %), because the cleaned training set contains no "Note: …" tails - the student copies the teacher's *filtered* behaviour, not its failures. In 64 of 100 commands the student's greedy object is identical to the teacher's; 42 commands are fully right for both, 11 only for the teacher, 5 only for the student. Its single invalid greedy output (V028, a corrupted slot string) is repaired by the beam-search retry into a *valid but wrong* object (`"time": "one"`), which raises validity to 100 % and intent/date to 87/86 % without changing full frame (greedy-only scores from the training run: 99/86/85/83/84/47, `results/task2/train_v1.log`). v2 is slightly better on full frame (49) and validity (100) but worse on intent (83); the differences (2-3 commands) are within run-to-run noise on 100 examples. **Suitability of Pythia-70M:** good at copying short spans (slot values) and learning a fixed output format, Apache-2.0, small enough for 1 CPU / 1 GiB; but it has little world knowledge, so it cannot generalise to intents or slot styles the teacher never produced, and it cannot follow instructions without fine-tuning.
 
@@ -51,13 +53,30 @@ Object storage is the hand-off point between every stage, and every hand-off is 
 
 **Image.** `python:3.12.8-slim-bookworm`, CPU-only `torch==2.5.1+cpu` from the PyTorch CPU index (the default wheel pulls ~3 GB of CUDA libraries), every dependency pinned with `==` (fully resolved lock, `service/requirements.txt`), non-root user, no weights (checked: 0 weight files in the image). Build from a fresh clone with one command: `make image` (= `docker build -f service/Dockerfile -t ccmini/parser:1.0 .`).
 
-⟨T3⟩
+**Results** (<span class="m">measured</span>, deploy run 42524321276, `results/task3/`). Image `ccmini/parser:1.0`: **1,137,333,745 bytes (1.14 GB) ≤ 2 GB**; 0 weight files in the image, `/models` empty (`no_weights_in_image.txt`); all 40 installed packages match the `==` pins of `service/requirements.txt` (`pip_freeze_in_image.txt`). The container was started with `docker run --cpus=1 --memory=1g --memory-swap=1g` (cgroup `memory.max` = 1,073,741,824, `cpu.max` = 100000/100000). `/readyz` answered 503 until the model was loaded, then 200 (~5 s); `/healthz` 200 throughout. **50 sequential `POST /parse`: 50 × HTTP 200**, mean 422 ms, p50 402 ms, p95 469 ms, max 1,253 ms. **Peak memory: 656.1 MiB** (cgroup `memory.peak` = 688,001,024 bytes; it includes the page cache of the 282 MB weight file); `docker stats` sampled at ~1 Hz peaked at 379.8 MiB. **No OOM kill** (`OOMKilled=false`, `oom_kill 0`, 0 restarts). With `FAULT_INJECT=1`: `HTTP/1.1 500` with body exactly `{"error":"invalid_model_output"}` and both headers (`fault_inject.txt`).
+
+**Limitations / improvements.** One generation at a time per Pod (≈ 2.4 requests/s per CPU); fp32 weights (282 MB) make up most of the memory. Dynamic int8 quantisation or ONNX Runtime would roughly halve both, and request batching would raise throughput. The beam-search retry hides a model error behind a *valid but wrong* answer (V028); a stricter design would return 500 and log it.
 
 ## 4 · Kubernetes deployment, scaling and reliability
 
 **Architecture / implementation** (`k8s/app/parser.yaml`). Namespace `app`: a **Deployment** `parser` with 2 replicas, requests 500m CPU / 512 Mi and limits 1 CPU / 1 Gi, readiness probe `GET /readyz` every 2 s, liveness probe `GET /healthz` (10 s, 6 failures), rolling update `maxSurge 1 / maxUnavailable 0`, `preStop: sleep 8` and a 40 s grace period so that a Pod keeps serving while Traefik removes it from the endpoints; a **Service** (ClusterIP :80 → 8000) that only lists Ready Pods; a Traefik **Ingress** routing `/parse` (and `/readyz`, `/healthz`) from `localhost:8080`; an **HPA** `autoscaling/v2`, min 1, max 2, target 70 % average CPU utilisation (of the 500m request), scale-down stabilisation shortened to 60 s (default 300 s) so the demonstration fits in one CI run. All experiments are scripted in `scripts/experiments.sh` and ran in one `deploy` workflow run on a fresh runner; for the tests that need exactly two replicas (rolling update, recovery, load balancing, cold start) the HPA's `minReplicas` was temporarily patched to 2 and restored to 1 for the HPA test (<span class="a">design choice</span>, recorded in the logs).
 
-⟨T4⟩
+**Results** (<span class="m">measured</span>, deploy run 42524321276, `results/task4/`):
+
+| Check | Evidence |
+|---|---|
+| Ingress → Service → Pods | `curl -X POST localhost:8080/parse` → 200, four-key body, `X-Model-Version: v1`, `X-Served-By: parser-…-75tjb` (`parse_through_ingress.txt`) |
+| Requests / limits | requests 500m / 512Mi, limits 1 CPU / 1Gi (`requests_limits.json`) |
+| No ready endpoints while loading | cold-start run 1, 21:19:53-21:20:00: `ready endpoints: [] not-ready: [2 new Pods]`; the Ingress answered **404 for those 6 s** (no backend), 200 before and after (`coldstart/run1-watch.txt`, `run1-ingress-codes.txt`) |
+| HPA 1 → 2 → 1 | idle → 1 replica (21:33:18); load started 21:33:26 → CPU 176 % of request → **2 replicas at 21:33:46 (20 s)**, peak 199 %; load stopped 21:38:26 → **back to 1 at 21:39:48** (82 s = 60 s stabilisation + metrics lag). Events: "New size: 2; reason: cpu resource utilization … above target", "New size: 1; reason: All metrics below target" (`hpa/`) |
+| Rolling update under load | `set env MODEL_VERSION=v2 MODEL_URI=s3://models/v2/` at 21:23:35, rolled out in 19 s; `rollout undo` at 21:24:46, done in 20 s. Locust (6 min): **1,491 requests, 0 failed (0.00 %)**, 286 answered by v2. After rollback **10/10 responses `X-Model-Version: v1`** (`rolling/`) |
+| Recovery under load | Pod deleted 21:29:36 → 2/2 Ready again 21:29:46 (**10 s**); Locust (3 min): **736 requests, 0 failed (0.00 %)** (`recovery/`) |
+| Cold start ×3 | Pod creation → Ready: run 1: 8, 8 s; run 2: 9, 8 s; run 3: 9, 9 s → **median 9 s** (slowest Pod per run; 8.5 s over all 6 Pods). Logs: `downloaded 8 files (285.3 MB) from s3://models/v1/ in 1.4s`, `sha256 verified`, `model v1 loaded … in 2.6s` (`coldstart/`) |
+| Load balancing (2 Ready replicas, standard command) | successful requests per replica: **268 / 265 = 50.3 % / 49.7 %** (`loadbalance_headers.json`) |
+
+The *first* deployment run (greedy decoding only, `results/archive/greedy-only-run-42521715011/`) already lost **no** request to the rolling update, the Pod deletion or the scaling (0 connection errors / 502 / 503), but ~1 % of all requests were HTTP 500 for one validation command (V028), giving 0.86 % failures in the rolling update. The retry described in Section 3 removed exactly those failures.
+
+**Limitations.** **The whole cluster is one k3s node on one machine:** these tests show that Kubernetes replaces Pods and shifts traffic, *not* fault tolerance across machines - losing the machine (or the single SeaweedFS Pod and its local-path volume) stops everything. The HPA can only go to 2 replicas on 4 cores; the experiments that need exactly two replicas temporarily set the HPA's `minReplicas` to 2 (logged). **Improvements:** several nodes with Pod anti-affinity and a PodDisruptionBudget, replicated object storage, a startup probe and a node-local model cache to cut cold start.
 
 ## 5 · Subnetting and network access control
 
@@ -80,7 +99,7 @@ Working, e.g. app: 2<sup>9</sup>−2 = 510 < 1,000 ≤ 2<sup>10</sup>−2 = 1,02
 
 **Architecture.** Everything is in Git: code, tests, prompts, configs, manifests, network files, workflows, and the *outputs* that are small (teacher shards, `train.jsonl`, checksums, every result file). Model weights are kept out of Git (`.gitignore`) and live in object storage and GitHub Releases. Four GitHub Actions workflows reproduce the project on clean `ubuntu-24.04` runners and commit their evidence back as the repository owner: `label.yml` (Task 1), `train.yml` (Task 2), `deploy.yml` (Tasks 3/4/7: fresh clone → `make up` → experiments → `make down`) and **`ci.yml`** (Task 6).
 
-**`make up` / `make down`.** From a fresh clone: `git clone …`, `cd cloudcomputing`, `make up` (three commands). `make up` = tools venv → k3d cluster → SeaweedFS + buckets + kit upload → models from the Release (checksum-verified) to `s3://models/v1|v2/` → image build + `k3d image import` → `kubectl apply -f k8s/app/` → wait for `/readyz` through the Ingress. ⟨MAKEUP⟩ `make down` runs `k3d cluster delete --config cluster/k3d.yaml` (log: `results/task6/make_down.log`, `k3d cluster list` empty afterwards).
+**`make up` / `make down`.** From a fresh clone: `git clone …`, `cd cloudcomputing`, `make up` (three commands). `make up` = tools venv → k3d cluster → SeaweedFS + buckets + kit upload → models from the Release (checksum-verified) to `s3://models/v1|v2/` → image build + `k3d image import` → `kubectl apply -f k8s/app/` → wait for `/readyz` through the Ingress. <span class="m">From the fresh CI checkout, `make up` finished in **187 s** (`results/task6/make_up.log`, ending with a 200 from `/parse`).</span> `make down` runs `k3d cluster delete --config cluster/k3d.yaml` (log: `results/task6/make_down.log`, `k3d cluster list` empty afterwards).
 
 **CI pipeline (`ci.yml`, on every push and on demand)** - stages run in this order, each `needs` the previous one: (1) **lint** - ruff (pinned 0.8.4, rules E/F/W/B/I), `bash -n` on scripts, JSON/YAML syntax of NACL, manifests and workflows; (2) **unit tests** - 21 pytest tests (clean.py rules and counts, shard partitioning, service endpoints/headers/500 body/FAULT_INJECT, schema validator, prompt format, subnets, NACL); (3) **model evaluation** - downloads the model from the GitHub Release (`gh release download model-v1`), verifies `sha256sum -c model.sha256`, runs `predict.py` + `score.py` on `validation.jsonl`; (4) **quality gate** - `score.py --min-validity 95`. A parallel **secret-scan** job runs gitleaks 8.21.2 over the whole Git history. <span class="m">**Gate demonstration - failed run:** <a href="https://github.com/kumshivam0712/cloudcomputing/actions/runs/42524323815">actions/runs/42524323815</a> (`model_tag=model-base`, the untrained Pythia-70M): lint, tests and evaluation pass, the gate stops the pipeline with `QUALITY GATE FAILED: json_validity 0.0 < 95.0`. **Passing run** with the student: <a href="https://github.com/kumshivam0712/cloudcomputing/actions/runs/42524310266">actions/runs/42524310266</a> (`model-v1`, validity 100 ≥ 95). gitleaks reported **no leaks** in every run.</span> (`results/task6/ci_runs.md`.) The CI evaluation stage also caught a real bug: `predict.py` wrote its raw output into the predictions file when that file was not named `*_predictions.jsonl`; it was fixed and covered by a test.
 
@@ -90,8 +109,43 @@ Working, e.g. app: 2<sup>9</sup>−2 = 510 < 1,000 ≤ 2<sup>10</sup>−2 = 1,02
 
 ## 7 · Performance, cost and review
 
-⟨T7⟩
+**Load test** (<span class="m">measured</span>; the standard command, through the Ingress, two Ready replicas; `results/loadtest_stats.csv`, `loadtest_headers.json`, `task7/`):
+
+| Measure (standard command, 2 Ready replicas) | Value |
+|---|---|
+| Requests / failed (error rate) | 530 / **0 (0.00 %)** |
+| Latency p50 / p95 / p99 | **860 ms / 1,400 ms** / 2,200 ms |
+| Throughput | **4.46 requests/s** |
+| CPU per Pod (`kubectl top`, 13 samples, 10 s apart) | Pod A avg 892m, max 995m · Pod B avg 841m, max 1000m |
+| Memory per Pod (same samples) | Pod A avg 394 Mi, max 400 Mi · Pod B avg 450 Mi, max 500 Mi |
+| Cold start (Section 4) | median **9 s** from Pod creation to Ready |
+
+Both Pods sit at their 1-CPU limit: the service is CPU-bound, and latency is mostly queueing (2 users per Pod × ~0.42 s per request). The node used 1,797m CPU (44 %) and 2.0 GiB in total.
+
+**Cost** (`data/rate_card.json`, `scripts/cost.py`, `task7/cost.json`; billing on limits for every running replica, <span class="a">assumption: the replicas serve this load for the whole hour</span>): per replica per hour = 1 vCPU × 3.50 + 1 GiB × 0.45 = **3.95 INR**; 2 replicas = **7.90 INR/h**; requests per hour = 4.459 req/s × 3,600 = **16,053**; cost per 1,000 requests = 7.90 / 16,053 × 1,000 = **0.492 INR**. When idle the HPA runs one replica (3.95 INR/h), so the price per request rises as traffic falls.
+
+**SLO.** *99 % of `POST /parse` requests return HTTP 200 within 30 s, measured over one standard load-test run (2 min, 4 users).* Error budget = 1 % × 530 = **5.3 → 5 requests**; used **0 (0 % of the budget)**. In the first deployment run the same SLO would have used **5 of 5 allowed failures (506 requests, 99 % of the budget)** - all from one model error - which is what triggered the retry.
+
+| Component / concern | Evidence (measured) | Limitation found | Improvement proposed |
+|---|---|---|---|
+| Data and storage | 3,000 → 2,661 kept (157 invalid JSON, 138 bad slots); model pulled from S3: 285 MB in 1.4 s | single SeaweedFS Pod on one local-path volume (SPOF); ~5 % of labels lost to "Note" tails | replicated SeaweedFS (several volume servers, replication 001); constrained JSON decoding for the teacher |
+| Model quality | full frame 47 % vs teacher 53 % (89 %), validity 100 %, intent 87 % | copies teacher errors; 100 validation commands → ±5-point noise; V028 only "fixed" to a wrong answer | train on all 2,661 records, token-level KD with a same-tokenizer teacher, larger held-out set |
+| Latency and throughput | p50 860 ms, p95 1,400 ms, 4.46 req/s (2 Pods); 0.42 s per request alone | one request at a time per Pod, fp32 on CPU | int8 quantisation / ONNX Runtime, request batching, more replicas on more nodes |
+| Resource utilisation | CPU 841-892m of 1000m (saturated); memory 394-450 Mi of 1 Gi (peak 656 MiB at start-up) | CPU is the bottleneck, memory over-provisioned | memory limit ~768 Mi, more CPU per Pod or more Pods; requests = observed usage |
+| Reliability and recovery | 0 / 1,491 failed during rolling update, 0 / 736 during Pod deletion; replica restored in 10 s; cold start 9 s | one node: no machine-level fault tolerance; cold start depends on S3 being up | multi-node cluster, anti-affinity, PodDisruptionBudget, cached model volume |
+| Security and cost | gitleaks: 0 leaks; keys only in Secrets; 0.492 INR per 1,000 requests (7.90 INR/h) | Secrets not encrypted at rest by default; S3 and Ingress over plain HTTP; billed on limits even when idle | k3s secrets encryption / sealed-secrets, TLS on Ingress and S3; right-size limits, scale to the minimum at night |
 
 ## References
 
-1. Y. Kim, A. M. Rush. *Sequence-Level Knowledge Distillation.* EMNLP 2016. 2. G. Hinton, O. Vinyals, J. Dean. *Distilling the Knowledge in a Neural Network.* 2015. 3. Y.-C. Chen et al. *Distilling Knowledge Learned in BERT for Text Generation.* ACL 2020. 4. E. Bastianelli et al. *SLURP: A Spoken Language Understanding Resource Package.* EMNLP 2020. 5. S. Biderman et al. *Pythia* (EleutherAI/pythia-70m model card). 6. Hugging Face Transformers and TRL documentation. 7. k3d, k3s, SeaweedFS, Ollama, Locust, gitleaks and Kubernetes documentation (Deployments, Services, Probes, HPA, Secrets, resource metrics pipeline). 8. AWS VPC User Guide, *Network ACLs*. 9. Google SRE Book, *Service Level Objectives*.
+<ol class="small">
+<li>Y. Kim, A. M. Rush. <i>Sequence-Level Knowledge Distillation.</i> EMNLP 2016.</li>
+<li>G. Hinton, O. Vinyals, J. Dean. <i>Distilling the Knowledge in a Neural Network.</i> 2015.</li>
+<li>Y.-C. Chen et al. <i>Distilling Knowledge Learned in BERT for Text Generation.</i> ACL 2020.</li>
+<li>E. Bastianelli et al. <i>SLURP: A Spoken Language Understanding Resource Package.</i> EMNLP 2020.</li>
+<li>S. Biderman et al. <i>Pythia</i>; EleutherAI/pythia-70m model card.</li>
+<li>Hugging Face Transformers (causal LM fine-tuning, generation) and TRL (distillation trainer) documentation.</li>
+<li>k3d, k3s (Traefik, metrics-server), SeaweedFS, Ollama, Locust and gitleaks documentation.</li>
+<li>Kubernetes documentation: Deployments, Services, Ingress, Probes, Secrets, Horizontal Pod Autoscaling, resource metrics pipeline.</li>
+<li>AWS VPC User Guide, <i>Network ACLs</i>.</li>
+<li>Google SRE Book, <i>Service Level Objectives</i>.</li>
+</ol>

@@ -16,6 +16,10 @@ on:
       reflection_scan:
         description: "Path of the scanned handwritten reflection PDF in the repository"
         default: "reflection/scan.pdf"
+      dry_run:
+        description: "Test only: build the PDF and zip as an artifact, but do not commit, tag or publish"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -59,6 +63,7 @@ jobs:
       - name: Build report/report.pdf
         run: report/build_pdf.sh report.md report.pdf && pdfinfo report/report.pdf 2>/dev/null | grep Pages || true
       - name: Commit and tag "final"
+        if: ${{ !inputs.dry_run }}
         run: |
           git config user.name "$COMMIT_NAME"
           git config user.email "$COMMIT_EMAIL"
@@ -68,6 +73,17 @@ jobs:
           git tag -f -a final -m "Final submission (${ROLL})"
           git push -f -q origin final
           echo "final -> $(git rev-parse --short final)"
+      - name: Dry run - stand-in tag and scan
+        if: ${{ inputs.dry_run }}
+        run: |
+          git config user.name "$COMMIT_NAME"; git config user.email "$COMMIT_EMAIL"
+          git add report/report.md report/report.pdf README.md
+          git commit -q -m "dry run (not pushed)"
+          git tag -f final
+          if [[ ! -f "$SCAN" ]]; then
+            mkdir -p "$(dirname "$SCAN")"
+            cp report/report.pdf "$SCAN"     # stand-in only, so the packaging step can be tested
+          fi
       - name: Package <roll_number>.zip
         run: |
           if [[ ! -f "$SCAN" ]]; then
@@ -75,6 +91,8 @@ jobs:
             exit 0
           fi
           scripts/package_submission.sh "$ROLL" "$SCAN" final
+          unzip -l "dist/${ROLL}.zip" | tail -3
+          if [[ "${{ inputs.dry_run }}" == "true" ]]; then echo "dry run: zip kept as an artifact only"; exit 0; fi
           gh release delete submission --yes 2>/dev/null || true
           gh release create submission "dist/${ROLL}.zip" --target "$(git rev-parse final)" \
             --title "Submission ${ROLL}" --notes "Single-file submission built from tag final."
