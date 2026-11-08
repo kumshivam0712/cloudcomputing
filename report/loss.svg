@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 230" width="560" height="230" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" role="img" aria-label="Training loss per epoch">
+<rect width="560" height="230" fill="#fcfcfb"/>
+<line x1="52" x2="540" y1="192.0" y2="192.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="46" y="195.0" text-anchor="end" fill="#52514e">0.00</text>
+<line x1="52" x2="540" y1="158.8" y2="158.8" stroke="#e4e3df" stroke-width="1"/>
+<text x="46" y="161.8" text-anchor="end" fill="#52514e">0.16</text>
+<line x1="52" x2="540" y1="125.6" y2="125.6" stroke="#e4e3df" stroke-width="1"/>
+<text x="46" y="128.6" text-anchor="end" fill="#52514e">0.32</text>
+<line x1="52" x2="540" y1="92.4" y2="92.4" stroke="#e4e3df" stroke-width="1"/>
+<text x="46" y="95.4" text-anchor="end" fill="#52514e">0.48</text>
+<line x1="52" x2="540" y1="59.2" y2="59.2" stroke="#e4e3df" stroke-width="1"/>
+<text x="46" y="62.2" text-anchor="end" fill="#52514e">0.64</text>
+<line x1="52" x2="540" y1="26.0" y2="26.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="46" y="29.0" text-anchor="end" fill="#52514e">0.80</text>
+<text x="52.0" y="206" text-anchor="middle" fill="#52514e">1</text>
+<text x="100.8" y="206" text-anchor="middle" fill="#52514e">2</text>
+<text x="149.6" y="206" text-anchor="middle" fill="#52514e">3</text>
+<text x="198.4" y="206" text-anchor="middle" fill="#52514e">4</text>
+<text x="247.2" y="206" text-anchor="middle" fill="#52514e">5</text>
+<text x="296.0" y="206" text-anchor="middle" fill="#52514e">6</text>
+<text x="344.8" y="206" text-anchor="middle" fill="#52514e">7</text>
+<text x="393.6" y="206" text-anchor="middle" fill="#52514e">8</text>
+<text x="442.4" y="206" text-anchor="middle" fill="#52514e">9</text>
+<text x="491.2" y="206" text-anchor="middle" fill="#52514e">10</text>
+<text x="540.0" y="206" text-anchor="middle" fill="#52514e">11</text>
+<text x="296.0" y="224" text-anchor="middle" fill="#52514e">epoch</text>
+<text x="52" y="16" fill="#0b0b0b" font-weight="bold">Training loss (mean cross-entropy per target token)</text>
+<path d="M52.0,42.1 L100.8,93.0 L149.6,146.3 L198.4,161.4 L247.2,173.2 L296.0,179.2 L344.8,183.6 L393.6,187.5 L442.4,189.6 L491.2,191.2" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="52.0" cy="42.1" r="3" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="100.8" cy="93.0" r="3" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="149.6" cy="146.3" r="3" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="198.4" cy="161.4" r="3" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="247.2" cy="173.2" r="3" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="296.0" cy="179.2" r="3" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="344.8" cy="183.6" r="3" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="393.6" cy="187.5" r="3" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="442.4" cy="189.6" r="3" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="491.2" cy="191.2" r="3" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"/>
+<line x1="390" x2="408" y1="36" y2="36" stroke="#2a78d6" stroke-width="2"/>
+<circle cx="399" cy="36" r="3" fill="#2a78d6"/>
+<text x="414" y="40" fill="#0b0b0b">v1: 10 epochs, final 0.0039</text>
+<path d="M52.0,37.6 L100.8,97.8 L149.6,140.7 L198.4,154.9 L247.2,165.4 L296.0,173.9 L344.8,179.0 L393.6,184.0 L442.4,187.5 L491.2,189.8 L540.0,191.3" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="52.0" cy="37.6" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="100.8" cy="97.8" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="149.6" cy="140.7" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="198.4" cy="154.9" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="247.2" cy="165.4" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="296.0" cy="173.9" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="344.8" cy="179.0" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="393.6" cy="184.0" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="442.4" cy="187.5" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="491.2" cy="189.8" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="540.0" cy="191.3" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<line x1="390" x2="408" y1="52" y2="52" stroke="#eb6834" stroke-width="2"/>
+<circle cx="399" cy="52" r="3" fill="#eb6834"/>
+<text x="414" y="56" fill="#0b0b0b">v2: 11 epochs, final 0.0036</text>
+</svg>

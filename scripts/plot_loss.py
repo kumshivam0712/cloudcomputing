@@ -8,7 +8,7 @@ import sys
 
 COLORS = ["#2a78d6", "#eb6834"]          # categorical slots 1-2 (validated adjacent pair)
 INK, MUTED, GRID = "#0b0b0b", "#52514e", "#e4e3df"
-W, H, L, R, T, B = 560, 230, 52, 70, 26, 38
+W, H, L, R, T, B = 560, 230, 52, 20, 26, 38
 
 
 def read(path):
@@ -53,10 +53,10 @@ def main():
             out.append(f'<circle cx="{x(e):.1f}" cy="{y(v):.1f}" r="3" fill="{c}" '
                        f'stroke="#fcfcfb" stroke-width="1.5"/>')
         e, v = pts[-1]
-        out.append(f'<text x="{x(e) + 8:.1f}" y="{y(v) + 3 + i * 11:.1f}" fill="{INK}">{name} {v:.3f}</text>')
-        lx = W - R - 150 + i * 75
-        out.append(f'<line x1="{lx}" x2="{lx + 16}" y1="{T - 13}" y2="{T - 13}" stroke="{c}" stroke-width="2"/>')
-        out.append(f'<text x="{lx + 20}" y="{T - 10}" fill="{INK}">{name}</text>')
+        lx, ly = W - R - 150, T + 14 + i * 16
+        out.append(f'<line x1="{lx}" x2="{lx + 18}" y1="{ly - 4}" y2="{ly - 4}" stroke="{c}" stroke-width="2"/>')
+        out.append(f'<circle cx="{lx + 9}" cy="{ly - 4}" r="3" fill="{c}"/>')
+        out.append(f'<text x="{lx + 24}" y="{ly}" fill="{INK}">{name}: {len(pts)} epochs, final {v:.4f}</text>')
     out.append("</svg>")
     print("\n".join(out))
 
