@@ -1,7 +1,7 @@
 {
-  "json_validity": 99.0,
-  "intent_accuracy": 86.0,
-  "date_accuracy": 85.0,
+  "json_validity": 100.0,
+  "intent_accuracy": 87.0,
+  "date_accuracy": 86.0,
   "time_accuracy": 83.0,
   "place_accuracy": 84.0,
   "full_frame": 47.0,

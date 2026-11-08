@@ -1,5 +1,5 @@
-.venv-train/bin/python training/predict.py --model build/models/v2 --gold data/validation.jsonl --out results/student_v2_predictions.jsonl
-100 predictions -> results/student_v2_predictions.jsonl (raw: results/student_v2_raw.jsonl) in 46.0s
+.venv-train/bin/python training/predict.py --model build/release/v2 --gold data/validation.jsonl --out results/student_v2_predictions.jsonl
+100 predictions -> results/student_v2_predictions.jsonl (raw: results/student_v2_raw.jsonl) in 36.1s; beam-search retry used for 0
 python3 tools/score.py results/student_v2_predictions.jsonl data/validation.jsonl --out results/student_v2_validation.json
 {
   "json_validity": 100.0,

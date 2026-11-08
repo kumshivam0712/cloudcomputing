@@ -1,5 +1,5 @@
-.venv-train/bin/python training/predict.py --model build/models/base --gold data/validation.jsonl --out results/pythia_base_predictions.jsonl
-100 predictions -> results/pythia_base_predictions.jsonl (raw: results/pythia_base_raw.jsonl) in 3.9s
+.venv-train/bin/python training/predict.py --model build/release/base --gold data/validation.jsonl --out results/pythia_base_predictions.jsonl
+100 predictions -> results/pythia_base_predictions.jsonl (raw: results/pythia_base_raw.jsonl) in 98.7s; beam-search retry used for 0
 python3 tools/score.py results/pythia_base_predictions.jsonl data/validation.jsonl --out results/pythia_base_validation.json
 {
   "json_validity": 0.0,

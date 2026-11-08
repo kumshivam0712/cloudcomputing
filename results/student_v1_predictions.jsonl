@@ -25,7 +25,7 @@
 {"id": "V025", "prediction": "{\"intent\": \"datetime_query\", \"date\": null, \"time\": \"now\", \"place\": \"new york\"}"}
 {"id": "V026", "prediction": "{\"intent\": \"weather_query\", \"date\": null, \"time\": \"five days\", \"place\": \"new york city\"}"}
 {"id": "V027", "prediction": "{\"intent\": \"calendar_query\", \"date\": \"today\", \"time\": null, \"place\": null}"}
-{"id": "V028", "prediction": "{\"intent\": \"weather_query\", \"date\": null, \"time\": \"s. null, \"place\": null}"}
+{"id": "V028", "prediction": "{\"intent\": \"weather_query\", \"date\": null, \"time\": \"one\", \"place\": null}"}
 {"id": "V029", "prediction": "{\"intent\": \"alarm_query\", \"date\": null, \"time\": \"right now\", \"place\": null}"}
 {"id": "V030", "prediction": "{\"intent\": \"alarm_set\", \"date\": null, \"time\": \"ten am\", \"place\": null}"}
 {"id": "V031", "prediction": "{\"intent\": \"recommendation_events\", \"date\": \"today\", \"time\": null, \"place\": null}"}
