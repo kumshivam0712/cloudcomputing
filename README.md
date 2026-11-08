@@ -28,7 +28,7 @@ SeaweedFS (S3) and pulled at start-up. The report is [`report/report.pdf`](repor
 | `service/` | FastAPI service, Dockerfile, pinned requirements |
 | `network/` | `subnets.md`, `nacl.json`, `packets_sample.jsonl` |
 | `tests/` | unit tests (pytest) |
-| `.github/workflows/` | `ci.yml` (Task 6), `label.yml` (Task 1), `train.yml` (Task 2), `deploy.yml` (Tasks 3/4/6/7) |
+| `.github/workflows/` | `ci.yml` (Task 6), `label.yml` (Task 1), `train.yml` + `evaluate.yml` (Task 2), `deploy.yml` (Tasks 3/4/6/7), `submission.yml` (final packaging) |
 | `results/` | every log, score report, Locust output and command output used in the report |
 | `report/` | `report.md` (source) and `report.pdf` |
 | `data/`, `tools/` | the student kit, unchanged |
@@ -99,9 +99,26 @@ scripts/experiments.sh all
 | Evaluate a model | `make evaluate MODEL_DIR=build/models/v1 NAME=student_v1` | |
 | Use freshly trained models | `make seed-models LOCAL_MODELS=1` | uploads `build/models/v*` instead of the Release assets |
 
-The same stages run on GitHub Actions (`workflow_dispatch`): `task1-teacher-labelling`,
-`task2-train-student`, `task3-4-7-deploy-and-experiments` and `ci`; each commits its outputs to
-`results/`.
+The same stages run on GitHub Actions: `task1-teacher-labelling` → (automatically)
+`task2-train-student` → (automatically) `task3-4-7-deploy-and-experiments`, plus
+`task2-evaluate-models` and `ci`. Each commits its outputs to `results/` as the repository owner.
+
+| Evidence run | Link |
+|---|---|
+| Task 1 labelling (4 workers, 3,000 commands) | [42500739339](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42500739339) |
+| Task 2 training v1/v2 + Releases | [42518210435](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42518210435) |
+| Task 2 evaluation (final code) | [42524318612](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42524318612) |
+| Tasks 3/4/6/7 deployment and experiments | [42524321276](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42524321276) |
+| CI with the untrained model (quality gate fails) | [42524323815](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42524323815) |
+| CI with model-v1 (all stages pass) | [42524310266](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42524310266) |
+
+## Submission package
+
+1. Scan the handwritten reflection and upload it to the repository as `reflection/scan.pdf`.
+2. Actions → **submission** → Run workflow with your full name and roll number. It fills in
+   `⟨NAME⟩`/`⟨ROLL⟩` in the report, rebuilds `report/report.pdf`, commits, moves the tag `final`
+   to that commit and publishes `<roll_number>.zip` (source tree of `final` + `<roll_number>.pdf`)
+   as the Release `submission`. Locally: `scripts/package_submission.sh ROLL reflection/scan.pdf final`.
 
 ## Shut down
 

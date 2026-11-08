@@ -16,5 +16,7 @@ scripts or by the GitHub Actions workflows (which commit them back to the reposi
 | 3 Container | `task3/image.txt`, `task3/no_weights_in_image.txt`, `task3/pip_freeze_in_image.txt`, `task3/limits.txt`, `task3/sequential_50.csv`, `task3/memory_peak_bytes.txt`, `task3/docker_stats.csv`, `task3/oom_check.txt`, `task3/fault_inject.txt`, `task3/summary.json` | `scripts/experiments.sh task3` |
 | 4 Kubernetes | `task4/resources.txt`, `task4/describe_deployment.txt`, `task4/parse_through_ingress.txt`, `task4/models_bucket.txt`, `task4/coldstart/`, `task4/cold_start_summary.json`, `task4/rolling/`, `task4/recovery/`, `task4/hpa/`, `task4/loadbalance_headers.json`, `task4/final_state.txt` | `scripts/experiments.sh` |
 | 5 Network | `task5/subnets_table.md`, `task5/subnets.json`, `task5/nacl_check.txt` | `scripts/subnets.py`, `tools/nacl_sim.py` |
-| 6 Make / CI | `task6/make_up.log`, `task6/make_down.log`, CI run links in the report | deploy workflow, `ci.yml` |
+| 6 Make / CI | `task6/make_up.log`, `task6/make_down.log`, `task6/ci_runs.md` (gate failure / pass links and output) | deploy workflow, `ci.yml` |
 | 7 Load test | `loadtest_stats.csv`, `loadtest_stats_history.csv`, `loadtest_failures.csv`, `loadtest_headers.json` (standard command), `task7/locust_stdout.txt`, `task7/top_pods.txt`, `task7/loadtest_summary.json`, `task7/cost.json`, `task7/cost.txt` | `scripts/experiments.sh standard`, `scripts/cost.py` |
+| all | `report_numbers.json` - every measured number used in the report, extracted from the files above | `scripts/report_numbers.py` |
+| before/after | `archive/greedy-only-run-42521715011/` - the first deployment run, before the beam-search retry (all failures = HTTP 500 for one command) | deploy workflow |
