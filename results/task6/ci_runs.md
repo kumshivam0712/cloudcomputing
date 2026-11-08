@@ -1,11 +1,17 @@
 # CI runs (ci.yml) used as evidence
 
-| Run | Model | lint | unit tests (20) | evaluate | quality gate | secret scan (gitleaks) |
-|---|---|---|---|---|---|---|
-| [42522194726](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42522194726) | `model-base` (untrained Pythia-70M, deliberately bad) | success | success | success | **failure** | success (no leaks) |
-| [42522190946](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42522190946) | `model-v1` (distilled student) | success | success | success | **success** | success (no leaks) |
+Final code (commit 2b30c5b, with the beam-search retry):
 
-Quality-gate step output of the failed run (job 128858301836, copied from the run log):
+| Run | Model | lint | unit tests (21) | evaluate | quality gate | secret scan (gitleaks) |
+|---|---|---|---|---|---|---|
+| [42524323815](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42524323815) | `model-base` (untrained Pythia-70M, deliberately bad) | success | success | success | **failure** | success (no leaks) |
+| [42524310266](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42524310266) | `model-v1` (distilled student) | success | success | success | **success** | success (no leaks) |
+
+The same pair on the earlier code (commit 3d51f4f, greedy decoding only) behaved identically:
+[42522194726](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42522194726) (model-base, gate failed) and
+[42522190946](https://github.com/kumshivam0712/cloudcomputing/actions/runs/42522190946) (model-v1, gate passed).
+
+Quality-gate step output of a failed run (job 128858301836 of run 42522194726, copied from the run log):
 
 ```
 $ python3 tools/score.py build/eval/predictions.jsonl data/validation.jsonl --min-validity 95
