@@ -20,8 +20,10 @@ from a file that a script or a workflow run produced**, and each such file is in
    (`.github/workflows/`): labelling (`label.yml`), training (`train.yml`), deployment and
    experiments (`deploy.yml`) and CI (`ci.yml`). The workflow logs and the files they committed are
    the evidence. Failures during development (a YAML quoting error in a workflow, a missing
-   `accelerate` dependency for `low_cpu_mem_usage`, a line too long for ruff) were found by running
-   the code and then fixed.
+   `accelerate` dependency for `low_cpu_mem_usage`, a line too long for ruff, a smoke test that
+   failed with the deliberately bad model, and an AI-written `predict.py` that wrote its raw output
+   into the predictions file when that file was not named `*_predictions.jsonl` - caught by the CI
+   evaluation stage, fixed, and covered by a new unit test) were found by running the code.
 2. **Unit tests** (`tests/`, 20 tests) pin down the behaviour the assignment specifies: clean.py rules
    (a)-(e) and the count identity, shard partitioning without gaps or repeats, the exact
    `{"error": "invalid_model_output"}` body and HTTP 500 for invalid output and for `FAULT_INJECT=1`,
