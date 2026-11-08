@@ -11,7 +11,8 @@ class FakeModel:
     def __init__(self, output):
         self.output = output
 
-    def parse(self, text):
+    def parse(self, text, is_valid=None):
+        self.is_valid = is_valid
         return self.output
 
 
@@ -50,6 +51,13 @@ def test_invalid_model_output_is_500_never_200(client, bad):
     r = client.post("/parse", json={"text": "x"})
     assert r.status_code == 500
     assert r.json() == {"error": "invalid_model_output"}
+
+
+def test_service_passes_the_schema_check_to_the_model_for_the_retry(client):
+    fake = FakeModel(GOOD)
+    service.state["model"] = fake
+    client.post("/parse", json={"text": "x"})
+    assert fake.is_valid(GOOD) is True and fake.is_valid("not json") is False
 
 
 def test_fault_inject(client, monkeypatch):

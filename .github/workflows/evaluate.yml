@@ -1,0 +1,44 @@
+# Task 2, step 6: score the released models on validation.jsonl with the current predict.py
+# (the same generation code as the service) and commit the raw outputs and score reports.
+name: task2-evaluate-models
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  COMMIT_NAME: Shivam Kumar
+  COMMIT_EMAIL: 227203916+kumshivam0712@users.noreply.github.com
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-24.04
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: make train-env
+      - name: Download the Releases and verify them
+        run: |
+          for v in v1 v2 base; do
+            gh release download "model-$v" --dir "build/release/$v" --clobber
+            (cd "build/release/$v" && sha256sum -c model.sha256)
+          done
+      - name: Predict and score (teacher scores come from the Task 1 run)
+        run: |
+          mkdir -p results/task2
+          for pair in v1:student_v1 v2:student_v2 base:pythia_base; do
+            v=${pair%%:*}; name=${pair#*:}
+            make evaluate MODEL_DIR=build/release/$v NAME=$name | tee results/task2/evaluate_$v.log
+          done
+          python3 scripts/summarize.py compare | tee results/task2/comparison.md
+      - name: Commit results
+        run: |
+          scripts/ci_commit.sh "Task 2: evaluate released models with the final generation code (workflow run ${{ github.run_id }})" results

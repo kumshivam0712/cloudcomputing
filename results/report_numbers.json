@@ -1,0 +1,520 @@
+{
+  "task1_clean": {
+    "shards": {
+      "shard-0.jsonl": 750,
+      "shard-1.jsonl": 750,
+      "shard-2.jsonl": 750,
+      "shard-3.jsonl": 750
+    },
+    "counts": {
+      "input_records": 3000,
+      "invalid_json": 157,
+      "wrong_keys": 1,
+      "bad_intent": 3,
+      "bad_slot": 138,
+      "duplicate": 40,
+      "kept": 2661
+    },
+    "train_sha256": "b79246c99ac598a3d0ea38a6db9801ec575aa04d1424d307ba247d9c589aea35",
+    "coverage": {
+      "pool_ids": 3000,
+      "shard_records": 3000,
+      "missing": [],
+      "repeated": [],
+      "unknown": []
+    }
+  },
+  "task1_shard_meta": [
+    {
+      "shard_index": 0,
+      "shard_count": 4,
+      "records": 750,
+      "labelled_this_run": 750,
+      "seconds_this_run": 11393.9,
+      "model": "phi3.5",
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 128
+      },
+      "prompt_file": "/app/prompts/teacher_prompt.txt",
+      "pod": "teacher-labeler-0"
+    },
+    {
+      "shard_index": 1,
+      "shard_count": 4,
+      "records": 750,
+      "labelled_this_run": 750,
+      "seconds_this_run": 11547.5,
+      "model": "phi3.5",
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 128
+      },
+      "prompt_file": "/app/prompts/teacher_prompt.txt",
+      "pod": "teacher-labeler-1"
+    },
+    {
+      "shard_index": 2,
+      "shard_count": 4,
+      "records": 750,
+      "labelled_this_run": 750,
+      "seconds_this_run": 11553.3,
+      "model": "phi3.5",
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 128
+      },
+      "prompt_file": "/app/prompts/teacher_prompt.txt",
+      "pod": "teacher-labeler-2"
+    },
+    {
+      "shard_index": 3,
+      "shard_count": 4,
+      "records": 750,
+      "labelled_this_run": 750,
+      "seconds_this_run": 11311.8,
+      "model": "phi3.5",
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 128
+      },
+      "prompt_file": "/app/prompts/teacher_prompt.txt",
+      "pod": "teacher-labeler-3"
+    }
+  ],
+  "teacher_validation": {
+    "json_validity": 95.0,
+    "intent_accuracy": 83.0,
+    "date_accuracy": 81.0,
+    "time_accuracy": 81.0,
+    "place_accuracy": 87.0,
+    "full_frame": 53.0,
+    "examples": 100,
+    "missing_predictions": 0
+  },
+  "pythia_base_validation": {
+    "json_validity": 0.0,
+    "intent_accuracy": 0.0,
+    "date_accuracy": 0.0,
+    "time_accuracy": 0.0,
+    "place_accuracy": 0.0,
+    "full_frame": 0.0,
+    "examples": 100,
+    "missing_predictions": 0
+  },
+  "student_v1_validation": {
+    "json_validity": 99.0,
+    "intent_accuracy": 86.0,
+    "date_accuracy": 85.0,
+    "time_accuracy": 83.0,
+    "place_accuracy": 84.0,
+    "full_frame": 47.0,
+    "examples": 100,
+    "missing_predictions": 0
+  },
+  "student_v2_validation": {
+    "json_validity": 100.0,
+    "intent_accuracy": 83.0,
+    "date_accuracy": 82.0,
+    "time_accuracy": 85.0,
+    "place_accuracy": 86.0,
+    "full_frame": 49.0,
+    "examples": 100,
+    "missing_predictions": 0
+  },
+  "loss_v1": [
+    {
+      "epoch": 1,
+      "loss": 0.722501,
+      "seconds": 153.9
+    },
+    {
+      "epoch": 2,
+      "loss": 0.476915,
+      "seconds": 151.7
+    },
+    {
+      "epoch": 3,
+      "loss": 0.220369,
+      "seconds": 150.1
+    },
+    {
+      "epoch": 4,
+      "loss": 0.147599,
+      "seconds": 152.4
+    },
+    {
+      "epoch": 5,
+      "loss": 0.090532,
+      "seconds": 149.8
+    },
+    {
+      "epoch": 6,
+      "loss": 0.061891,
+      "seconds": 152.6
+    },
+    {
+      "epoch": 7,
+      "loss": 0.040678,
+      "seconds": 160.3
+    },
+    {
+      "epoch": 8,
+      "loss": 0.021454,
+      "seconds": 160.5
+    },
+    {
+      "epoch": 9,
+      "loss": 0.01166,
+      "seconds": 156.1
+    },
+    {
+      "epoch": 10,
+      "loss": 0.003892,
+      "seconds": 156.0
+    }
+  ],
+  "loss_v2": [
+    {
+      "epoch": 1,
+      "loss": 0.743964,
+      "seconds": 206.6
+    },
+    {
+      "epoch": 2,
+      "loss": 0.453756,
+      "seconds": 205.5
+    },
+    {
+      "epoch": 3,
+      "loss": 0.247423,
+      "seconds": 206.1
+    },
+    {
+      "epoch": 4,
+      "loss": 0.178811,
+      "seconds": 206.6
+    },
+    {
+      "epoch": 5,
+      "loss": 0.127981,
+      "seconds": 207.4
+    },
+    {
+      "epoch": 6,
+      "loss": 0.087209,
+      "seconds": 206.3
+    },
+    {
+      "epoch": 7,
+      "loss": 0.062886,
+      "seconds": 206.4
+    },
+    {
+      "epoch": 8,
+      "loss": 0.038707,
+      "seconds": 207.2
+    },
+    {
+      "epoch": 9,
+      "loss": 0.021725,
+      "seconds": 207.4
+    },
+    {
+      "epoch": 10,
+      "loss": 0.010515,
+      "seconds": 207.1
+    },
+    {
+      "epoch": 11,
+      "loss": 0.003591,
+      "seconds": 206.4
+    }
+  ],
+  "task3": {
+    "cgroup_memory_peak_bytes": 680001536,
+    "cgroup_memory_peak_mib": 648.5,
+    "docker_stats_samples": 14,
+    "docker_stats_peak_mib": 372.2,
+    "sequential_50": {
+      "requests": 50,
+      "http_200": 49,
+      "http_500": 1,
+      "other": 0,
+      "latency_ms_mean": 450.4,
+      "latency_ms_p50": 449.8,
+      "latency_ms_p95": 491.8,
+      "latency_ms_max": 647.9
+    },
+    "oom_check": "OOMKilled=false Running=true RestartCount=0"
+  },
+  "task3_image_bytes": 1137331816,
+  "task3_fault_inject": [
+    "{\"error\":\"invalid_model_output\"}"
+  ],
+  "task4_cold_start": {
+    "runs": [
+      {
+        "run": "run1",
+        "pods": [
+          {
+            "pod": "parser-68fc4b5b57-2ddnb",
+            "created": "2026-11-08T20:49:08Z",
+            "ready": "2026-11-08T20:49:14Z",
+            "seconds": 6.0
+          },
+          {
+            "pod": "parser-68fc4b5b57-m26s6",
+            "created": "2026-11-08T20:49:08Z",
+            "ready": "2026-11-08T20:49:14Z",
+            "seconds": 6.0
+          }
+        ],
+        "max_seconds": 6.0,
+        "mean_seconds": 6.0
+      },
+      {
+        "run": "run2",
+        "pods": [
+          {
+            "pod": "parser-68fc4b5b57-5z9b9",
+            "created": "2026-11-08T20:49:18Z",
+            "ready": "2026-11-08T20:49:25Z",
+            "seconds": 7.0
+          },
+          {
+            "pod": "parser-68fc4b5b57-wcdmn",
+            "created": "2026-11-08T20:49:18Z",
+            "ready": "2026-11-08T20:49:25Z",
+            "seconds": 7.0
+          }
+        ],
+        "max_seconds": 7.0,
+        "mean_seconds": 7.0
+      },
+      {
+        "run": "run3",
+        "pods": [
+          {
+            "pod": "parser-68fc4b5b57-9r6h8",
+            "created": "2026-11-08T20:49:29Z",
+            "ready": "2026-11-08T20:49:35Z",
+            "seconds": 6.0
+          },
+          {
+            "pod": "parser-68fc4b5b57-t6w2k",
+            "created": "2026-11-08T20:49:29Z",
+            "ready": "2026-11-08T20:49:37Z",
+            "seconds": 8.0
+          }
+        ],
+        "max_seconds": 8.0,
+        "mean_seconds": 7.0
+      }
+    ],
+    "median_of_runs_seconds (slowest pod per run)": 7.0,
+    "median_over_all_pods_seconds": 6.5
+  },
+  "task4_rolling_locust": {
+    "requests": 1403,
+    "failures": 12,
+    "failure_pct": 0.855,
+    "p50_ms": 1000.0,
+    "p95_ms": 1600.0,
+    "p99_ms": 1700.0,
+    "avg_ms": 1023.5,
+    "max_ms": 2236.4938240000356,
+    "requests_per_s": 3.903,
+    "per_replica": {
+      "parser-68fc4b5b57-t6w2k": 115,
+      "parser-68fc4b5b57-9r6h8": 101,
+      "parser-7d4885b655-hkrjj": 141,
+      "parser-7d4885b655-rtnbs": 113,
+      "parser-68fc4b5b57-f2src": 462,
+      "parser-68fc4b5b57-xfdcp": 460
+    },
+    "per_model_version": {
+      "v1": 1138,
+      "v2": 254
+    },
+    "per_replica_share_pct": {
+      "parser-68fc4b5b57-t6w2k": 8.3,
+      "parser-68fc4b5b57-9r6h8": 7.3,
+      "parser-7d4885b655-hkrjj": 10.1,
+      "parser-7d4885b655-rtnbs": 8.1,
+      "parser-68fc4b5b57-f2src": 33.2,
+      "parser-68fc4b5b57-xfdcp": 33.0
+    }
+  },
+  "task4_rolling_timeline": [
+    "2026-11-08T20:52:48Z kubectl set env deployment/parser MODEL_VERSION=v2 MODEL_URI=s3://models/v2/",
+    "deployment.apps/parser env updated",
+    "Waiting for deployment \"parser\" rollout to finish: 1 out of 2 new replicas have been updated...",
+    "Waiting for deployment \"parser\" rollout to finish: 1 out of 2 new replicas have been updated...",
+    "Waiting for deployment \"parser\" rollout to finish: 1 out of 2 new replicas have been updated...",
+    "Waiting for deployment \"parser\" rollout to finish: 1 old replicas are pending termination...",
+    "Waiting for deployment \"parser\" rollout to finish: 1 old replicas are pending termination...",
+    "deployment \"parser\" successfully rolled out",
+    "2026-11-08T20:53:07Z rollout to v2 complete",
+    "2026-11-08T20:54:01Z kubectl rollout undo deployment/parser",
+    "Warning: resource deployments/parser was previously managed with 'kubectl apply'. Rolling back will not update the kubectl.kubernetes.io/last-applied-configuration annotation, which may cause unexpected behavior on future 'kubectl apply' operations. Consider using 'kubectl apply' with your previous configuration file instead.",
+    "deployment.apps/parser rolled back",
+    "Waiting for deployment \"parser\" rollout to finish: 1 out of 2 new replicas have been updated...",
+    "Waiting for deployment \"parser\" rollout to finish: 1 out of 2 new replicas have been updated...",
+    "Waiting for deployment \"parser\" rollout to finish: 1 out of 2 new replicas have been updated...",
+    "Waiting for deployment \"parser\" rollout to finish: 1 old replicas are pending termination...",
+    "Waiting for deployment \"parser\" rollout to finish: 1 old replicas are pending termination...",
+    "deployment \"parser\" successfully rolled out",
+    "2026-11-08T20:54:18Z rollback complete"
+  ],
+  "task4_recovery_locust": {
+    "requests": 719,
+    "failures": 7,
+    "failure_pct": 0.974,
+    "p50_ms": 1100.0,
+    "p95_ms": 1600.0,
+    "p99_ms": 1900.0,
+    "avg_ms": 992.2,
+    "max_ms": 2139.651817000072,
+    "requests_per_s": 4.02,
+    "per_replica": {
+      "parser-68fc4b5b57-f2src": 84,
+      "parser-68fc4b5b57-xfdcp": 363,
+      "parser-68fc4b5b57-lxn5z": 268
+    },
+    "per_model_version": {
+      "v1": 715
+    },
+    "per_replica_share_pct": {
+      "parser-68fc4b5b57-f2src": 11.7,
+      "parser-68fc4b5b57-xfdcp": 50.8,
+      "parser-68fc4b5b57-lxn5z": 37.5
+    }
+  },
+  "task4_recovery_timeline": [
+    "2026-11-08T20:58:49Z deleting pod parser-68fc4b5b57-f2src",
+    "pod \"parser-68fc4b5b57-f2src\" deleted from app namespace",
+    "NAME     READY   UP-TO-DATE   AVAILABLE   AGE",
+    "parser   1/2     2            1           10m",
+    "2026-11-08T20:59:00Z replica count restored",
+    "NAME     READY   UP-TO-DATE   AVAILABLE   AGE",
+    "parser   2/2     2            2           10m",
+    "NAME                      READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES",
+    "parser-68fc4b5b57-lxn5z   1/1     Running   0          11s     10.42.0.23   k3d-ccmini-server-0   <none>           <none>",
+    "parser-68fc4b5b57-xfdcp   1/1     Running   0          4m50s   10.42.0.22   k3d-ccmini-server-0   <none>           <none>"
+  ],
+  "task4_hpa_locust": {
+    "requests": 1167,
+    "failures": 12,
+    "failure_pct": 1.028,
+    "p50_ms": 1300.0,
+    "p95_ms": 1800.0,
+    "p99_ms": 2000.0,
+    "avg_ms": 1024.6,
+    "max_ms": 2230.9084630001053,
+    "requests_per_s": 3.898,
+    "per_replica": {
+      "parser-68fc4b5b57-xfdcp": 616,
+      "parser-68fc4b5b57-g4dfj": 541
+    },
+    "per_model_version": {
+      "v1": 1157
+    },
+    "per_replica_share_pct": {
+      "parser-68fc4b5b57-xfdcp": 53.2,
+      "parser-68fc4b5b57-g4dfj": 46.8
+    }
+  },
+  "task4_hpa_timeline": [
+    "2026-11-08T21:02:52Z scaled down to 1 replica while idle",
+    "2026-11-08T21:03:00Z load started (4 users)",
+    "2026-11-08T21:03:36Z HPA set replicas=2 under load",
+    "2026-11-08T21:08:01Z load finished",
+    "2026-11-08T21:09:38Z replicas=1 after load"
+  ],
+  "task4_versions_after_update": [
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-hkrjj ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-hkrjj ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-rtnbs ",
+    "HTTP/1.1 200 OK X-Model-Version: v2 X-Served-By: parser-7d4885b655-hkrjj"
+  ],
+  "task4_versions_after_rollback": [
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-xfdcp ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-xfdcp ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-f2src ",
+    "HTTP/1.1 200 OK X-Model-Version: v1 X-Served-By: parser-68fc4b5b57-xfdcp"
+  ],
+  "task7_loadtest": {
+    "requests": 506,
+    "failures": 5,
+    "failure_pct": 0.988,
+    "p50_ms": 890.0,
+    "p95_ms": 1500.0,
+    "p99_ms": 1500.0,
+    "avg_ms": 936.8,
+    "max_ms": 1558.7780459999863,
+    "requests_per_s": 4.254,
+    "per_replica": {
+      "parser-68fc4b5b57-9r6h8": 250,
+      "parser-68fc4b5b57-t6w2k": 254
+    },
+    "per_model_version": {
+      "v1": 504
+    },
+    "per_replica_share_pct": {
+      "parser-68fc4b5b57-9r6h8": 49.6,
+      "parser-68fc4b5b57-t6w2k": 50.4
+    }
+  },
+  "task7_top_pods": {
+    "parser-68fc4b5b57-9r6h8": {
+      "samples": 13,
+      "cpu_m_max": 997,
+      "cpu_m_avg": 851,
+      "mem_mi_max": 371,
+      "mem_mi_avg": 369
+    },
+    "parser-68fc4b5b57-t6w2k": {
+      "samples": 13,
+      "cpu_m_max": 1000,
+      "cpu_m_avg": 867,
+      "mem_mi_max": 400,
+      "mem_mi_avg": 392
+    }
+  },
+  "task7_cost": {
+    "currency": "INR",
+    "replicas": 2,
+    "cpu_limit_vcpu": 1.0,
+    "memory_limit_gib": 1.0,
+    "requests_per_s": 4.253661441168077,
+    "successful_requests_per_s": 4.212,
+    "hourly_cost_per_replica": 3.95,
+    "hourly_cost_all_replicas": 7.9,
+    "requests_per_hour": 15313.2,
+    "cost_per_1000_requests": 0.5159,
+    "steps": [
+      "per replica per hour = 1 vCPU x 3.50 + 1 GiB x 0.45 = 3.9500 INR/h",
+      "all replicas per hour = 2 x 3.9500 = 7.9000 INR/h",
+      "requests per hour = 4.254 req/s x 3600 = 15313.2",
+      "cost per 1,000 requests = 7.9000 / 15313.2 x 1000 = 0.5159 INR"
+    ]
+  },
+  "make_up_seconds": "185"
+}

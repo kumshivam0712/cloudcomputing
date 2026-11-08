@@ -1,11 +1,18 @@
-"""Greedy generation with the fine-tuned Pythia-70M student (used by the service and by
-training/predict.py, so evaluation and serving produce identical text)."""
+"""Generation with the fine-tuned Pythia-70M student. Used by the service AND by
+training/predict.py, so evaluation and serving produce identical answers.
+
+Decoding: greedy first. Only if a validator is given and rejects the greedy answer, the same model
+is asked again with beam search (FALLBACK_BEAMS beams) and the first beam that passes the
+validator is returned; if none passes, the greedy answer is returned (and the service answers 500).
+"""
 import os
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, StoppingCriteria, StoppingCriteriaList
 
 from prompting import extract_output, format_prompt
+
+FALLBACK_BEAMS = int(os.environ.get("FALLBACK_BEAMS", "4"))
 
 
 class _StopOnNewline(StoppingCriteria):
@@ -33,7 +40,7 @@ class ParserModel:
 
     @torch.inference_mode()
     def generate_raw(self, text):
-        """Return (prompt-free generated text, extracted answer)."""
+        """Greedy decoding. Return (prompt-free generated text, extracted answer)."""
         enc = self.tokenizer(format_prompt(text), return_tensors="pt")
         prompt_len = enc["input_ids"].shape[1]
         out = self.model.generate(
@@ -48,5 +55,32 @@ class ParserModel:
         generated = self.tokenizer.decode(out[0, prompt_len:], skip_special_tokens=True)
         return generated, extract_output(generated)
 
-    def parse(self, text):
-        return self.generate_raw(text)[1]
+    @torch.inference_mode()
+    def beam_answers(self, text, beams=FALLBACK_BEAMS):
+        """The answers of the `beams` best beam-search hypotheses, best first."""
+        enc = self.tokenizer(format_prompt(text), return_tensors="pt")
+        prompt_len = enc["input_ids"].shape[1]
+        out = self.model.generate(
+            **enc,
+            max_new_tokens=self.max_new_tokens,
+            do_sample=False,
+            num_beams=beams,
+            num_return_sequences=beams,
+            eos_token_id=self.eos,
+            pad_token_id=self.eos,
+        )
+        return [extract_output(self.tokenizer.decode(o[prompt_len:], skip_special_tokens=True)) for o in out]
+
+    def generate(self, text, is_valid=None):
+        """Return {"generated", "answer", "fallback"}; see the module docstring."""
+        generated, answer = self.generate_raw(text)
+        result = {"generated": generated, "answer": answer, "fallback": False}
+        if is_valid is None or is_valid(answer) or FALLBACK_BEAMS < 2:
+            return result
+        for candidate in self.beam_answers(text):
+            if is_valid(candidate):
+                return {"generated": generated, "answer": candidate, "fallback": True}
+        return result
+
+    def parse(self, text, is_valid=None):
+        return self.generate(text, is_valid)["answer"]

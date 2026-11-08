@@ -13,6 +13,8 @@ Configuration (environment):
   S3_ENDPOINT     http://seaweedfs-s3.data.svc.cluster.local:8333
   MAX_NEW_TOKENS  48                generation budget
   FAULT_INJECT    1 = replace the model output with "not json" before validation (test hook)
+  FALLBACK_BEAMS  4 = if the greedy answer fails the schema, retry once with 4-beam search and
+                  use the first beam that passes (0 or 1 disables the retry)
   AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY  from a Kubernetes Secret
   POD_NAME        from the downward API (X-Served-By); falls back to the hostname
 """
@@ -46,6 +48,10 @@ SCHEMA_PATH = os.environ.get("SCHEMA_PATH", str(Path(__file__).with_name("schema
 validator = SchemaValidator.from_file(SCHEMA_PATH)
 state = {"model": None, "loaded_at": None}
 _generate_lock = threading.Lock()  # one generation at a time per Pod (CPU limit is 1 core)
+
+
+def _is_valid(text):
+    return validator.validate(text) is not None
 
 
 def _headers():
@@ -152,7 +158,7 @@ def parse(req: ParseRequest):
     if model is None:
         return JSONResponse({"error": "model_not_ready"}, status_code=503, headers=_headers())
     with _generate_lock:
-        raw = model.parse(req.text)
+        raw = model.parse(req.text, is_valid=_is_valid)   # greedy; beam-search retry only if invalid
     if FAULT_INJECT:
         raw = "not json"
     obj = validator.validate(raw)
