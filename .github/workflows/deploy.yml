@@ -13,6 +13,10 @@ on:
         description: "Commit results/ back to the branch"
         type: boolean
         default: true
+      dry_run_base_model:
+        description: "Infrastructure dry run: serve the untrained Pythia-70M as v1/v2 instead of the released models"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -46,6 +50,14 @@ jobs:
           sudo chmod +x /usr/local/bin/k3d
           k3d version && kubectl version --client && docker version --format '{{.Server.Version}}' && nproc && free -g
 
+      - name: Dry run only - untrained Pythia-70M as stand-in models
+        if: ${{ inputs.dry_run_base_model }}
+        run: |
+          make train-env
+          .venv-train/bin/python training/save_base.py --out build/models/v1
+          cp -r build/models/v1 build/models/v2
+          echo "LOCAL_MODELS=1" >> "$GITHUB_ENV"
+
       - name: make up (fresh clone -> whole system)
         run: |
           mkdir -p results/task6
@@ -75,6 +87,6 @@ jobs:
           path: results/
 
       - name: Commit results
-        if: ${{ success() && inputs.commit }}
+        if: ${{ success() && inputs.commit && !inputs.dry_run_base_model }}
         run: |
           scripts/ci_commit.sh "Tasks 3/4/7: deployment experiments and load tests (workflow run ${{ github.run_id }})" results
