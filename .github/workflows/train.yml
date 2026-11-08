@@ -1,0 +1,147 @@
+# Task 2: train the student (v1, v2) on CPU, evaluate teacher-free baselines, publish the models as
+# GitHub Release assets (model-v1, model-v2, model-base = untrained Pythia-70M for the CI gate demo)
+# and commit loss curves, checksums and score reports.
+name: task2-train-student
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Create/replace the GitHub Releases model-v1, model-v2, model-base"
+        type: boolean
+        default: true
+      commit:
+        description: "Commit training/loss*.csv, models/*/model.sha256 and results/ back to the branch"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: task2-train
+  cancel-in-progress: false
+
+env:
+  COMMIT_NAME: Shivam Kumar
+  COMMIT_EMAIL: 227203916+kumshivam0712@users.noreply.github.com
+
+jobs:
+  train:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - version: v1
+            config: training/config.yaml
+          - version: v2
+            config: training/config_v2.yaml
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Training environment (CPU PyTorch)
+        run: make train-env
+      - name: make train SUBSET=50 (quick check)
+        if: matrix.version == 'v1'
+        run: |
+          mkdir -p results/task2
+          { echo "\$ make train SUBSET=50"; make train SUBSET=50; } 2>&1 | tee results/task2/train_subset50.log
+      - name: make train CONFIG=${{ matrix.config }}
+        run: |
+          mkdir -p results/task2
+          { echo "\$ make train CONFIG=${{ matrix.config }}"; make train CONFIG=${{ matrix.config }}; } 2>&1 \
+            | tee results/task2/train_${{ matrix.version }}.log
+      - name: Evaluate on validation.jsonl
+        run: |
+          make evaluate MODEL_DIR=build/models/${{ matrix.version }} NAME=student_${{ matrix.version }} \
+            | tee results/task2/evaluate_${{ matrix.version }}.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: model-${{ matrix.version }}
+          path: |
+            build/models/${{ matrix.version }}/
+            training/loss*.csv
+            build/models/loss-subset50.csv
+            results/
+          if-no-files-found: error
+
+  base:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: make train-env
+      - name: Save the untrained Pythia-70M and evaluate it
+        run: |
+          mkdir -p results/task2
+          .venv-train/bin/python training/save_base.py --config training/config.yaml --out build/models/base
+          make evaluate MODEL_DIR=build/models/base NAME=pythia_base | tee results/task2/evaluate_base.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: model-base
+          path: |
+            build/models/base/
+            results/
+          if-no-files-found: error
+
+  publish:
+    needs: [train, base]
+    runs-on: ubuntu-24.04
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Collect files
+        run: |
+          set -e
+          for v in v1 v2 base; do
+            mkdir -p build/models/$v models/$v
+            cp -r artifacts/model-$v/build/models/$v/. build/models/$v/
+            cp build/models/$v/model.sha256 models/$v/model.sha256
+            cp build/models/$v/version.json models/$v/version.json
+            cp -rn artifacts/model-$v/results/. results/
+            (cd build/models/$v && sha256sum -c model.sha256)
+          done
+          cp artifacts/model-v1/training/loss.csv training/loss.csv
+          cp artifacts/model-v2/training/loss_v2.csv training/loss_v2.csv
+          cp artifacts/model-v1/build/models/loss-subset50.csv results/task2/loss_subset50.csv || true
+          python3 scripts/summarize.py compare | tee results/task2/comparison.md
+          ls -la build/models/* results results/task2
+      - name: Publish GitHub Releases
+        if: ${{ inputs.publish }}
+        run: |
+          set -e
+          for v in v1 v2 base; do
+            tag=model-$v
+            gh release delete "$tag" --yes --cleanup-tag 2>/dev/null || true
+            case $v in
+              base) title="Untrained Pythia-70M (deliberately bad model for the CI quality gate)";;
+              *) title="Student model $v (Pythia-70M distilled from phi3.5)";;
+            esac
+            notes="Model + tokenizer + version.json + model.sha256 (sha256sum format, same as models/$v/model.sha256 in Git). Built by workflow run ${{ github.run_id }} from commit ${{ github.sha }}."
+            gh release create "$tag" build/models/$v/* --target "${{ github.sha }}" --title "$title" --notes "$notes"
+          done
+      - name: Verify the release assets against models/v1/model.sha256
+        if: ${{ inputs.publish }}
+        run: |
+          mkdir -p results/task2 build/check-v1
+          gh release download model-v1 --dir build/check-v1 --clobber
+          { echo "\$ gh release download model-v1 && sha256sum -c models/v1/model.sha256"
+            cd build/check-v1 && sha256sum -c ../../models/v1/model.sha256; } 2>&1 | tee results/task2/release_checksum_check.txt
+      - name: Commit results
+        if: ${{ inputs.commit }}
+        run: |
+          scripts/ci_commit.sh "Task 2: train student v1/v2, evaluate three models, publish releases (workflow run ${{ github.run_id }})" \
+            training/loss.csv training/loss_v2.csv models results

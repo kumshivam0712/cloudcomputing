@@ -1,0 +1,12 @@
+.git
+.venv
+.venv-train
+.secrets
+build
+dist
+results
+report
+datasets
+**/__pycache__
+**/*.safetensors
+**/*.bin

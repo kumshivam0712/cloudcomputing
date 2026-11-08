@@ -1,0 +1,38 @@
+# Task 2: sequence-level knowledge distillation (teacher phi3.5 -> student Pythia-70M), CPU only.
+# `make train` reads only this file (training/train.py --config training/config.yaml).
+# `make train SUBSET=50` trains on the first 50 records only (quick check).
+version: v1
+
+# --- the six required items -------------------------------------------------------------
+seed: 42
+learning_rate: 0.0005
+batch_size: 16
+epochs: 10
+max_seq_length: 128
+libraries:            # checked against the installed versions at start-up
+  python: "3.12"
+  torch: "2.5.1"
+  transformers: "4.46.3"
+  tokenizers: "0.20.3"
+  safetensors: "0.4.5"
+  numpy: "2.2.1"
+  pyyaml: "6.0.2"
+
+# --- data and model -------------------------------------------------------------------------
+base_model: EleutherAI/pythia-70m
+base_revision: a39f36b100fe8a5377810d56c3f4789b9c53ac42   # Hugging Face "main" (= step143000 weights)
+train_file: datasets/v1/train.jsonl
+max_train_records: 1500        # the first 1,500 records of the cleaned dataset, never more
+output_dir: build/models/v1
+loss_csv: training/loss.csv
+
+# --- optimiser ---------------------------------------------------------------------------------
+optimizer: adamw
+weight_decay: 0.01
+warmup_ratio: 0.06             # linear warm-up, then linear decay to 0
+grad_clip_norm: 1.0
+loss_on: target_only           # prompt tokens ("Command: ...\nJSON:") are masked out of the loss
+num_threads: 0                 # 0 = let PyTorch use every core
+
+# --- generation (evaluation and the service) ---------------------------------------------------
+max_new_tokens: 48

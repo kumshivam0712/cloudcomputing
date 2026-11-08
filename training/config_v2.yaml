@@ -1,0 +1,34 @@
+# Second model version for the rolling-update experiment (Task 4).
+# Identical to config.yaml except: one more epoch and another seed.
+#   make train CONFIG=training/config_v2.yaml
+version: v2
+
+seed: 1234
+learning_rate: 0.0005
+batch_size: 16
+epochs: 11
+max_seq_length: 128
+libraries:
+  python: "3.12"
+  torch: "2.5.1"
+  transformers: "4.46.3"
+  tokenizers: "0.20.3"
+  safetensors: "0.4.5"
+  numpy: "2.2.1"
+  pyyaml: "6.0.2"
+
+base_model: EleutherAI/pythia-70m
+base_revision: a39f36b100fe8a5377810d56c3f4789b9c53ac42
+train_file: datasets/v1/train.jsonl
+max_train_records: 1500
+output_dir: build/models/v2
+loss_csv: training/loss_v2.csv
+
+optimizer: adamw
+weight_decay: 0.01
+warmup_ratio: 0.06
+grad_clip_norm: 1.0
+loss_on: target_only
+num_threads: 0
+
+max_new_tokens: 48

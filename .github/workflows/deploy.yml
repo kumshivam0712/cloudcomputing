@@ -1,0 +1,80 @@
+# Tasks 3, 4, 6 (make up / make down) and 7 on a fresh runner:
+#   fresh clone -> make up -> experiments (container limits, k8s rollout/recovery/HPA/cold start,
+#   standard load test, cost) -> make down. All evidence is committed to results/.
+name: task3-4-7-deploy-and-experiments
+
+on:
+  workflow_dispatch:
+    inputs:
+      steps:
+        description: "Experiment steps (space separated): task3 resources coldstart standard rolling recovery hpa | all"
+        default: "all"
+      commit:
+        description: "Commit results/ back to the branch"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-experiments
+  cancel-in-progress: false
+
+env:
+  K3D_VERSION: v5.7.4
+  COMMIT_NAME: Shivam Kumar
+  COMMIT_EMAIL: 227203916+kumshivam0712@users.noreply.github.com
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install k3d
+        run: |
+          sudo curl -fsSL -o /usr/local/bin/k3d \
+            "https://github.com/k3d-io/k3d/releases/download/${K3D_VERSION}/k3d-linux-amd64"
+          sudo chmod +x /usr/local/bin/k3d
+          k3d version && kubectl version --client && docker version --format '{{.Server.Version}}' && nproc && free -g
+
+      - name: make up (fresh clone -> whole system)
+        run: |
+          mkdir -p results/task6
+          start=$(date +%s)
+          { echo "\$ git clone https://github.com/${{ github.repository }} && cd cloudcomputing && make up"
+            make up; echo "make up finished in $(( $(date +%s) - start )) s"; } 2>&1 | tee results/task6/make_up.log
+
+      - name: Experiments (${{ inputs.steps }})
+        run: scripts/experiments.sh ${{ inputs.steps }} 2>&1 | tee results/experiments.log
+
+      - name: Final state
+        if: always()
+        run: |
+          { kubectl get nodes -o wide; kubectl get all,ingress,hpa,pvc -n app; kubectl get all,pvc -n data;
+            kubectl get hpa -n app parser -o jsonpath='{.spec}'; echo; } > results/task4/final_state.txt 2>&1 || true
+
+      - name: make down
+        if: always()
+        run: |
+          { echo "\$ make down"; make down; echo "\$ k3d cluster list"; k3d cluster list; } 2>&1 | tee results/task6/make_down.log
+
+      - name: Upload evidence artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: deploy-${{ github.run_id }}
+          path: results/
+
+      - name: Commit results
+        if: ${{ success() && inputs.commit }}
+        run: |
+          scripts/ci_commit.sh "Tasks 3/4/7: deployment experiments and load tests (workflow run ${{ github.run_id }})" results

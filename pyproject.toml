@@ -1,0 +1,14 @@
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["tools"]   # kit files are used unchanged
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+ignore = ["E402"]            # scripts add sibling folders to sys.path before importing
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "model", "prompting", "clean", "worker", "teacher", "storage", "subnets", "nacl_sim", "model_checksum"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

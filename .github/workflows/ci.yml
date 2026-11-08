@@ -1,0 +1,112 @@
+# Task 6: CI/CD - linting -> unit tests -> model evaluation (model from the GitHub Release) ->
+# quality gate (score.py --min-validity 95), plus a secret scan (gitleaks).
+# Run it by hand with model_tag=model-base to see the gate fail on the untrained Pythia-70M.
+name: ci
+
+on:
+  push:
+    paths-ignore:
+      - "results/**"
+      - "report/**"
+      - "datasets/**"
+      - "**/*.md"
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      model_tag:
+        description: "Release tag of the model to evaluate (model-v1; model-base = untrained Pythia-70M)"
+        default: "model-v1"
+
+permissions:
+  contents: read
+
+env:
+  MODEL_TAG: ${{ inputs.model_tag || 'model-v1' }}
+  GITLEAKS_VERSION: 8.21.2
+
+jobs:
+  secret-scan:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: gitleaks (whole Git history)
+        run: |
+          curl -fsSL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
+            | tar -xz gitleaks
+          ./gitleaks version
+          ./gitleaks detect --source . --redact --verbose --report-format json --report-path gitleaks-report.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gitleaks-report
+          path: gitleaks-report.json
+
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ruff==0.8.4 pyyaml==6.0.2
+      - name: ruff
+        run: ruff check .
+      - name: shell, JSON and YAML syntax
+        run: |
+          for f in scripts/*.sh; do bash -n "$f"; done
+          python -m json.tool network/nacl.json > /dev/null
+          python -c "import sys, yaml; [list(yaml.safe_load_all(open(f))) for f in sys.argv[1:]]" \
+            cluster/k3d.yaml k8s/*.yaml k8s/*/*.yaml training/*.yaml .github/workflows/*.yml
+
+  unit-tests:
+    needs: lint
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-tools.txt
+      - run: python -m pytest -v tests
+
+  evaluate:
+    needs: unit-tests
+    runs-on: ubuntu-24.04
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install CPU PyTorch + Transformers (pinned)
+        run: |
+          pip install --index-url https://download.pytorch.org/whl/cpu torch==2.5.1+cpu
+          pip install -r training/requirements.txt
+      - name: Download ${{ env.MODEL_TAG }} from the GitHub Release and verify its checksums
+        run: |
+          gh release download "$MODEL_TAG" --repo "${{ github.repository }}" --dir build/model
+          cd build/model && sha256sum -c model.sha256
+      - name: Predict on validation.jsonl and score
+        run: |
+          mkdir -p build/eval
+          python training/predict.py --model build/model --gold data/validation.jsonl --out build/eval/predictions.jsonl
+          python tools/score.py build/eval/predictions.jsonl data/validation.jsonl --out build/eval/score.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evaluation-${{ env.MODEL_TAG }}
+          path: build/eval/
+
+  quality-gate:
+    needs: evaluate
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: evaluation-${{ env.MODEL_TAG }}
+          path: build/eval
+      - name: score.py --min-validity 95
+        run: python3 tools/score.py build/eval/predictions.jsonl data/validation.jsonl --min-validity 95

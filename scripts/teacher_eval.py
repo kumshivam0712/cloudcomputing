@@ -41,10 +41,10 @@ def main():
     elapsed = time.time() - t0
     os.makedirs(os.path.dirname(a.raw) or ".", exist_ok=True)
     with open(a.raw, "w", encoding="utf-8") as f:
-        for g, r in zip(gold, replies):
+        for g, r in zip(gold, replies, strict=False):
             f.write(json.dumps({"id": g["id"], "text": g["text"], "teacher_raw": r}, ensure_ascii=False) + "\n")
     with open(a.pred, "w", encoding="utf-8") as f:
-        for g, r in zip(gold, replies):
+        for g, r in zip(gold, replies, strict=False):
             f.write(json.dumps({"id": g["id"], "prediction": r}, ensure_ascii=False) + "\n")
     print(f"teacher labelled {len(gold)} validation commands in {elapsed:.1f}s "
           f"({elapsed / len(gold):.2f} s/command with {a.workers} concurrent requests)")
