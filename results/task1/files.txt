@@ -1,0 +1,21 @@
+datasets/teacher:
+total 592
+drwxr-xr-x 2 runner runner   4096 Nov  8 20:04 .
+drwxr-xr-x 4 runner runner   4096 Nov  8 20:04 ..
+-rw-r--r-- 1 runner runner 141760 Nov  8 20:04 shard-0.jsonl
+-rw-r--r-- 1 runner runner    304 Nov  8 20:04 shard-0.meta.json
+-rw-r--r-- 1 runner runner 144508 Nov  8 20:04 shard-1.jsonl
+-rw-r--r-- 1 runner runner    304 Nov  8 20:04 shard-1.meta.json
+-rw-r--r-- 1 runner runner 144057 Nov  8 20:04 shard-2.jsonl
+-rw-r--r-- 1 runner runner    304 Nov  8 20:04 shard-2.meta.json
+-rw-r--r-- 1 runner runner 140227 Nov  8 20:04 shard-3.jsonl
+-rw-r--r-- 1 runner runner    304 Nov  8 20:04 shard-3.meta.json
+
+datasets/v1:
+total 684
+drwxr-xr-x 2 runner runner   4096 Nov  8 20:04 .
+drwxr-xr-x 4 runner runner   4096 Nov  8 20:04 ..
+-rw-r--r-- 1 runner runner    510 Nov  8 20:04 clean_report.json
+-rw-r--r-- 1 runner runner  14358 Nov  8 20:04 rejected.jsonl
+-rw-r--r-- 1 runner runner 665328 Nov  8 20:04 train.jsonl
+-rw-r--r-- 1 runner runner     78 Nov  8 20:04 train.sha256

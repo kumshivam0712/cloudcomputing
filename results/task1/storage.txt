@@ -1,0 +1,33 @@
+$ kubectl -n data get deploy,pods,svc,pvc -o wide
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES                     SELECTOR
+deployment.apps/seaweedfs   1/1     1            1           3h27m   seaweedfs    chrislusf/seaweedfs:3.80   app=seaweedfs
+
+NAME                             READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+pod/seaweedfs-7457b79669-r5455   1/1     Running   0          3h27m   10.42.0.10   k3d-ccmini-server-0   <none>           <none>
+
+NAME                   TYPE       CLUSTER-IP    EXTERNAL-IP   PORT(S)          AGE     SELECTOR
+service/seaweedfs-s3   NodePort   10.43.99.93   <none>        8333:30333/TCP   3h27m   app=seaweedfs
+
+NAME                                   STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE     VOLUMEMODE
+persistentvolumeclaim/seaweedfs-data   Bound    pvc-6f9f8c76-629e-4ae2-85f9-398504fb30e9   5Gi        RWO            local-path     <unset>                 3h27m   Filesystem
+
+$ python scripts/s3.py ls
+bucket  datasets
+bucket  models
+
+$ python scripts/s3.py ls s3://datasets/
+      197541  s3://datasets/commands_pool.jsonl
+      141760  s3://datasets/teacher/shard-0.jsonl
+         304  s3://datasets/teacher/shard-0.meta.json
+      144508  s3://datasets/teacher/shard-1.jsonl
+         304  s3://datasets/teacher/shard-1.meta.json
+      144057  s3://datasets/teacher/shard-2.jsonl
+         304  s3://datasets/teacher/shard-2.meta.json
+      140227  s3://datasets/teacher/shard-3.jsonl
+         304  s3://datasets/teacher/shard-3.meta.json
+         510  s3://datasets/v1/clean_report.json
+       14358  s3://datasets/v1/rejected.jsonl
+      665328  s3://datasets/v1/train.jsonl
+          78  s3://datasets/v1/train.sha256
+
+$ python scripts/s3.py ls s3://models/

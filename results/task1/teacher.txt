@@ -1,0 +1,31 @@
+$ ollama list
+NAME             ID              SIZE      MODIFIED    
+phi3.5:latest    61819fb370a3    2.2 GB    3 hours ago    
+
+$ ollama show phi3.5
+  Model
+    architecture        phi3      
+    parameters          3.8B      
+    context length      131072    
+    embedding length    3072      
+    quantization        Q4_0      
+
+  Parameters
+    stop    "<|system|>"       
+    stop    "<|user|>"         
+    stop    "<|end|>"          
+    stop    "<|assistant|>"    
+
+  License
+    MIT License                             
+    Copyright (c) Microsoft Corporation.    
+
+
+$ ollama --version
+ollama version is 0.5.7-0-ga420a45-dirty
+
+teacher options used by worker/teacher.py:
+16:TEACHER_OPTIONS = {"temperature": 0, "seed": 42, "num_predict": 128}
+
+sha256 of prompts/teacher_prompt.txt:
+ea0426db124784ebeccdea40ac7fc926e37994ada9639deaaeedfb39fca24c83  prompts/teacher_prompt.txt

@@ -1,0 +1,17 @@
+$ k3d cluster list
+NAME     SERVERS   AGENTS   LOADBALANCER
+ccmini   1/1       0/0      true
+
+$ kubectl get nodes -o wide
+NAME                  STATUS   ROLES                  AGE     VERSION        INTERNAL-IP   EXTERNAL-IP   OS-IMAGE           KERNEL-VERSION     CONTAINER-RUNTIME
+k3d-ccmini-server-0   Ready    control-plane,master   3h27m   v1.30.6+k3s1   172.18.0.2    <none>        K3s v1.30.6+k3s1   7.0.0-1017-azure   containerd://1.7.22-k3s1
+
+$ kubectl get ns
+NAME              STATUS   AGE
+app               Active   3h27m
+data              Active   3h27m
+default           Active   3h27m
+kube-node-lease   Active   3h27m
+kube-public       Active   3h27m
+kube-system       Active   3h27m
+pipeline          Active   3h27m

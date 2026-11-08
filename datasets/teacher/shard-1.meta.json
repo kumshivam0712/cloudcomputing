@@ -1,0 +1,15 @@
+{
+  "shard_index": 1,
+  "shard_count": 4,
+  "records": 750,
+  "labelled_this_run": 750,
+  "seconds_this_run": 11547.5,
+  "model": "phi3.5",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_predict": 128
+  },
+  "prompt_file": "/app/prompts/teacher_prompt.txt",
+  "pod": "teacher-labeler-1"
+}

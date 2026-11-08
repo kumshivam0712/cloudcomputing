@@ -1,0 +1,5 @@
+mkdir -p build
+python3 worker/clean.py --shards datasets/teacher --out build/clean-check --schema data/schema.json \
+  --pool data/commands_pool.jsonl --pool-limit 0 > build/clean-check.log
+diff <(cut -d' ' -f1 datasets/v1/train.sha256) <(cut -d' ' -f1 build/clean-check/train.sha256)
+OK: clean.py reproduces b79246c99ac598a3d0ea38a6db9801ec575aa04d1424d307ba247d9c589aea35

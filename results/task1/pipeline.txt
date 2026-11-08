@@ -1,0 +1,72 @@
+$ kubectl -n pipeline get jobs,pods -o wide
+NAME                        STATUS     COMPLETIONS   DURATION   AGE     CONTAINERS   IMAGES              SELECTOR
+job.batch/clean-dataset     Complete   1/1           5s         8s      clean        ccmini/worker:1.0   batch.kubernetes.io/controller-uid=2f6fb66c-06d0-4b6c-a644-a0e644a4a3ef
+job.batch/teacher-labeler   Complete   4/4           3h12m      3h15m   worker       ccmini/worker:1.0   batch.kubernetes.io/controller-uid=766d6544-0b1b-4a1c-9379-1d8c4196a668
+
+NAME                          READY   STATUS      RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+pod/clean-dataset-xg74h       0/1     Completed   0          8s      10.42.0.17   k3d-ccmini-server-0   <none>           <none>
+pod/ollama-66f868f687-d2tg4   1/1     Running     0          3h26m   10.42.0.12   k3d-ccmini-server-0   <none>           <none>
+pod/teacher-labeler-0-vx2t6   0/1     Completed   0          3h15m   10.42.0.13   k3d-ccmini-server-0   <none>           <none>
+pod/teacher-labeler-1-pc5pb   0/1     Completed   0          3h15m   10.42.0.14   k3d-ccmini-server-0   <none>           <none>
+pod/teacher-labeler-2-rrss4   0/1     Completed   0          3h15m   10.42.0.15   k3d-ccmini-server-0   <none>           <none>
+pod/teacher-labeler-3-6phcp   0/1     Completed   0          3h15m   10.42.0.16   k3d-ccmini-server-0   <none>           <none>
+
+Worker pods: shard index, start and finish times (they overlap => ran at the same time)
+POD                       SHARD_INDEX   STARTED                FINISHED               EXIT
+teacher-labeler-0-vx2t6   0             2026-11-08T16:48:17Z   2026-11-08T19:58:14Z   0
+teacher-labeler-1-pc5pb   1             2026-11-08T16:48:17Z   2026-11-08T20:00:47Z   0
+teacher-labeler-2-rrss4   2             2026-11-08T16:48:17Z   2026-11-08T20:00:53Z   0
+teacher-labeler-3-6phcp   3             2026-11-08T16:48:17Z   2026-11-08T19:56:51Z   0
+
+$ kubectl -n pipeline describe job teacher-labeler
+Name:               teacher-labeler
+Namespace:          pipeline
+Selector:           batch.kubernetes.io/controller-uid=766d6544-0b1b-4a1c-9379-1d8c4196a668
+Labels:             app=teacher-labeler
+Annotations:        <none>
+Parallelism:        4
+Completions:        4
+Completion Mode:    Indexed
+Suspend:            false
+Backoff Limit:      12
+Start Time:         Sun, 08 Nov 2026 16:48:17 +0000
+Completed At:       Sun, 08 Nov 2026 20:00:56 +0000
+Duration:           3h12m
+Pods Statuses:      0 Active (0 Ready) / 4 Succeeded / 0 Failed
+Completed Indexes:  0-3
+Pod Template:
+  Labels:  app=teacher-labeler
+           batch.kubernetes.io/controller-uid=766d6544-0b1b-4a1c-9379-1d8c4196a668
+           batch.kubernetes.io/job-name=teacher-labeler
+           controller-uid=766d6544-0b1b-4a1c-9379-1d8c4196a668
+           job-name=teacher-labeler
+  Containers:
+   worker:
+    Image:      ccmini/worker:1.0
+    Port:       <none>
+    Host Port:  <none>
+    Limits:
+      cpu:     500m
+      memory:  256Mi
+    Requests:
+      cpu:     50m
+      memory:  64Mi
+    Environment Variables from:
+      s3-credentials  Secret  Optional: false
+    Environment:
+      SHARD_INDEX:     (v1:metadata.annotations['batch.kubernetes.io/job-completion-index'])
+      SHARD_COUNT:    4
+      LIMIT:          0
+      INPUT_URI:      s3://datasets/commands_pool.jsonl
+      OUTPUT_URI:     s3://datasets/teacher/shard-{index}.jsonl
+      OLLAMA_URL:     http://ollama.pipeline.svc.cluster.local:11434
+      TEACHER_MODEL:  phi3.5
+      S3_ENDPOINT:    http://seaweedfs-s3.data.svc.cluster.local:8333
+    Mounts:           <none>
+  Volumes:            <none>
+  Node-Selectors:     <none>
+  Tolerations:        <none>
+Events:
+  Type    Reason     Age    From            Message
+  ----    ------     ----   ----            -------
+  Normal  Completed  3m15s  job-controller  Job completed

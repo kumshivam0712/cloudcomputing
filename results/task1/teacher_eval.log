@@ -1,0 +1,12 @@
+scripts/teacher_eval.sh
+teacher labelled 100 validation commands in 564.6s (5.65 s/command with 4 concurrent requests)
+{
+  "json_validity": 95.0,
+  "intent_accuracy": 83.0,
+  "date_accuracy": 81.0,
+  "time_accuracy": 81.0,
+  "place_accuracy": 87.0,
+  "full_frame": 53.0,
+  "examples": 100,
+  "missing_predictions": 0
+}

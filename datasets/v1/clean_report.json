@@ -1,0 +1,25 @@
+{
+  "shards": {
+    "shard-0.jsonl": 750,
+    "shard-1.jsonl": 750,
+    "shard-2.jsonl": 750,
+    "shard-3.jsonl": 750
+  },
+  "counts": {
+    "input_records": 3000,
+    "invalid_json": 157,
+    "wrong_keys": 1,
+    "bad_intent": 3,
+    "bad_slot": 138,
+    "duplicate": 40,
+    "kept": 2661
+  },
+  "train_sha256": "b79246c99ac598a3d0ea38a6db9801ec575aa04d1424d307ba247d9c589aea35",
+  "coverage": {
+    "pool_ids": 3000,
+    "shard_records": 3000,
+    "missing": [],
+    "repeated": [],
+    "unknown": []
+  }
+}
