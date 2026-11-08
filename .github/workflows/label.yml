@@ -89,4 +89,5 @@ jobs:
 
       - name: Commit results
         if: ${{ success() && inputs.commit }}
-        run: scripts/ci_commit.sh "Task 1: teacher labelling and cleaned dataset (workflow run ${{ github.run_id }}, limit ${{ inputs.limit }})" datasets results
+        run: |
+          scripts/ci_commit.sh "Task 1: teacher labelling and cleaned dataset (workflow run ${{ github.run_id }}, limit ${{ inputs.limit }})" datasets results
