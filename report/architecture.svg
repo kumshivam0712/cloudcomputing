@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" role="img" aria-label="System architecture">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+  <rect width="760" height="300" fill="#fcfcfb"/>
+  <!-- k3d cluster -->
+  <rect x="150" y="8" width="455" height="284" rx="8" fill="none" stroke="#1f4e79" stroke-width="1.5"/>
+  <text x="160" y="24" fill="#1f4e79" font-weight="bold">k3d cluster "ccmini" (k3s v1.30, 1 node) - cluster/k3d.yaml</text>
+
+  <!-- pipeline ns -->
+  <rect x="162" y="34" width="210" height="150" rx="6" fill="#eef2f7" stroke="#9fb3c8"/>
+  <text x="170" y="49" font-weight="bold" fill="#0b0b0b">namespace pipeline</text>
+  <rect x="172" y="57" width="190" height="30" rx="4" fill="#fff" stroke="#9fb3c8"/>
+  <text x="180" y="70" fill="#0b0b0b">Ollama phi3.5 (teacher)</text>
+  <text x="180" y="81" fill="#52514e">temp 0, seed 42, 4 parallel slots</text>
+  <rect x="172" y="97" width="190" height="38" rx="4" fill="#fff" stroke="#9fb3c8"/>
+  <text x="180" y="110" fill="#0b0b0b">Indexed Job: 4 workers</text>
+  <text x="180" y="121" fill="#52514e">SHARD_INDEX = completion index</text>
+  <text x="180" y="131" fill="#52514e">line n -&gt; shard n mod 4</text>
+  <rect x="172" y="145" width="190" height="30" rx="4" fill="#fff" stroke="#9fb3c8"/>
+  <text x="180" y="158" fill="#0b0b0b">Job: clean.py</text>
+  <text x="180" y="169" fill="#52514e">rules (a)-(e), sha256</text>
+  <line x1="267" y1="97" x2="267" y2="89" stroke="#52514e" marker-end="url(#ar)"/>
+
+  <!-- data ns -->
+  <rect x="390" y="34" width="205" height="150" rx="6" fill="#eef2f7" stroke="#9fb3c8"/>
+  <text x="398" y="49" font-weight="bold" fill="#0b0b0b">namespace data</text>
+  <rect x="400" y="57" width="185" height="118" rx="4" fill="#fff" stroke="#9fb3c8"/>
+  <text x="408" y="70" fill="#0b0b0b">SeaweedFS (S3 API :8333, PVC)</text>
+  <text x="408" y="86" fill="#0b0b0b" font-weight="bold">bucket datasets</text>
+  <text x="414" y="98" fill="#52514e">commands_pool.jsonl</text>
+  <text x="414" y="109" fill="#52514e">teacher/shard-0..3.jsonl</text>
+  <text x="414" y="120" fill="#52514e">v1/train.jsonl, train.sha256</text>
+  <text x="408" y="137" fill="#0b0b0b" font-weight="bold">bucket models</text>
+  <text x="414" y="149" fill="#52514e">v1/ v2/ model + tokenizer</text>
+  <text x="414" y="160" fill="#52514e">model.sha256, version.json</text>
+  <line x1="362" y1="116" x2="398" y2="104" stroke="#52514e" marker-end="url(#ar)"/>
+  <line x1="362" y1="160" x2="398" y2="118" stroke="#52514e" marker-end="url(#ar)"/>
+
+  <!-- app ns -->
+  <rect x="162" y="194" width="433" height="90" rx="6" fill="#eef2f7" stroke="#9fb3c8"/>
+  <text x="170" y="209" font-weight="bold" fill="#0b0b0b">namespace app</text>
+  <rect x="172" y="216" width="92" height="58" rx="4" fill="#fff" stroke="#9fb3c8"/>
+  <text x="180" y="230" fill="#0b0b0b">Ingress</text>
+  <text x="180" y="242" fill="#52514e">Traefik, /parse</text>
+  <text x="180" y="254" fill="#52514e">host :8080</text>
+  <rect x="280" y="216" width="70" height="58" rx="4" fill="#fff" stroke="#9fb3c8"/>
+  <text x="288" y="230" fill="#0b0b0b">Service</text>
+  <text x="288" y="242" fill="#52514e">ready Pods</text>
+  <text x="288" y="254" fill="#52514e">only</text>
+  <rect x="366" y="216" width="135" height="58" rx="4" fill="#fff" stroke="#9fb3c8"/>
+  <text x="374" y="230" fill="#0b0b0b">Deployment parser</text>
+  <text x="374" y="242" fill="#52514e">2 Pods, FastAPI :8000</text>
+  <text x="374" y="254" fill="#52514e">1 CPU / 1 GiB limit</text>
+  <text x="374" y="266" fill="#52514e">probes /healthz /readyz</text>
+  <rect x="512" y="216" width="73" height="58" rx="4" fill="#fff" stroke="#9fb3c8"/>
+  <text x="520" y="230" fill="#0b0b0b">HPA</text>
+  <text x="520" y="242" fill="#52514e">1..2 Pods</text>
+  <text x="520" y="254" fill="#52514e">70 % CPU</text>
+  <line x1="264" y1="245" x2="278" y2="245" stroke="#52514e" marker-end="url(#ar)"/>
+  <line x1="350" y1="245" x2="364" y2="245" stroke="#52514e" marker-end="url(#ar)"/>
+  <line x1="512" y1="245" x2="503" y2="245" stroke="#52514e" marker-end="url(#ar)"/>
+  <line x1="440" y1="216" x2="440" y2="177" stroke="#52514e" stroke-dasharray="3,2" marker-end="url(#ar)"/>
+  <text x="448" y="209" fill="#52514e">model pulled at start-up</text>
+
+  <!-- left: clients -->
+  <rect x="10" y="215" width="128" height="60" rx="6" fill="#fff" stroke="#9fb3c8"/>
+  <text x="18" y="231" fill="#0b0b0b" font-weight="bold">Clients</text>
+  <text x="18" y="244" fill="#52514e">Locust (4 users),</text>
+  <text x="18" y="256" fill="#52514e">curl, score.py</text>
+  <line x1="138" y1="245" x2="170" y2="245" stroke="#52514e" marker-end="url(#ar)"/>
+  <rect x="10" y="40" width="128" height="88" rx="6" fill="#fff" stroke="#9fb3c8"/>
+  <text x="18" y="56" fill="#0b0b0b" font-weight="bold">make / CI runner</text>
+  <text x="18" y="69" fill="#52514e">make up / make down</text>
+  <text x="18" y="81" fill="#52514e">scripts/s3.py (boto3)</text>
+  <text x="18" y="93" fill="#52514e">kit data upload</text>
+  <text x="18" y="105" fill="#52514e">random S3 keys -&gt;</text>
+  <text x="18" y="117" fill="#52514e">K8s Secrets only</text>
+
+  <!-- right: training + release -->
+  <rect x="620" y="40" width="130" height="80" rx="6" fill="#fff" stroke="#9fb3c8"/>
+  <text x="628" y="56" fill="#0b0b0b" font-weight="bold">Training (CPU)</text>
+  <text x="628" y="69" fill="#52514e">Pythia-70M on first</text>
+  <text x="628" y="81" fill="#52514e">1,500 of train.jsonl</text>
+  <text x="628" y="93" fill="#52514e">train.py, config.yaml</text>
+  <text x="628" y="105" fill="#52514e">-&gt; v1, v2</text>
+  <rect x="620" y="150" width="130" height="62" rx="6" fill="#fff" stroke="#9fb3c8"/>
+  <text x="628" y="166" fill="#0b0b0b" font-weight="bold">GitHub Releases</text>
+  <text x="628" y="179" fill="#52514e">model-v1, model-v2,</text>
+  <text x="628" y="191" fill="#52514e">model-base (+sha256)</text>
+  <text x="628" y="203" fill="#52514e">copied to S3 by make up</text>
+  <line x1="685" y1="120" x2="685" y2="148" stroke="#52514e" marker-end="url(#ar)"/>
+  <line x1="620" y1="180" x2="587" y2="150" stroke="#52514e" marker-end="url(#ar)"/>
+  <line x1="595" y1="100" x2="618" y2="80" stroke="#52514e" marker-end="url(#ar)"/>
+</svg>

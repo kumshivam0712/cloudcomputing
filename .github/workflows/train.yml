@@ -4,6 +4,9 @@
 name: task2-train-student
 
 on:
+  workflow_run:                       # chained: starts when Task 1 labelling has committed the data
+    workflows: [task1-teacher-labelling]
+    types: [completed]
   workflow_dispatch:
     inputs:
       publish:
@@ -27,7 +30,25 @@ env:
   COMMIT_EMAIL: 227203916+kumshivam0712@users.noreply.github.com
 
 jobs:
+  check:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-24.04
+    outputs:
+      ready: ${{ steps.data.outputs.ready }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - id: data
+        name: Is the full cleaned training set committed?
+        run: |
+          n=$(wc -l < datasets/v1/train.jsonl 2>/dev/null || echo 0)
+          echo "datasets/v1/train.jsonl has $n records"
+          if [ "$n" -ge 1500 ]; then echo "ready=true" >> "$GITHUB_OUTPUT"; else echo "ready=false" >> "$GITHUB_OUTPUT"; fi
+
   train:
+    needs: check
+    if: ${{ needs.check.outputs.ready == 'true' }}
     strategy:
       fail-fast: false
       matrix:
@@ -70,6 +91,8 @@ jobs:
           if-no-files-found: error
 
   base:
+    needs: check
+    if: ${{ needs.check.outputs.ready == 'true' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     steps:
@@ -120,7 +143,7 @@ jobs:
           python3 scripts/summarize.py compare | tee results/task2/comparison.md
           ls -la build/models/* results results/task2
       - name: Publish GitHub Releases
-        if: ${{ inputs.publish }}
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.publish }}
         run: |
           set -e
           for v in v1 v2 base; do
@@ -134,14 +157,14 @@ jobs:
             gh release create "$tag" build/models/$v/* --target "${{ github.sha }}" --title "$title" --notes "$notes"
           done
       - name: Verify the release assets against models/v1/model.sha256
-        if: ${{ inputs.publish }}
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.publish }}
         run: |
           mkdir -p results/task2 build/check-v1
           gh release download model-v1 --dir build/check-v1 --clobber
           { echo "\$ gh release download model-v1 && sha256sum -c models/v1/model.sha256"
             cd build/check-v1 && sha256sum -c ../../models/v1/model.sha256; } 2>&1 | tee results/task2/release_checksum_check.txt
       - name: Commit results
-        if: ${{ inputs.commit }}
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.commit }}
         run: |
           scripts/ci_commit.sh "Task 2: train student v1/v2, evaluate three models, publish releases (workflow run ${{ github.run_id }})" \
             training/loss.csv training/loss_v2.csv models results

@@ -4,6 +4,9 @@
 name: task3-4-7-deploy-and-experiments
 
 on:
+  workflow_run:                       # chained: starts when Task 2 has published the models
+    workflows: [task2-train-student]
+    types: [completed]
   workflow_dispatch:
     inputs:
       steps:
@@ -32,6 +35,7 @@ env:
 
 jobs:
   deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 150
     steps:
@@ -65,8 +69,8 @@ jobs:
           { echo "\$ git clone https://github.com/${{ github.repository }} && cd cloudcomputing && make up"
             make up; echo "make up finished in $(( $(date +%s) - start )) s"; } 2>&1 | tee results/task6/make_up.log
 
-      - name: Experiments (${{ inputs.steps }})
-        run: scripts/experiments.sh ${{ inputs.steps }} 2>&1 | tee results/experiments.log
+      - name: Experiments (${{ inputs.steps || 'all' }})
+        run: scripts/experiments.sh ${{ inputs.steps || 'all' }} 2>&1 | tee results/experiments.log
 
       - name: Final state
         if: always()
@@ -87,6 +91,6 @@ jobs:
           path: results/
 
       - name: Commit results
-        if: ${{ success() && inputs.commit && !inputs.dry_run_base_model }}
+        if: ${{ success() && (github.event_name != 'workflow_dispatch' || (inputs.commit && !inputs.dry_run_base_model)) }}
         run: |
           scripts/ci_commit.sh "Tasks 3/4/7: deployment experiments and load tests (workflow run ${{ github.run_id }})" results
