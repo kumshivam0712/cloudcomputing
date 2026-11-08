@@ -1,0 +1,28 @@
+# Put the annotated tag "final" on the current head of the branch (the assessed commit).
+# The submission workflow moves it again after it fills in name and roll number.
+name: tag-final
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  COMMIT_NAME: Shivam Kumar
+  COMMIT_EMAIL: 227203916+kumshivam0712@users.noreply.github.com
+
+jobs:
+  tag:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Tag final
+        run: |
+          git config user.name "$COMMIT_NAME"
+          git config user.email "$COMMIT_EMAIL"
+          git tag -f -a final -m "Final submission"
+          git push -f origin final
+          echo "final -> $(git rev-parse --short 'final^{commit}') $(git log -1 --format=%s 'final^{commit}')"

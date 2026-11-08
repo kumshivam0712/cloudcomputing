@@ -28,7 +28,7 @@ SeaweedFS (S3) and pulled at start-up. The report is [`report/report.pdf`](repor
 | `service/` | FastAPI service, Dockerfile, pinned requirements |
 | `network/` | `subnets.md`, `nacl.json`, `packets_sample.jsonl` |
 | `tests/` | unit tests (pytest) |
-| `.github/workflows/` | `ci.yml` (Task 6), `label.yml` (Task 1), `train.yml` + `evaluate.yml` (Task 2), `deploy.yml` (Tasks 3/4/6/7), `submission.yml` (final packaging) |
+| `.github/workflows/` | `ci.yml` (Task 6), `label.yml` (Task 1), `train.yml` + `evaluate.yml` (Task 2), `deploy.yml` (Tasks 3/4/6/7), `submission.yml` (final packaging), `tag-final.yml` |
 | `results/` | every log, score report, Locust output and command output used in the report |
 | `report/` | `report.md` (source) and `report.pdf` |
 | `data/`, `tools/` | the student kit, unchanged |
