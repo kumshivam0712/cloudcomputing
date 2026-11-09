@@ -1,5 +1,5 @@
 <h1>Knowledge Distillation and Deployment of a Command-Parsing Model on a Local Cloud</h1>
-<div class="meta"><b>Name:</b> ⟨NAME⟩ &nbsp;·&nbsp; <b>Roll number:</b> ⟨ROLL⟩ &nbsp;·&nbsp; CS3081 Cloud Computing mini project &nbsp;·&nbsp;
+<div class="meta"><b>Name:</b> Shivam Kumar &nbsp;·&nbsp; <b>Roll number:</b> 230103010 &nbsp;·&nbsp; CS3081 Cloud Computing mini project &nbsp;·&nbsp;
 <b>Repository:</b> <a href="https://github.com/kumshivam0712/cloudcomputing">github.com/kumshivam0712/cloudcomputing</a> (tag <code>final</code>)</div>
 
 <p class="legend"><b>Reading guide.</b> <span class="m">Green</span> = measured (copied from a file in <code>results/</code>, produced by a script or workflow run); <span class="a">amber</span> = assumption or design choice. All runs used GitHub-hosted runners (Ubuntu 24.04, 4 vCPU, 16 GB RAM, no GPU) as the "laptop": every task ran on one such machine inside a k3d cluster created from <code>cluster/k3d.yaml</code>.</p>

@@ -1,6 +1,6 @@
 # Knowledge Distillation and Deployment of a Command-Parsing Language Model on a Local Cloud
 
-Cloud Computing (CS3081) mini project - **⟨NAME⟩, roll number ⟨ROLL⟩**.
+Cloud Computing (CS3081) mini project - **Shivam Kumar, roll number 230103010**.
 
 **GitHub repository: https://github.com/kumshivam0712/cloudcomputing**
 (the assessed commit is the one tagged [`final`](https://github.com/kumshivam0712/cloudcomputing/tree/final);
