@@ -1,6 +1,6 @@
 # Knowledge Distillation and Deployment of a Command-Parsing Language Model on a Local Cloud
 
-Cloud Computing (CS3081) mini project.
+Cloud Computing (CS3081) mini project - **⟨NAME⟩, roll number ⟨ROLL⟩**.
 
 **GitHub repository: https://github.com/kumshivam0712/cloudcomputing**
 (the assessed commit is the one tagged [`final`](https://github.com/kumshivam0712/cloudcomputing/tree/final);
@@ -116,9 +116,9 @@ The same stages run on GitHub Actions: `task1-teacher-labelling` → (automatica
 
 1. Scan the handwritten reflection and upload it to the repository as `reflection/scan.pdf`.
 2. Actions → **submission** → Run workflow with your full name and roll number. It fills in
-   `⟨NAME⟩`/`⟨ROLL⟩` in the report, rebuilds `report/report.pdf`, commits, moves the tag `final`
+   the name and roll-number placeholders in the report and this README, rebuilds `report/report.pdf`, commits, moves the tag `final`
    to that commit and publishes `<roll_number>.zip` (source tree of `final` + `<roll_number>.pdf`)
-   as the Release `submission`. Locally: `scripts/package_submission.sh ROLL reflection/scan.pdf final`.
+   as the Release `submission` when the scan is in the repository. Locally: `scripts/package_submission.sh ROLL reflection/scan.pdf final`.
 
 ## Shut down
 
